@@ -1,0 +1,42 @@
+@import "normalize";
+@import "abstracts";
+@import "base";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.pages-container {
+  height: 100vh;
+  padding: 24px;
+}
+
+.page {
+  padding: 24px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.light-mode {
+  color: $foreground-light;
+  background-color: $background-light;
+}
+
+.dark-mode {
+  color: $foreground-dark;
+  background-color: $background-dark;
+}
