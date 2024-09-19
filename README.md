@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Esse é o meu primeiro site de portifólio.
+🚩 Projeto ainda em construção.
 
-## Getting Started
+## Tecnologias usadas
 
-First, run the development server:
+- React
+- Next.js
+- Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Design do site
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Como primeiro passo para começar o projeto, foquei em criar o _wireframing do site_, isto é, os rabiscos do que era realmente essencial ter.
+Porém, o tempo foi passando e fui criando gosto pelo layout inicial.
+E então, ele ficou da seguinte maneira:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+![imagem do layout inicial](./public/github-imagens/capa.png)
+![imagem do layout inicial](./public/github-imagens/projetos.png)
+![imagem do layout inicial](./public/github-imagens/experiencias.png)
+![imagem do layout inicial](./public/github-imagens/habilidades.png)
+![imagem do layout inicial](./public/github-imagens/aprendizados.png)
+![imagem do layout inicial](./public/github-imagens/contato.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tarefas a fazer
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [x] Wireframing inicial no Figma
+- [x] Organização das pastas e arquivos
+- [x] Instalação das dependências necessárias
+- [ ] Desenvolvimento do layout inicial ⬅️ **Doing**
+- [ ] Definição do style guide definitivo
+- [ ] Adequar o layout final
