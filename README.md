@@ -13,12 +13,12 @@ Como primeiro passo para começar o projeto, foquei em criar o _wireframing do s
 Porém, o tempo foi passando e fui criando gosto pelo layout inicial.
 E então, ele ficou da seguinte maneira:
 
-![imagem do layout inicial](./public/github-imagens/capa.png)
-![imagem do layout inicial](./public/github-imagens/projetos.png)
-![imagem do layout inicial](./public/github-imagens/experiencias.png)
-![imagem do layout inicial](./public/github-imagens/habilidades.png)
-![imagem do layout inicial](./public/github-imagens/aprendizados.png)
-![imagem do layout inicial](./public/github-imagens/contato.png)
+![imagem do layout inicial](./public/github-images/capa.png)
+![imagem do layout inicial](./public/github-images/projetos.png)
+![imagem do layout inicial](./public/github-images/experiencias.png)
+![imagem do layout inicial](./public/github-images/habilidades.png)
+![imagem do layout inicial](./public/github-images/aprendizados.png)
+![imagem do layout inicial](./public/github-images/contato.png)
 
 ## Tarefas a fazer
 
