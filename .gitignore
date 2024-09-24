@@ -19,6 +19,8 @@
 # misc
 .DS_Store
 *.pem
+/src/app/backup.js
+/src/assets/scss/backup.scss
 
 # debug
 npm-debug.log*
