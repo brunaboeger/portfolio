@@ -21,6 +21,7 @@
 *.pem
 /src/app/backup.js
 /src/assets/scss/backup.scss
+/src/app/favicon.ico
 
 # debug
 npm-debug.log*
