@@ -12,7 +12,13 @@ Esse é o meu primeiro site de portifólio.
 
 ## Design do site
 
-Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do site, isto é, os rabiscos do que era realmente essencial ter. Ele ficou da seguinte maneira:
+Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do site, isto é, os rabiscos do que era realmente essencial ter.
+
+### Tecnologias usadas
+
+- React
+- Next.js
+- Vercel
 
 ### Wireframing
 
@@ -24,9 +30,3 @@ Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do 
 ![imagem do layout inicial](./public/github-images/contato.png)
 ![imagem do layout inicial](./public/github-images/esconder-grid.png)
 ![imagem do layout inicial](./public/github-images/layout.png)
-
-## Tecnologias usadas
-
-- React
-- Next.js
-- Vercel
