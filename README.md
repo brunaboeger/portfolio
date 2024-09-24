@@ -12,9 +12,7 @@ Esse é o meu primeiro site de portifólio.
 
 ## Design do site
 
-Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do site, isto é, os rabiscos do que era realmente essencial ter.
-Porém, o tempo foi passando e fui criando gosto pelo layout inicial.
-E então, ele ficou da seguinte maneira:
+Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do site, isto é, os rabiscos do que era realmente essencial ter. Ele ficou da seguinte maneira:
 
 ### Wireframing
 
@@ -24,6 +22,7 @@ E então, ele ficou da seguinte maneira:
 ![imagem do layout inicial](./public/github-images/habilidades.png)
 ![imagem do layout inicial](./public/github-images/aprendizados.png)
 ![imagem do layout inicial](./public/github-images/contato.png)
+![imagem do layout inicial](./public/github-images/esconder-grid.png)
 
 ## Tecnologias usadas
 
