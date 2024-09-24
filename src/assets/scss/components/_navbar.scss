@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+$navbar-height: 5rem;
+
+.navbar {
+  position: relative;
+  height: $navbar-height;
+
+  &-container {
+    height: 100%;
+    @include layout-flex(row, center, space-between);
+
+    .navbar-actions-box {
+      @include layout-flex;
+    }
+  }
+
+  .navbar-floating-menu {
+    position: absolute;
+    top: calc($navbar-height + $gutter-global);
+    @include layout-flex(column);
+
+    &.is-right {
+      right: 0;
+      text-align: right;
+    }
+  }
+}
