@@ -1,13 +1,6 @@
 @import "normalize";
 @import "abstracts";
-@import "base";
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/assets/fonts/Poppins-Regular.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
+@import "components";
 
 html,
 body {
@@ -22,21 +15,19 @@ body {
 
 .pages-container {
   height: 100vh;
-  padding: 24px;
 }
 
-.page {
-  padding: 24px;
-  margin: 0 auto;
+.page-loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
-
-.light-mode {
-  color: $foreground-light;
-  background-color: $background-light;
-}
-
-.dark-mode {
   color: $foreground-dark;
   background-color: $background-dark;
+}
+
+.page-content {
+  padding: $gutter-global;
 }

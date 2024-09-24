@@ -1,0 +1,18 @@
+$gutter-global: 1.5rem;
+$container-large: 82.375rem;
+$container-medium: 77rem;
+
+// coluns map here
+
+@mixin layout-flex(
+  $direction: row,
+  $align: left,
+  $justify: flex-start,
+  $gap: $gutter-global
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}

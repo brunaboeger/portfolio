@@ -1,0 +1,22 @@
+@use "colors" as *;
+
+$markdown-border-light: 1px solid $color-markdown-light;
+$markdown-border-dark: 1px solid $color-markdown-dark;
+
+.light-mode {
+  color: $foreground-light;
+  background-color: $background-light;
+
+  .navbar {
+    border: $markdown-border-light;
+  }
+}
+
+.dark-mode {
+  color: $foreground-dark;
+  background-color: $background-dark;
+
+  .navbar {
+    border: $markdown-border-dark;
+  }
+}
