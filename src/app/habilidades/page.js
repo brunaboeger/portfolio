@@ -1,7 +1,7 @@
-export default function AboutPage() {
+export default function AbilitiesPage() {
   return (
-    <div className="page">
-      <h1>Habilidades</h1>
+    <div className="tab-pane">
+      <h1 className="tab-pane-title">Habilidades</h1>
     </div>
   );
 }
