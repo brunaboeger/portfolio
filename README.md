@@ -23,6 +23,7 @@ Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do 
 ![imagem do layout inicial](./public/github-images/aprendizados.png)
 ![imagem do layout inicial](./public/github-images/contato.png)
 ![imagem do layout inicial](./public/github-images/esconder-grid.png)
+![imagem do layout inicial](./public/github-images/layout.png)
 
 ## Tecnologias usadas
 
