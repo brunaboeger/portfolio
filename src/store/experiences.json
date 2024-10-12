@@ -1,0 +1,34 @@
+[
+  {
+    "media": {
+      "icon": "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM11.14 8.86L8.14 12.73L6 10.14L3 14H15L11.14 8.86Z' fill='currentColor'/></svg>"
+    },
+    "title": "Cubo Afinação de Empresas",
+    "text": "Em meu primeiro estágio, fui lançada em um laboratório de possibilidades: tive que misturar PHP (uma linguagem de programação que até então desconhecia) com Design para criar algo novo no ambiente administrativo da empresa.",
+    "action": "Ver projetos"
+  },
+  {
+    "media": {
+      "icon": "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM11.14 8.86L8.14 12.73L6 10.14L3 14H15L11.14 8.86Z' fill='currentColor'/></svg>"
+    },
+    "title": "Schulz S.A.",
+    "text": "Lörem ipsum åsat rede, nens nenas. Pojirat rening. Aheten syhyliga konfili sunade hikikomori. Unar belav prorade. Ress rek nynyrad att nyrågt. Eurovaläck filolog plus egode. Unar belav prorade.",
+    "action": "Ver projetos"
+  },
+  {
+    "media": {
+      "icon": "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM11.14 8.86L8.14 12.73L6 10.14L3 14H15L11.14 8.86Z' fill='currentColor'/></svg>"
+    },
+    "title": "Sonda I.T. Brasil",
+    "text": "Com a liberdade de criar um dashboard do zero, me encontrei em um laboratório pessoal. Cada decisão era um novo experimento, e pude combinar diferentes elementos do design e código. O resultado foi a mistura do melhor de dois mundos.",
+    "action": "Ver projetos"
+  },
+  {
+    "media": {
+      "icon": "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM11.14 8.86L8.14 12.73L6 10.14L3 14H15L11.14 8.86Z' fill='currentColor'/></svg>"
+    },
+    "title": "Adapcon Software e Inovação",
+    "text": "Em minha última experiência, pude fundir as habilidades de UX/UI Design com uma base sólida de programação, criando algo mais do que apenas projetos web – experiências únicas, em que a forma e função estão em perfeita harmonia.",
+    "action": "Ver projetos"
+  }
+]

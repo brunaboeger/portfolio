@@ -1,0 +1,52 @@
+[
+  {
+    "priority": 1,
+    "media": "",
+    "subtitle": "Front-end"
+  },
+  {
+    "priority": 2,
+    "media": "",
+    "subtitle": "JavaScript"
+  },
+  {
+    "priority": 3,
+    "media": "",
+    "subtitle": "VueJS"
+  },
+  {
+    "priority": 4,
+    "media": "",
+    "subtitle": "SASS"
+  },
+  {
+    "priority": 5,
+    "media": "",
+    "subtitle": "CSS3"
+  },
+  {
+    "priority": 6,
+    "media": "",
+    "subtitle": "HTML5"
+  },
+  {
+    "priority": 7,
+    "media": "",
+    "subtitle": "Design System"
+  },
+  {
+    "priority": 8,
+    "media": "",
+    "subtitle": "Figma"
+  },
+  {
+    "priority": 9,
+    "media": "",
+    "subtitle": "Webflow"
+  },
+  {
+    "priority": 10,
+    "media": "",
+    "subtitle": "Wordpress"
+  }
+]
