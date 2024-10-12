@@ -1,0 +1,34 @@
+@use "./variables" as *;
+
+@mixin flex(
+  $direction: row,
+  $align: left,
+  $justify: flex-start,
+  $gap: $gutter
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@function get-mardown-color($theme) {
+  @if $theme == dark {
+    @return $markdown-dark;
+  } @else if $theme == light {
+    @return $markdown-light;
+  } @else {
+    @warn "Invalid theme value: #{$theme}. Valid values are 'dark' or 'light'";
+    @return null;
+  }
+}
+
+@mixin border($theme: dark) {
+  $color: get-mardown-color($theme);
+  @if $color != null {
+    border: 1px solid $color;
+  } @else {
+    @warn "Unable to find color for theme: #{$theme}";
+  }
+}

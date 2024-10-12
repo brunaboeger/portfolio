@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @font-face {
   font-family: "Poppins";
   src: url("/assets/fonts/poppins/Poppins-Regular.ttf") format("ttf");
@@ -24,4 +26,40 @@
   src: url("/assets/fonts/poppins/Poppins-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/assets/fonts/ibm-plex-sans/IBMPlexSans-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/assets/fonts/ibm-plex-mono/IBMPlexMono-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/assets/fonts/merriweather/Merriweather-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading {
+  font-size: $h1;
+  font-family: "Merriweather";
+}
+
+.paragraph {
+  font-size: $paragraphs;
+}
+
+.subtitle {
+  font-size: $subtitles;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-top: $gutter;
 }

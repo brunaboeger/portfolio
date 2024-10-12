@@ -1,22 +1,18 @@
-@use "colors" as *;
-
-$markdown-border-light: 1px solid $color-markdown-light;
-$markdown-border-dark: 1px solid $color-markdown-dark;
+@use "./variables" as *;
+@use "./mixins" as *;
 
 .light-mode {
-  color: $foreground-light;
-  background-color: $background-light;
-
-  .navbar {
-    border: $markdown-border-light;
-  }
+  --foreground: #{$foreground-light};
+  --background: #{$background-light};
+  --markdown: #{$markdown-border-light};
+  --primary: #{$primary-light};
+  --border: #{$border-light};
 }
 
 .dark-mode {
-  color: $foreground-dark;
-  background-color: $background-dark;
-
-  .navbar {
-    border: $markdown-border-dark;
-  }
+  --foreground: #{$foreground-dark};
+  --background: #{$background-dark};
+  --markdown: #{$markdown-border-dark};
+  --primary: #{$primary-dark};
+  --border: #{$border-dark};
 }

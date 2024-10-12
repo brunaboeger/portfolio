@@ -1,0 +1,40 @@
+// Colors
+
+$white: #fbfbfb;
+$gray-100: #c9c9c9;
+$gray-600: #363a3f;
+$black: #1e1e1e;
+$yellow-500: #fac336;
+$yellow-600: #dd9e00;
+
+$primary-light: $yellow-600;
+$foreground-light: $black;
+$background-light: $white;
+$markdown-light: $gray-100;
+$markdown-border-light: 1px solid $markdown-light;
+$border-light: 1px solid $black;
+
+$primary-dark: $yellow-500;
+$foreground-dark: $gray-100;
+$background-dark: $black;
+$markdown-dark: $gray-600;
+$markdown-border-dark: 1px solid $markdown-dark;
+$border-dark: 1px solid $gray-100;
+
+// Spacings
+
+$gutter: 1.5rem;
+$padding: 1.5rem;
+// $container-large: 82.375rem;
+// $container-medium: 77rem;
+// $container-small: 50%;
+
+// Fonts
+
+$h1: 3.5rem;
+$subtitles: 1.5rem;
+$paragraphs: 1rem;
+
+// Components
+
+$navbar-height: 5rem;
