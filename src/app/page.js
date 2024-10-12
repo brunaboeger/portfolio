@@ -10,37 +10,11 @@ import Contato from "./contato/page";
 
 import Navbar from "../components/navbar/Navbar";
 import Button from "../components/button/Button";
+import SideMenu from "../components/menus/SideMenu";
 
-function Home() {
-  // const [isDarkMode, setIsDarkMode] = useState(null);
+import store from "../store";
 
-  // useEffect(() => {
-  //   const fetchTheme = async () => {
-  //     try {
-  //       const response = await fetch("/api/v1/theme");
-  //       const data = await response.json();
-  //       setIsDarkMode(data.isDarkMode);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchTheme();
-  // }, []);
-
-  // const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-  // const [isDarkMode, setIsDarkMode] = useState(darkTheme.matches);
-  // useEffect(() => {
-  //   setIsDarkMode(darkTheme.matches);
-
-  //   const handleThemeChange = () => setIsDarkMode(darkTheme.matches);
-  //   darkTheme.addEventListener("change", handleThemeChange);
-
-  //   return () => {
-  //     darkTheme.removeEventListener("change", handleThemeChange);
-  //   };
-  // }, []);
-
+export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(null);
 
   const getDarkTheme = async () => {
@@ -58,9 +32,11 @@ function Home() {
     setIsDarkMode(!isDarkMode);
   };
 
+  const sideMenuPages = store.pages;
+  const sideMenuTools = store.tools;
+
   return (
     <div
-      // className={`pages-container ${isDarkMode ? "dark-mode" : "light-mode"}`}
       className={`pages-container ${
         isDarkMode === null
           ? "loading"
@@ -76,22 +52,24 @@ function Home() {
           <Navbar>
             <Button
               text={isDarkMode ? "Tema escuro" : "Tema claro"}
-              action={toggleDarkMode}
+              onClick={toggleDarkMode}
             />
             <Button text="Contato" />
           </Navbar>
 
           <div className="tabs-container">
-            <Projetos />
-            <Experiencias />
-            <Habilidades />
-            <Aprendizados />
-            <Contato />
+            <SideMenu buttons={sideMenuPages} position="left" />
+            <section className="tab-pane">
+              <Projetos />
+              <Experiencias />
+              <Habilidades />
+              <Aprendizados />
+              <Contato />
+            </section>
+            <SideMenu buttons={sideMenuTools} position="right" />
           </div>
         </div>
       )}
     </div>
   );
 }
-
-export default Home;
