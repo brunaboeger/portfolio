@@ -161,7 +161,9 @@
 .side-menu {
   padding: $gutter;
   position: sticky;
-  max-width: 13rem;
+  min-width: 13rem;
+  display: flex;
+  flex-direction: column;
   top: 0;
 
   & > button {
@@ -174,5 +176,6 @@
 
   &.is-right {
     text-align: right;
+    align-items: flex-end;
   }
 }

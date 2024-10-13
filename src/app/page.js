@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
+import Capa from "./capa/page";
 import Projetos from "./projetos/page";
 import Experiencias from "./experiencias/page";
 import Habilidades from "./habilidades/page";
@@ -60,6 +61,7 @@ export default function Home() {
           <div className="tabs-container">
             <SideMenu buttons={sideMenuPages} position="left" />
             <section className="tab-pane">
+              <Capa />
               <Projetos />
               <Experiencias />
               <Habilidades />
