@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 
 import Capa from "./capa/page";
@@ -13,63 +12,56 @@ import Navbar from "../components/navbar/Navbar";
 import Button from "../components/button/Button";
 import SideMenu from "../components/menus/SideMenu";
 
+import fullpage from "fullpage.js";
+
 import store from "../store";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(null);
-
-  const getDarkTheme = async () => {
-    const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    setIsDarkMode(darkTheme.matches);
-
-    return darkTheme;
-  };
+  const pages = [
+    { name: Capa },
+    { name: Projetos },
+    { name: Experiencias },
+    { name: Habilidades },
+    { name: Aprendizados },
+    { name: Contato },
+  ];
 
   useEffect(() => {
-    getDarkTheme();
+    if (typeof window !== "undefined") {
+      const fullpageElement = document.getElementById("fullpage");
+      if (fullpageElement) {
+        new fullpage("#fullpage", {
+          autoScrolling: true,
+          navigation: true,
+        });
+      }
+    }
+    return () => {
+      if (fullpage.destroy) {
+        fullpage.destroy("all");
+      }
+    };
   }, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  const sideMenuPages = store.pages;
-
   return (
-    <div
-      className={`pages-container ${
-        isDarkMode === null
-          ? "loading"
-          : isDarkMode
-          ? "dark-mode"
-          : "light-mode"
-      }`}
-    >
-      {isDarkMode === null ? (
-        <div className="page-loading">Carregando...</div>
-      ) : (
-        <div className="page-content">
-          <Navbar>
-            <Button
-              text={isDarkMode ? "Tema escuro" : "Tema claro"}
-              onClick={toggleDarkMode}
-            />
-            <Button text="Contato" />
-          </Navbar>
+    <div className="light-mode">
+      <div className="page-content">
+        <Navbar>
+          <Button text="Tema" />
+          <Button text="Contato" />
+        </Navbar>
 
-          <div className="tabs-container">
-            <SideMenu buttons={sideMenuPages} position="left" />
-            <section className="tab-pane">
-              <Capa />
-              <Projetos />
-              <Experiencias />
-              <Habilidades />
-              <Aprendizados />
-              <Contato />
-            </section>
-          </div>
+        <div id="fullpage">
+          {pages.map((page, index) => {
+            const PageComponent = page.name;
+            return (
+              <div className="section" key={index}>
+                <PageComponent />
+              </div>
+            );
+          })}
         </div>
-      )}
+      </div>
     </div>
   );
 }
