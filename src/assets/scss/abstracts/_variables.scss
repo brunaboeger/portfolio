@@ -7,12 +7,17 @@ $black: #1e1e1e;
 $yellow-500: #fac336;
 $yellow-600: #dd9e00;
 
+// Light
+
 $primary-light: $yellow-600;
 $foreground-light: $black;
 $background-light: $white;
 $markdown-light: $gray-100;
 $markdown-border-light: 1px solid $markdown-light;
 $border-light: 1px solid $black;
+$active-light: $primary-light;
+
+// Dark
 
 $primary-dark: $yellow-500;
 $foreground-dark: $gray-100;
@@ -20,18 +25,24 @@ $background-dark: $black;
 $markdown-dark: $gray-600;
 $markdown-border-dark: 1px solid $markdown-dark;
 $border-dark: 1px solid $gray-100;
+$active-dark: $primary-dark;
 
 // Spacings
 
 $gutter: 1.5rem;
+$gutter-sm: 1rem;
 $padding: 1.5rem;
+$padding-sm: 1rem;
+
+$container-width: 18.25rem;
+
 // $container-large: 82.375rem;
 // $container-medium: 77rem;
 // $container-small: 50%;
 
 // Fonts
 
-$h1: 3.5rem;
+$heading: 3.5rem;
 $subtitles: 1.5rem;
 $paragraphs: 1rem;
 

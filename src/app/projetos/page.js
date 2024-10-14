@@ -1,5 +1,6 @@
 import Card from "@/src/components/card/Card";
 import store from "@/src/store/index";
+import { definePriorityClass } from "@/src/models/knowledgeModel";
 
 const projects = store.projects;
 const principalProjects = [];
@@ -21,31 +22,20 @@ export default function ProjectsPage() {
         <p className="subtitle">Lorem ipsum dolor simet.</p>
       </header>
       <main className="tab-pane-content">
-        {principalProjects.map((project, index) => {
+        {projects.map((project, index) => {
           return (
-            <Card
-              key={index}
-              title={project.title}
-              text={project.text}
-              media={project.media}
-              action={project.action}
-            />
+            <div key={index} className={definePriorityClass(project.priority)}>
+              <Card
+                title={project.title}
+                subtitle={project.subtitle}
+                text={project.text}
+                media={project.media}
+                action={project.action}
+              />
+            </div>
           );
         })}
       </main>
-      <footer className="tab-pane-footer">
-        {secondaryProjects.map((project, index) => {
-          return (
-            <Card
-              key={index}
-              subtitle={project.subtitle}
-              text={project.text}
-              media={project.media}
-              action={project.action}
-            />
-          );
-        })}
-      </footer>
     </div>
   );
 }

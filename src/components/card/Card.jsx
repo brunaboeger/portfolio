@@ -15,10 +15,9 @@ function getMedia(media) {
 
   if (media.icon) {
     return (
-      <div
-        className="card-icon"
-        dangerouslySetInnerHTML={{ __html: media.icon }}
-      />
+      <div className="card-icon">
+        <span className="material-icons">{media.icon}</span>
+      </div>
     );
   }
 

@@ -50,7 +50,7 @@
 }
 
 .heading {
-  font-size: $h1;
+  font-size: $heading;
   font-family: "Merriweather";
 }
 
@@ -61,5 +61,6 @@
 .subtitle {
   font-size: $subtitles;
   font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
   margin-top: $gutter;
 }

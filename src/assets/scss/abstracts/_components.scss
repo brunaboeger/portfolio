@@ -2,11 +2,14 @@
 @use "./mixins" as *;
 
 .navbar,
+.navbar-logo-box,
+.navbar-actions-box,
 .tab-pane,
 .tab-pane-header,
 .tab-pane-content,
 .card,
-.side-menu {
+.side-menu,
+.button {
   border: var(--markdown);
 }
 
@@ -93,14 +96,40 @@
 .navbar {
   position: relative;
   height: $navbar-height;
-  padding: $gutter;
 
   &-container {
     height: 100%;
     @include flex(row, center, space-between);
 
+    .navbar-logo-box {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 $padding;
+      width: $container-width;
+
+      .logo-symbol {
+        width: 3.5rem;
+        height: 3.5rem;
+        border: var(--border);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $gutter-sm;
+      }
+
+      .logo-name {
+        font-family: "Merriweather", serif;
+        font-size: 1.5rem;
+      }
+    }
+
     .navbar-actions-box {
       @include flex;
+      padding: 0 $padding;
+      height: 100%;
+      justify-content: flex-end;
     }
   }
 
@@ -119,7 +148,7 @@
 .tabs-container {
   display: flex;
   height: calc(100% - $navbar-height);
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
   scroll-snap-type: y mandatory;
 
@@ -145,8 +174,22 @@
 
     &-content {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       grid-gap: $gutter;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      .is-principal {
+        grid-column: 1 / 3;
+      }
+
+      .is-secondary {
+        grid-column: 3 / 5;
+      }
+    }
+
+    &-content-wider {
+      display: grid;
+      grid-gap: $gutter;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
     &-footer {
@@ -160,13 +203,12 @@
 
 .side-menu {
   padding: $gutter;
-  position: sticky;
-  min-width: 13rem;
+  position: fixed;
+  min-width: $container-width;
   display: flex;
   flex-direction: column;
-  top: 0;
 
-  & > button {
+  & button:not(:last-child) {
     margin-bottom: $gutter;
   }
 

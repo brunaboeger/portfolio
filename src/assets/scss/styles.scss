@@ -9,6 +9,11 @@ body {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
+  overflow: hidden;
+}
+
+* {
+  border: var(--markdown);
 }
 
 .pages-container {
@@ -29,4 +34,8 @@ body {
 
 .page-content {
   height: 100vh;
+}
+
+.text-highlight {
+  color: var(--active);
 }

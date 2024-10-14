@@ -34,7 +34,6 @@ export default function Home() {
   };
 
   const sideMenuPages = store.pages;
-  const sideMenuTools = store.tools;
 
   return (
     <div
@@ -68,7 +67,6 @@ export default function Home() {
               <Aprendizados />
               <Contato />
             </section>
-            <SideMenu buttons={sideMenuTools} position="right" />
           </div>
         </div>
       )}

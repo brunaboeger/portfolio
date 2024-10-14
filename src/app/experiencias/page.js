@@ -1,5 +1,5 @@
 import store from "@/src/store";
-
+import { definePriorityClass } from "@/src/models/knowledgeModel";
 import Card from "@/src/components/card/Card";
 
 const experiences = store.experiences;
@@ -14,16 +14,19 @@ export default function ExperiencesPage() {
           um alquimista tentando transformar chumbo em ouro.
         </p>
       </header>
+
       <main className="tab-pane-content">
         {experiences.map((job, index) => {
           return (
-            <Card
-              key={index}
-              media={job.media}
-              title={job.title}
-              text={job.text}
-              action={job.action}
-            />
+            <div key={index} className={definePriorityClass(job.priority)}>
+              <Card
+                media={job.media}
+                title={job.title}
+                subtitle={job.subtitle}
+                text={job.text}
+                action={job.action}
+              />
+            </div>
           );
         })}
       </main>

@@ -1,5 +1,6 @@
 import pages from "./pages.json";
 import tools from "./tools.json";
+import navbar from "./navbar.json";
 
 import projects from "./projects.json";
 import experiences from "./experiences.json";
@@ -15,6 +16,7 @@ const store = {
   abilities,
   knowledge,
   contact,
+  navbar,
 };
 
 export default store;

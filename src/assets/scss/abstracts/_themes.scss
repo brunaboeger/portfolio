@@ -7,6 +7,7 @@
   --markdown: #{$markdown-border-light};
   --primary: #{$primary-light};
   --border: #{$border-light};
+  --active: #{$active-light};
 }
 
 .dark-mode {
@@ -15,4 +16,5 @@
   --markdown: #{$markdown-border-dark};
   --primary: #{$primary-dark};
   --border: #{$border-dark};
+  --active: #{$active-dark};
 }

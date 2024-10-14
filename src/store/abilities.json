@@ -1,52 +1,82 @@
 [
   {
-    "priority": 1,
-    "media": "",
+    "priority": "third",
+    "order": 1,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "Front-end"
   },
   {
-    "priority": 2,
-    "media": "",
+    "priority": "third",
+    "order": 2,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "JavaScript"
   },
   {
-    "priority": 3,
-    "media": "",
+    "priority": "third",
+    "order": 3,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "VueJS"
   },
   {
-    "priority": 4,
-    "media": "",
+    "priority": "third",
+    "order": 4,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "SASS"
   },
   {
-    "priority": 5,
-    "media": "",
+    "priority": "third",
+    "order": 5,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "CSS3"
   },
   {
-    "priority": 6,
-    "media": "",
+    "priority": "third",
+    "order": 6,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "HTML5"
   },
   {
-    "priority": 7,
-    "media": "",
+    "priority": "third",
+    "order": 7,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "Design System"
   },
   {
-    "priority": 8,
-    "media": "",
+    "priority": "third",
+    "order": 8,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "Figma"
   },
   {
-    "priority": 9,
-    "media": "",
+    "priority": "third",
+    "order": 9,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "Webflow"
   },
   {
-    "priority": 10,
-    "media": "",
+    "priority": "third",
+    "order": 10,
+    "media": {
+      "icon": "image"
+    },
     "subtitle": "Wordpress"
   }
 ]

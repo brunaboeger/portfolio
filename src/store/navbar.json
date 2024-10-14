@@ -1,0 +1,27 @@
+[
+  {
+    "title": "",
+    "subtitle": "",
+    "logo": {
+      "title": "",
+      "media": ""
+    },
+    "actions": [
+      {
+        "title": "Contato",
+        "action": "openModal",
+        "openModal": {}
+      },
+      {
+        "title": "Tema",
+        "action": "toggleAction",
+        "toggleAction": {}
+      },
+      {
+        "title": "Grid",
+        "action": "toggleAction",
+        "toggleAction": {}
+      }
+    ]
+  }
+]
