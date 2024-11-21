@@ -1,0 +1,86 @@
+@use "./variables" as *;
+
+.navbar {
+  position: relative;
+}
+
+.navbar_menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 5.5rem);
+  z-index: 10;
+  background-color: var(--background);
+}
+
+.button {
+  text-align: left;
+  border: 1px solid var(--primary);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+
+  svg {
+    margin: auto;
+    color: var(--primary);
+  }
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.card,
+.card-header {
+  display: flex;
+  flex-direction: column;
+  border: var(--markdown);
+}
+
+.card {
+  &-header {
+    padding: 0 0 $gutter;
+    gap: $gutter;
+
+    &-title {
+      font-family: "Merriweather", serif;
+      font-size: 1.5rem;
+    }
+
+    &-subtitle {
+      font-family: "IBM Plex Mono", serif;
+      font-weight: 400;
+    }
+
+    .card-image {
+      width: 100%;
+      max-height: 5rem;
+    }
+
+    .card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3.5rem;
+      width: 3.5rem;
+      margin-inline: auto;
+      border: var(--border);
+      border-radius: 50%;
+    }
+  }
+
+  &-body {
+    padding: 0 $gutter;
+
+    &-text {
+      font-size: 0.9rem;
+    }
+  }
+
+  &-footer {
+    padding: $gutter;
+
+    & > button {
+      margin-inline: auto;
+    }
+  }
+}

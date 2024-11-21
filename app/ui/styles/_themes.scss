@@ -1,0 +1,18 @@
+@use "./variables" as *;
+
+.container {
+  --foreground: #{$foreground-light};
+  --background: #{$background-light};
+  --primary: #{$primary-light};
+  --border: #{$border-light};
+  --active: #{$active-light};
+}
+
+.container.dark-mode {
+  --foreground: #{$foreground-dark};
+  --background: #{$background-dark};
+  --markdown: #{$markdown-border-dark};
+  --primary: #{$primary-dark};
+  --border: #{$border-dark};
+  --active: #{$active-dark};
+}
