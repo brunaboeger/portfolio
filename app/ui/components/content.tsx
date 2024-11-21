@@ -15,16 +15,16 @@ export default function Banner() {
           technologies, such as Figma, Photoshop, Illustrator and more.
         </p>
         <p className="text-body margin-top-2">
-          But something was missing. And what I've been looking for I found in
+          But something was missing. And what I have been looking for I found in
           web development: the ability to create beautiful and functional
           interfaces that are easy to use and navigate <em>for real</em>.
         </p>
         <p className="text-body margin-top-2">
-          I'm proud to say that I can turn ideas into life.🤩
+          I am proud to say that I can turn ideas into life.🤩
         </p>
       </section>
       <section className="padding-container">
-        <h2 className="text-heading">Projects I'm proud of</h2>
+        <h2 className="text-heading">Projects I am proud of</h2>
         <p className="text-body margin-top-2">
           In all my experiences and projects I have gained valuable knowledge,
           both in the technical aspect and in soft skills.
