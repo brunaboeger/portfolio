@@ -1,4 +1,5 @@
 // This file contains placeholder data that you'll be replacing with real data in the future.
+// import data from store files!
 
 const users = [
   {
