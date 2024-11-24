@@ -1,5 +1,6 @@
 import "@/app/ui/globals.scss";
 import { merriweather } from "@/app/ui/fonts";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Portfolio Bruna Boeger",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={`${merriweather.className} antialiased`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
