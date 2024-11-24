@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "./button";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -13,10 +14,19 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="flex align-center justify-between padding-container">
-        <h3 className="logo">Bruna Boeger</h3>
-        <Button onClick={toggleMenu} />
+        <div className="flex align-center">
+          <Image
+            src="/images/myself.png"
+            alt="Bruna Boeger"
+            width={64}
+            height={64}
+            className="rounded-full"
+          />
+          <h3 className="heading ml-3">Bruna Boeger</h3>
+        </div>
+        <Button onClick={toggleMenu} iconOnly />
       </div>
-      <div className={`navbar_menu padding-container flex-column ${display}`}>
+      <div className={`navbar_menu padding-container flex column ${display}`}>
         navbar menu
       </div>
     </nav>

@@ -1,5 +1,7 @@
 @use "./variables" as *;
 
+$navbar-height: 5rem;
+
 .navbar {
   position: relative;
 }
@@ -13,74 +15,31 @@
 }
 
 .button {
-  text-align: left;
   border: 1px solid var(--primary);
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
+  padding: 0.5rem 1rem;
+  color: var(--primary);
+  font-family: inherit;
+
+  &.icon-only {
+    width: 2.5rem;
+    height: 2.5rem;
+    max-width: 2.5rem;
+    padding: 0;
+  }
 
   svg {
+    color: var(--primary);
+    height: 1.5rem;
     margin: auto;
-    color: var(--primary);
   }
-
-  &:hover {
-    color: var(--primary);
-  }
-}
-
-.card,
-.card-header {
-  display: flex;
-  flex-direction: column;
-  border: var(--markdown);
 }
 
 .card {
-  &-header {
-    padding: 0 0 $gutter;
-    gap: $gutter;
+  &_content {
+    transition: background-color 0.2s ease-in-out;
 
-    &-title {
-      font-family: "Merriweather", serif;
-      font-size: 1.5rem;
-    }
-
-    &-subtitle {
-      font-family: "IBM Plex Mono", serif;
-      font-weight: 400;
-    }
-
-    .card-image {
-      width: 100%;
-      max-height: 5rem;
-    }
-
-    .card-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 3.5rem;
-      width: 3.5rem;
-      margin-inline: auto;
-      border: var(--border);
-      border-radius: 50%;
-    }
-  }
-
-  &-body {
-    padding: 0 $gutter;
-
-    &-text {
-      font-size: 0.9rem;
-    }
-  }
-
-  &-footer {
-    padding: $gutter;
-
-    & > button {
-      margin-inline: auto;
+    &:hover {
+      background-color: var(--blue-200);
     }
   }
 }

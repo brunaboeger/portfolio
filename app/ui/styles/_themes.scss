@@ -1,11 +1,44 @@
 @use "./variables" as *;
 
+// Colors
+
+$white: #fff;
+$gray-100: #c9c9c9;
+$gray-600: #363a3f;
+$black: #1e1e1e;
+$yellow-500: #fac336;
+$yellow-600: #dd9e00;
+$blue-100: #f0f8ff;
+$orange-700: #f23f01;
+
+// Light
+
+$primary-light: $orange-700;
+$foreground-light: $black;
+$background-light: $white;
+$markdown-light: $gray-100;
+$markdown-border-light: 1px solid $markdown-light;
+$border-light: 1px solid $black;
+$active-light: $primary-light;
+
+// Dark
+
+$primary-dark: $yellow-500;
+$foreground-dark: $gray-100;
+$background-dark: $black;
+$markdown-dark: $gray-600;
+$markdown-border-dark: 1px solid $markdown-dark;
+$border-dark: 1px solid $gray-100;
+$active-dark: $primary-dark;
+
 .container {
   --foreground: #{$foreground-light};
   --background: #{$background-light};
   --primary: #{$primary-light};
   --border: #{$border-light};
   --active: #{$active-light};
+  --blue-100: #f0f8ff;
+  --blue-200: hsl(208, 43%, 88%);
 }
 
 .container.dark-mode {
@@ -15,4 +48,8 @@
   --primary: #{$primary-dark};
   --border: #{$border-dark};
   --active: #{$active-dark};
+}
+
+.bg-blue-100 {
+  background-color: var(--blue-100);
 }
