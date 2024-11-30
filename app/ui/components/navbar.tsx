@@ -16,11 +16,11 @@ export default function Navbar() {
       <div className="flex align-center justify-between padding-container">
         <div className="flex align-center">
           <Image
-            src="/images/myself.png"
+            src="/images/photo.jpg"
             alt="Bruna Boeger"
             width={64}
             height={64}
-            className="rounded-full"
+            className="round-full"
           />
           <h3 className="heading ml-3">Bruna Boeger</h3>
         </div>

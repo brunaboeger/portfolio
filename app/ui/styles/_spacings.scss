@@ -1,47 +1,15 @@
-/* Sizes
+// SPACINGS
 
-1 =  .25rem   4px 
-2 =  .5rem    8px
-3 =  .75rem  12px
-4 =  1rem    16px
-5 =  1.5rem  24px
-6 =  2rem    32px
-7 =  2.5rem  40px
-8 =  3rem    48px
-
-*/
-
-$spacing-1: 0.25rem;
-$spacing-2: 0.5rem;
-$spacing-3: 0.75rem;
-$spacing-4: 1rem;
-$spacing-5: 1.5rem;
-$spacing-6: 2rem;
-$spacing-7: 2.5rem;
-$spacing-8: 3rem;
+$spacing-1: 0.25rem; // 4px
+$spacing-2: 0.5rem; // 8px
+$spacing-3: 0.75rem; // 12px
+$spacing-4: 1rem; // 16px
+$spacing-5: 1.5rem; // 24px
+$spacing-6: 2rem; // 32px
+$spacing-7: 2.5rem; // 40px
+$spacing-8: 3rem; // 48px
 
 // PADDINGS
-
-.padding-container {
-  padding-top: $spacing-5;
-  padding-bottom: $spacing-5;
-  padding-left: $spacing-5;
-  padding-right: $spacing-5;
-}
-
-.padding-container-lr {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: $spacing-5;
-  padding-right: $spacing-5;
-}
-
-.padding-container-tb {
-  padding-top: $spacing-5;
-  padding-bottom: $spacing-5;
-  padding-left: 0;
-  padding-right: 0;
-}
 
 .p-1 {
   padding-top: $spacing-1;
@@ -97,6 +65,29 @@ $spacing-8: 3rem;
   padding-bottom: $spacing-8;
   padding-left: $spacing-8;
   padding-right: $spacing-8;
+}
+
+// Padding container
+
+.padding-container {
+  padding-top: $spacing-5;
+  padding-bottom: $spacing-5;
+  padding-left: $spacing-5;
+  padding-right: $spacing-5;
+}
+
+.padding-container-lr {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: $spacing-5;
+  padding-right: $spacing-5;
+}
+
+.padding-container-tb {
+  padding-top: $spacing-5;
+  padding-bottom: $spacing-5;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 // MARGINS
@@ -157,7 +148,7 @@ $spacing-8: 3rem;
   margin-right: $spacing-8;
 }
 
-// Top and Bottom
+// Margin top and bottom
 
 .mtb-1 {
   margin-top: $spacing-1;
@@ -199,7 +190,7 @@ $spacing-8: 3rem;
   margin-bottom: $spacing-8;
 }
 
-// Margin Top
+// Margin top
 
 .mt-1 {
   margin-top: $spacing-1;
@@ -233,7 +224,7 @@ $spacing-8: 3rem;
   margin-top: $spacing-8;
 }
 
-// Margin Bottom
+// Margin bottom
 
 .mb-1 {
   margin-bottom: $spacing-1;
@@ -267,7 +258,7 @@ $spacing-8: 3rem;
   margin-bottom: $spacing-8;
 }
 
-// Margin Left
+// Margin left
 
 .ml-1 {
   margin-left: $spacing-1;
@@ -301,8 +292,42 @@ $spacing-8: 3rem;
   margin-left: $spacing-8;
 }
 
+// Margin right
+
+.mr-1 {
+  margin-right: $spacing-1;
+}
+
+.mr-2 {
+  margin-right: $spacing-2;
+}
+
+.mr-3 {
+  margin-right: $spacing-3;
+}
+
+.mr-4 {
+  margin-right: $spacing-4;
+}
+
+.mr-5 {
+  margin-right: $spacing-5;
+}
+
+.mr-6 {
+  margin-right: $spacing-6;
+}
+
+.mr-7 {
+  margin-right: $spacing-7;
+}
+
+.mr-8 {
+  margin-right: $spacing-8;
+}
+
 // SIZES
 
-.s-2 {
+.size-2 {
   height: 1.5rem;
 }

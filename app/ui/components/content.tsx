@@ -1,8 +1,27 @@
 import Card from "@/app/ui/components/card";
+import React from "react";
+import Carousel from "@/app/ui/utility/Carousel";
 
 export default function Content() {
+  const items = [
+    <div style={{ background: "tomato", width: "100%", height: "100%" }}>
+      Item 1
+    </div>,
+    <div style={{ background: "skyblue", width: "100%", height: "100%" }}>
+      Item 2
+    </div>,
+    <div style={{ background: "lightgreen", width: "100%", height: "100%" }}>
+      Item 3
+    </div>,
+  ];
+
   return (
     <>
+      <div>
+        {" "}
+        <h1 style={{ textAlign: "center" }}>Carousel Estilo Tinder</h1>{" "}
+        <Carousel items={items} />{" "}
+      </div>
       {/* CAREER */}
       <section className="padding-container">
         <h2 className="heading">My carreer</h2>
@@ -10,14 +29,16 @@ export default function Content() {
           I gratuated in Graphic Design from the university of Univille in 2017
           and have been working in this field since then as a UX/UI Designer.
           Recently, at the beggining of this year, I had the opportunity to play
-          a role as a junior frontend developer and I pretty much loved it. 😍
+          a role as a junior frontend developer and I pretty much loved it.
         </p>
+        <h3 className="heading mt-6">Design as a profession</h3>
         <p className="paragraph mt-4">
           Design offered me the opportunity to learn deeply about user
-          experiences and interfaces, and how to manage them according to the
+          experiences and journeys, and how to manage them according to the
           users needs and feels. I was able to work with a wide range of tools
           and technologies, such as Figma, Photoshop, Illustrator and more.
         </p>
+        <h3 className="heading mt-6">Frontend as a passion</h3>
         <p className="paragraph mt-4">
           Although I am passionate about creating new experiences through
           graphic designs, I must say that I have become enamoured with the
@@ -27,7 +48,7 @@ export default function Content() {
           And what I have learned so far you can check in the section below.
         </p>
         <p className="paragraph mt-4">
-          I am proud to say that I can turn ideas into life.🤩
+          I am proud to say that I can turn ideas into life.
         </p>
       </section>
 
@@ -40,25 +61,25 @@ export default function Content() {
         </p>
         <div className="md-row mt-6">
           <Card
-            title="University"
-            text="I graduated from the university of Univille in 2014."
+            title="S+ Atendimento"
+            text="A module communication agents can use to interact with and help clients."
             className="mb-4"
             image={{
               src: "/images/placeholder-2.png",
               alt: "University",
-              height: 150,
-              className: "w-full object-cover",
+              width: 150,
+              className: "h-auto object-cover",
             }}
           />
           <Card
-            title="University"
+            title="S+ Website"
             text="I graduated from the university of Univille in 2014."
             className="mtb-4"
             image={{
               src: "/images/placeholder-2.png",
               alt: "University",
-              height: 150,
-              className: "w-full object-cover",
+              width: 150,
+              className: "h-auto object-cover",
             }}
           />
         </div>

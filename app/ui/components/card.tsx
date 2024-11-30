@@ -18,7 +18,7 @@ interface CardProps {
 export default function Card({ title, text, image, className }: CardProps) {
   return (
     <div className={`card ${className}`}>
-      <div className="flex rounded overflow-hidden">
+      <div className="flex round overflow-hidden">
         <Image
           src={image?.src || ""}
           alt={image?.alt || ""}
@@ -26,7 +26,7 @@ export default function Card({ title, text, image, className }: CardProps) {
           height={image?.height || 200}
           className={image?.className || "w-full"}
         />
-        <div className="card_content p-5 bg-blue-100">
+        <div className="bg-blue-100 hover-ease p-5">
           <h3 className="heading">{title}</h3>
           <p className="mt-2">{text}</p>
         </div>

@@ -36,6 +36,10 @@ button {
   flex-direction: row;
 }
 
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
 .align-center {
   align-items: center;
 }
@@ -78,15 +82,15 @@ button {
 
 // SHAPES
 
-.rounded {
+.round {
   border-radius: 1.15rem;
 }
 
-.rounded-full {
+.round-full {
   border-radius: 50%;
 }
 
-.rounded-top {
+.round-top {
   border-radius: 1.15rem 1.15rem 0 0;
 }
 

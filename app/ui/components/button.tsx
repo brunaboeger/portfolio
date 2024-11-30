@@ -15,7 +15,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`button flex align-center justify-center ${
+      className={`button flex align-center justify-center round-full ${
         iconOnly ? "icon-only" : ""
       }`}
       aria-label={ariaLabel}
