@@ -8,7 +8,7 @@ const TinderCarousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 para esquerda, 1 para direita
 
-  const handleDragEnd = (event, info) => {
+  const handleDragEnd = (info) => {
     if (info.offset.x > 100 && currentIndex > 0) {
       setDirection(1); // Swipe para direita
       setCurrentIndex((prev) => prev - 1);

@@ -4,15 +4,13 @@ import Carousel from "@/app/ui/utility/Carousel";
 
 export default function Content() {
   const items = [
-    <div style={{ background: "tomato", width: "100%", height: "100%" }}>
-      Item 1
-    </div>,
-    <div style={{ background: "skyblue", width: "100%", height: "100%" }}>
-      Item 2
-    </div>,
-    <div style={{ background: "lightgreen", width: "100%", height: "100%" }}>
-      Item 3
-    </div>,
+    "Item 1",
+    "Item 2",
+    "Item 3",
+    "Item 4",
+    "Item 5",
+    "Item 6",
+    "Item 7",
   ];
 
   return (
@@ -20,7 +18,7 @@ export default function Content() {
       <div>
         {" "}
         <h1 style={{ textAlign: "center" }}>Carousel Estilo Tinder</h1>{" "}
-        <Carousel items={items} />{" "}
+        <Carousel items={items} key={1} />{" "}
       </div>
       {/* CAREER */}
       <section className="padding-container">
