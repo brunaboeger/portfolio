@@ -26,9 +26,9 @@ const TinderCarousel = ({ items }) => {
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={handleDragEnd}
-          initial={{ x: direction === 1 ? -300 : 300, opacity: 0 }} // Entrada do cartão
-          animate={{ x: 0, opacity: 1 }} // Estado padrão do cartão
-          exit={{ x: direction === 1 ? 300 : -300, opacity: 0 }} // Saída do cartão
+          initial={{ x: direction === 1 ? -300 : 300, opacity: 0 }} // Entrada do card
+          animate={{ x: 0, opacity: 1 }} // Estado padrão do card
+          exit={{ x: direction === 1 ? 300 : -300, opacity: 0 }} // Saída do card
           transition={{ duration: 0.5 }}
         >
           <Card>{items[currentIndex]}</Card>
