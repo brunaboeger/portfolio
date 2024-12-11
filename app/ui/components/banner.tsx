@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <section className="padding-container">
+    <section className="p-container">
       <h1 className="heading">
         A dedicated UI designer and frontend developer.
       </h1>
@@ -23,7 +23,7 @@ export default function Banner() {
         alt="An UX/UI Designer and Frontend Developer"
         width={500}
         height={375}
-        className="w-full h-auto"
+        className="w-100 h-auto"
       />
     </section>
   );

@@ -5,23 +5,27 @@ export default function Button({
   onClick,
   ariaLabel,
   iconOnly = false,
+  children,
 }: {
   text?: string;
   onClick: () => void;
   icon?: React.ReactNode;
   ariaLabel?: string;
   iconOnly?: boolean;
+  children?: React.ReactNode;
 }) {
   return (
     <button
       onClick={onClick}
-      className={`button flex align-center justify-center round-full ${
+      className={`button flex align-center justify-center ${
         iconOnly ? "icon-only" : ""
       }`}
       aria-label={ariaLabel}
     >
-      <Bars3Icon />
-      <p className="text">{text}</p>
+      <p className="text">
+        {text}
+        {children}
+      </p>
     </button>
   );
 }

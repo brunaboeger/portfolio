@@ -69,21 +69,21 @@ $spacing-8: 3rem; // 48px
 
 // Padding container
 
-.padding-container {
+.p-container {
   padding-top: $spacing-5;
   padding-bottom: $spacing-5;
   padding-left: $spacing-5;
   padding-right: $spacing-5;
 }
 
-.padding-container-lr {
+.p-container-lr {
   padding-top: 0;
   padding-bottom: 0;
   padding-left: $spacing-5;
   padding-right: $spacing-5;
 }
 
-.padding-container-tb {
+.p-container-tb {
   padding-top: $spacing-5;
   padding-bottom: $spacing-5;
   padding-left: 0;
@@ -330,4 +330,49 @@ $spacing-8: 3rem; // 48px
 
 .size-2 {
   height: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .sm {
+    &\:mtb-1 {
+      margin-top: $spacing-1;
+      margin-bottom: $spacing-1;
+    }
+
+    &\:mtb-2 {
+      margin-top: $spacing-2;
+      margin-bottom: $spacing-2;
+    }
+
+    &\:mtb-3 {
+      margin-top: $spacing-3;
+      margin-bottom: $spacing-3;
+    }
+
+    &\:mtb-4 {
+      margin-top: $spacing-4;
+      margin-bottom: $spacing-4;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .md {
+    &\:ml-4 {
+      margin-left: $spacing-4;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg {
+    &\:ml-4 {
+      margin-left: $spacing-4;
+    }
+
+    &\:mtb-0 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
 }

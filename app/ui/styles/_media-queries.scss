@@ -1,5 +1,71 @@
+/*
+  Breakpoints
+  xs -> extra small devices -> max-width 480px
+
+  sm -> small devices       -> max-width 767px
+  md -> medium devices      -> min-width 768px
+  lg -> large devices       -> min-width 1025px 
+
+  320px — 480px: dispositivos móveis
+  481px — 768px: iPads, tablets
+  769px — 1024px: telas pequenas, laptops
+  1025px — 1200px: desktops, telas grandes
+  1201px e acima —  telas muito grandes, TVs
+*/
+
+// Only small devices
+
+@media (max-width: 767px) {
+  .sm {
+    &\:row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &\:column {
+      flex-direction: column;
+    }
+
+    &\:w-50 {
+      width: 50%;
+    }
+  }
+}
+
+// Medium devices and above
+
 @media (min-width: 768px) {
-  .md-row {
-    display: flex;
+  .md {
+    &\:row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &\:column {
+      flex-direction: column;
+    }
+
+    &\:w-50 {
+      width: 50%;
+    }
+  }
+}
+
+// Large devices and above
+
+@media (min-width: 1024px) {
+  .lg {
+    &\:row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &\:column {
+      flex-direction: column;
+    }
+
+    &\:w-50 {
+      width: 50%;
+    }
   }
 }

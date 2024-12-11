@@ -2,7 +2,9 @@
 
 import Button from "./button";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   const [display, setDisplay] = useState<string>("hidden");
@@ -13,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="flex align-center justify-between padding-container">
+      <div className="flex align-center justify-between p-container">
         <div className="flex align-center">
           <Image
             src="/images/photo.jpg"
@@ -24,10 +26,14 @@ export default function Navbar() {
           />
           <h3 className="heading ml-3">Bruna Boeger</h3>
         </div>
-        <Button onClick={toggleMenu} iconOnly />
+        <Button onClick={toggleMenu} iconOnly>
+          <Bars3Icon />
+        </Button>
       </div>
-      <div className={`navbar_menu padding-container flex column ${display}`}>
-        navbar menu
+      <div className={`navbar_menu p-container flex-column ${display}`}>
+        <Link href="/login" className="button w-auto">
+          Login
+        </Link>
       </div>
     </nav>
   );
