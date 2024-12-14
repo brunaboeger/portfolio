@@ -34,6 +34,9 @@ export default function Navbar() {
         <Link href="/login" className="button w-auto">
           Login
         </Link>
+        <Link href="/admin" className="button w-auto mt-4">
+          Admin
+        </Link>
       </div>
     </nav>
   );

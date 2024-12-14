@@ -43,16 +43,20 @@ button {
   }
 }
 
-.align-center {
-  align-items: center;
+.align {
+  &-center {
+    align-items: center;
+  }
 }
 
-.justify-between {
-  justify-content: space-between;
-}
+.justify {
+  &-between {
+    justify-content: space-between;
+  }
 
-.justify-center {
-  justify-content: center;
+  &-center {
+    justify-content: center;
+  }
 }
 
 // VISIBLITY
@@ -153,6 +157,15 @@ button {
 
   &-bottom {
     border-radius: 0 0 1.15rem 1.15rem;
+  }
+}
+
+// DECORATIONS
+
+.decoration {
+  &-none {
+    text-decoration: none;
+    list-style-type: none;
   }
 }
 
