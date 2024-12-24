@@ -1,5 +1,5 @@
 import "@/app/ui/globals.scss";
-import { merriweather } from "@/app/ui/fonts";
+import { font } from "@/app/ui/fonts";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${merriweather.className} antialiased`}>
+      <body className={`${font.paragraph} antialiased`}>
         {children}
         <SpeedInsights />
       </body>

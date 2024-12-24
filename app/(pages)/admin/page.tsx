@@ -1,9 +1,11 @@
-import { fetchProfiles } from "@/app/lib/data";
+// import { fetchProfiles } from "@/app/lib/data";
+// import { fetchProjects } from "@/app/lib/data";
 
-export default function Page() {
+export default async function Page() {
   const tab = null;
-  const profiles = fetchProfiles();
-  console.log(profiles);
+  // const profiles = await fetchProfiles();
+  // const projects = await fetchProjects();
+  // console.log(projects);
 
   return (
     <div>

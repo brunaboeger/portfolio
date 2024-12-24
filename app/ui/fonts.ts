@@ -1,4 +1,7 @@
 import { Merriweather, Poppins, IBM_Plex_Mono } from "next/font/google";
+import localFont from "next/font/local";
+
+export const ginto = localFont({ src: "/fonts/Ginto-Regular.otf" });
 
 export const merriweather = Merriweather({
   subsets: ["latin"],
@@ -14,3 +17,8 @@ export const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
+export const font = {
+  heading: `${merriweather.className} heading`,
+  paragraph: ginto.className,
+}

@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { font } from "@/app/ui/fonts";
 
 export default function Banner() {
   return (
     <section className="p-container">
-      <h1 className="heading">
+      <h1 className={font.heading}>
         A dedicated UI designer and frontend developer.
       </h1>
       <p className="paragraph mt-4 mb-5">

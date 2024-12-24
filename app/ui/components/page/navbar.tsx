@@ -1,10 +1,11 @@
 "use client";
 
-import Button from "./button";
+import Button from "@/app/ui/components/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import { font } from "@/app/ui/fonts";
 
 export default function Navbar() {
   const [display, setDisplay] = useState<string>("hidden");
@@ -24,7 +25,7 @@ export default function Navbar() {
             height={64}
             className="round-full"
           />
-          <h3 className="heading ml-3">Bruna Boeger</h3>
+          <h3 className={`${font.heading} ml-3`}>Bruna Boeger</h3>
         </div>
         <Button onClick={toggleMenu} iconOnly>
           <Bars3Icon />

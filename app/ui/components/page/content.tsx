@@ -1,16 +1,17 @@
 import Card from "@/app/ui/components/card";
 import React from "react";
+import { font } from "@/app/ui/fonts";
 
 export default function Content() {
   return (
     <>
       {/* CAREER */}
       <section className="p-container">
-        <h2 className="heading">My carreer</h2>
+        <h2 className={font.heading}>What I have been building over the years</h2>
         <p className="paragraph mt-4">
           I gratuated in Graphic Design from the university of Univille in 2017
           and have been working in this field since then as a UX/UI Designer.
-          Recently, at the beggining of this year, I had the opportunity to play
+          Recently, at the beggining of this year (2024), I had the opportunity to play
           a role as a junior frontend developer and I pretty much loved it.
         </p>
         <h3 className="heading mt-6">Design as a profession</h3>
@@ -36,32 +37,34 @@ export default function Content() {
 
       {/* PROJECTS */}
       <section className="p-container">
-        <h2 className="heading">Projects I am proud of</h2>
+        <h2 className={font.heading}>Projects I am proud of</h2>
         <p className="paragraph mt-2">
           In all my experiences and projects I have gained valuable knowledge,
           both in the technical aspect and in soft skills.
         </p>
         <div className="lg:row w-100 mt-6">
           <Card
-            title="S+ Atendimento"
-            text="A module communication agents can use to interact with and help clients."
             className="w-100"
             image={{
-              src: "/images/placeholder-2.png",
+              src: "/images/cover-allp.png",
               alt: "University",
-              width: 150,
-              className: "h-auto object-cover",
+              className: "w-100 object-cover",
             }}
           />
           <Card
-            title="S+ Website"
-            text="I graduated from the university of Univille in 2014."
             className="w-100 mtb-4 lg:mtb-0 lg:ml-4"
             image={{
-              src: "/images/placeholder-2.png",
+              src: "/images/cover-simplifica.png",
               alt: "University",
-              width: 150,
-              className: "h-auto object-cover",
+              className: "w-100 object-cover",
+            }}
+          />
+          <Card
+            className="w-100 mtb-4 lg:mtb-0 lg:ml-4"
+            image={{
+              src: "/images/cover-finnap.png",
+              alt: "University",
+              className: "w-100 object-cover",
             }}
           />
         </div>
@@ -69,12 +72,15 @@ export default function Content() {
 
       {/* SKILLS */}
       <section className="p-container">
-        <h2 className="heading">My goal is to keep learning</h2>
+        <h2 className={font.heading}>My goal is to keep learning</h2>
         <p className="paragraph mt-2">
           As I always say: knowledge is never enough. And the world of design
           and development is always evolving. So many new things are coming. And
           so many to explore.
         </p>
+        <div className="mt-6">
+          Essential toolbox - Figma, VSCode, Spotify and more... logos
+        </div>
       </section>
     </>
   );
