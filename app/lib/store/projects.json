@@ -7,7 +7,7 @@
         "border": "border-orange-200",
         "imageSrc": "/images/projects/screen-allp.png",
         "imageTexture": "/images/textures/texture-1.png",
-        "navigateTo": "/projects/allp"
+        "navigateTo": "/allp"
       },
       {
         "title": "Vue Polar Bear Library",
@@ -15,7 +15,7 @@
         "border": "border-gray-100",
         "imageSrc": "/images/projects/screen-allp.png",
         "imageTexture": "/images/textures/texture-2.png",
-        "navigateTo": "/projects/vue-polar-bear-library"
+        "navigateTo": "/vue-polar-bear"
       },
       {
         "title": "Simplifica+",
@@ -23,7 +23,7 @@
         "border": "border-blue-200",
         "imageSrc": "/images/projects/screen-simplificamais.png",
         "imageTexture": "/images/textures/texture-4.png",
-        "navigateTo": "/projects/simplificamais"
+        "navigateTo": "/simplificamais"
       }
     ]
   },

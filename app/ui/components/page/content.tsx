@@ -59,7 +59,7 @@ export default function Content() {
       {/* ABOUT */}
       <section
         id="about"
-        className="grid-area:about grid-template-columns-3 p-container z-index-10"
+        className="grid-area:about grid-template-columns-3 gap-5 p-container z-index-10"
       >
         <h2 className={font.heading}>About me</h2>
         <div className="grid-column:2-3 grid-template-columns-2 gap-5">

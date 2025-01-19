@@ -1,0 +1,33 @@
+.hover-bg-1 {
+  transition: background-color var(--transition-speed) ease-in-out;
+
+  &:hover {
+    background-color: var(--blue-200);
+  }
+}
+
+.hover-translateY {
+  &-1,
+  &-2,
+  &-3 {
+    transition: transform var(--transition-speed) ease-in-out;
+  }
+
+  &-1 {
+    &:hover {
+      transform: translateY(-0.25rem);
+    }
+  }
+
+  &-2 {
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &-3 {
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  }
+}
