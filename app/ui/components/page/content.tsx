@@ -1,77 +1,85 @@
-import Card from "@/app/ui/components/card";
 import React from "react";
+import Card from "@/app/ui/components/card";
+import store from "@/app/lib/store";
 import { font } from "@/app/ui/fonts";
 
 export default function Content() {
   return (
     <>
-      {/* CAREER */}
-      <section className="p-container">
-        <h2 className={font.heading}>What I have been building over the years</h2>
-        <p className="paragraph mt-4">
-          I gratuated in Graphic Design from the university of Univille in 2017
-          and have been working in this field since then as a UX/UI Designer.
-          Recently, at the beggining of this year (2024), I had the opportunity to play
-          a role as a junior frontend developer and I pretty much loved it.
-        </p>
-        <h3 className="heading mt-6">Design as a profession</h3>
-        <p className="paragraph mt-4">
-          Design offered me the opportunity to learn deeply about user
-          experiences and journeys, and how to manage them according to the
-          users needs and feels. I was able to work with a wide range of tools
-          and technologies, such as Figma, Photoshop, Illustrator and more.
-        </p>
-        <h3 className="heading mt-6">Frontend as a passion</h3>
-        <p className="paragraph mt-4">
-          Although I am passionate about creating new experiences through
-          graphic designs, I must say that I have become enamoured with the
-          possibility to build it with my bare hands - literally. Working in web
-          development and being close to developers and their workspaces has
-          made me acquire valuable knowledge which I can apply in any project.
-          And what I have learned so far you can check in the section below.
-        </p>
-        <p className="paragraph mt-4">
-          I am proud to say that I can turn ideas into life.
-        </p>
+      {/* PROJECTS */}
+      <section
+        id="projects"
+        className="grid-area:projects p-container-top-0 position-relative z-index-10"
+      >
+        <>
+          {store.projects.map((project, index) => (
+            <div key={index} className="grid-template-columns-3 gap-5">
+              {project.work?.map((workItem, index) => (
+                <Card
+                  key={index}
+                  title={workItem.title}
+                  text={workItem.description}
+                  className="h-600x"
+                  border={workItem.border}
+                  imageSrc={workItem.imageSrc}
+                  imageTexture={workItem.imageTexture}
+                  navigateTo={workItem.navigateTo}
+                />
+              ))}
+            </div>
+          ))}
+        </>
       </section>
 
-      {/* PROJECTS */}
-      <section className="p-container">
-        <h2 className={font.heading}>Projects I am proud of</h2>
-        <p className="paragraph mt-2">
-          In all my experiences and projects I have gained valuable knowledge,
-          both in the technical aspect and in soft skills.
-        </p>
-        <div className="lg:row w-100 mt-6">
-          <Card
-            className="w-100"
-            image={{
-              src: "/images/cover-allp.png",
-              alt: "University",
-              className: "w-100 object-cover",
-            }}
-          />
-          <Card
-            className="w-100 mtb-4 lg:mtb-0 lg:ml-4"
-            image={{
-              src: "/images/cover-simplifica.png",
-              alt: "University",
-              className: "w-100 object-cover",
-            }}
-          />
-          <Card
-            className="w-100 mtb-4 lg:mtb-0 lg:ml-4"
-            image={{
-              src: "/images/cover-finnap.png",
-              alt: "University",
-              className: "w-100 object-cover",
-            }}
-          />
+      {/* PLAYGROUND */}
+      <section
+        id="playground"
+        className="grid-area:playground p-container-top-0 z-index-10 grid-template-columns-3 gap-5"
+      >
+        <h2 className={font.heading}>Playground</h2>
+        <div className="grid-column:2-3 gap-5">
+          {store.projects.map((project, index) => (
+            <div
+              className="grid-template-columns-2 grid-column:2-3 gap-5"
+              key={index}
+            >
+              {project.playground?.map((playgroundItem, index) => (
+                <Card
+                  key={index}
+                  title={playgroundItem.title}
+                  text={playgroundItem.description}
+                  border={playgroundItem.border}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="grid-area:about grid-template-columns-3 p-container z-index-10"
+      >
+        <h2 className={font.heading}>About me</h2>
+        <div className="grid-column:2-3 grid-template-columns-2 gap-5">
+          <div className="border-gray-600 p-container round-3">
+            <p className="paragraph">
+              I gratuated in Graphic Design from the university of Univille in
+              2017, and have been working in this field since then as a UX/UI
+              Designer. Recently, at the beggining of this year (2024), I had
+              the opportunity to play a role as a junior frontend developer and
+              I pretty much loved it.
+            </p>
+          </div>
+          <div className="border-gray-600 p-container round-3">
+            Experiências
+          </div>
         </div>
       </section>
 
       {/* SKILLS */}
-      <section className="p-container">
+      {/* <section className="p-container">
         <h2 className={font.heading}>My goal is to keep learning</h2>
         <p className="paragraph mt-2">
           As I always say: knowledge is never enough. And the world of design
@@ -81,7 +89,7 @@ export default function Content() {
         <div className="mt-6">
           Essential toolbox - Figma, VSCode, Spotify and more... logos
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

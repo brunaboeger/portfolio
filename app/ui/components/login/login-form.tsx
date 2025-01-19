@@ -8,10 +8,6 @@ export default function LoginForm() {
     console.log("Submitted!");
   }
 
-  function goBack() {
-    console.log("Submitted!");
-  }
-
   return (
     <div className="container w-100 p-container">
       <h1 className="heading">Hello!</h1>

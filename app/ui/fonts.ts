@@ -6,6 +6,7 @@ export const ginto = localFont({ src: "/fonts/Ginto-Regular.otf" });
 export const merriweather = Merriweather({
   subsets: ["latin"],
   weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 export const poppins = Poppins({
@@ -19,6 +20,8 @@ export const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const font = {
-  heading: `${merriweather.className} heading`,
-  paragraph: ginto.className,
-}
+  heading: `${ginto.className} heading`,
+  paragraph: `${merriweather.className} paragraph`,
+  copyright: `${ginto.className} text-italic text-light`,
+  logo: `${merriweather.className} heading-light text-light`,
+};

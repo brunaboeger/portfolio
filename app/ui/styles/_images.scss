@@ -1,4 +1,3 @@
-
 .object {
   &-cover {
     object-fit: cover;
@@ -7,12 +6,6 @@
   &-contain {
     object-fit: contain;
   }
-}
-
-.bg-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 //  WIDTHS
@@ -51,16 +44,28 @@
     height: auto;
   }
 
+  &-fill {
+    height: -webkit-fill-available;
+  }
+
   &-25 {
     height: 25%;
   }
 
   &-50 {
     height: 50%;
+
+    &vh {
+      height: 50vh;
+    }
   }
 
   &-75 {
     height: 75%;
+
+    &vh {
+      height: 75vh;
+    }
   }
 
   &-100 {
@@ -69,5 +74,33 @@
     &vh {
       height: 100vh;
     }
+  }
+
+  &-100x {
+    height: 100px;
+  }
+
+  &-200x {
+    height: 200px;
+  }
+
+  &-300x {
+    height: 300px;
+  }
+
+  &-400x {
+    height: 400px;
+  }
+
+  &-500x {
+    height: 500px;
+  }
+
+  &-600x {
+    height: 600px;
+  }
+
+  &-700x {
+    height: 700px;
   }
 }

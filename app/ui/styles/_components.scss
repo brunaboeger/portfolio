@@ -12,6 +12,54 @@ $navbar-height: 5rem;
   background-color: var(--background);
 }
 
+.menu {
+  &-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    width: fit-content;
+    align-self: flex-end;
+
+    &:hover {
+      .menu-tooltip {
+        visibility: visible !important;
+        opacity: 100%;
+      }
+    }
+  }
+
+  &-link {
+    transition: color var(--transition-speed) ease;
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &-tooltip {
+    width: 13rem;
+    position: absolute;
+    left: -150px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    border: 1px solid var(--primary);
+    padding: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--primary);
+
+    transition: visibility var(--transition-speed) ease,
+      opacity var(--transition-speed) ease;
+  }
+}
+
+.banner-image {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
 .button {
   border: 1px solid var(--primary);
   padding: 0.5rem 1rem;
@@ -58,4 +106,11 @@ $navbar-height: 5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+}
+
+.tag {
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  color: var(--primary);
+  font-family: inherit;
 }
