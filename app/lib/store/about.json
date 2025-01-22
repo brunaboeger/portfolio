@@ -1,0 +1,181 @@
+[
+  {
+    "id": 1,
+    "image": {
+      "src": "/images/photo.jpg",
+      "alt": "Bruna Boeger photo",
+      "width": 400,
+      "height": 400
+    }
+  },
+  {
+    "id": 4,
+    "title": "Experiences",
+    "timeline": [
+      {
+        "id": 1,
+        "role": "UI Designer & Developer",
+        "company": "Adapcon Software & Inovação",
+        "date": "may 2021 - aug 2024 (3 years)"
+      },
+      {
+        "id": 2,
+        "role": "UX / UI Designer",
+        "company": "Sonda I.T. Brasil",
+        "date": "8 months"
+      },
+      {
+        "id": 3,
+        "role": "Graphic Designer",
+        "company": "Schulz S.A.",
+        "date": "8 months"
+      },
+      {
+        "id": 4,
+        "role": "Webdesigner",
+        "company": "Cubo Afinação de Empresas",
+        "date": "8 months"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "I gratuated in Graphic Design from the university of Univille in 2017, and have been working in this field since then as a UX/UI Designer. At the beggining of 2024, I had the opportunity to play a role as a junior frontend developer and I pretty much loved it.",
+    "icons": [
+      {
+        "id": 1,
+        "name": "Email",
+        "src": "/images/icons/email-primary.svg",
+        "alt": "Email",
+        "navigateTo": "",
+        "size": 28
+      },
+      {
+        "id": 3,
+        "name": "LinkedIn",
+        "src": "/images/icons/linkedin-primary.svg",
+        "alt": "LinkedIn",
+        "navigateTo": "",
+        "size": 28
+      },
+      {
+        "id": 2,
+        "name": "Github",
+        "src": "/images/icons/github-primary.svg",
+        "alt": "Github",
+        "navigateTo": "",
+        "size": 28
+      },
+      {
+        "id": 4,
+        "name": "Currículo",
+        "src": "/images/icons/github-primary.svg",
+        "alt": "Currículo",
+        "navigateTo": "",
+        "size": 28
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Education",
+    "timeline": [
+      {
+        "id": 1,
+        "role": "Curso.dev",
+        "company": "Filipe Deschamps",
+        "date": "2024 - present"
+      },
+      {
+        "id": 2,
+        "role": "Photography",
+        "company": "Univille Universidade",
+        "date": "2019-2021"
+      },
+      {
+        "id": 3,
+        "role": "Graphic Design",
+        "company": "Univille Universidade",
+        "date": "2014 - 2017"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Tools",
+    "icons": [
+      {
+        "id": 2,
+        "name": "Node.js",
+        "src": "/images/logos/nodejs.svg",
+        "alt": "Email",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine."
+      },
+      {
+        "id": 4,
+        "name": "JavaScript",
+        "src": "/images/logos/javascript.svg",
+        "alt": "LinkedIn",
+        "navigateTo": "",
+        "size": 40,
+        "description": "JavaScript is a programming language that conforms to the ECMAScript specification."
+      },
+      {
+        "id": 5,
+        "name": "SASS",
+        "src": "/images/logos/sass.svg",
+        "alt": "Github",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world."
+      },
+      {
+        "id": 1,
+        "name": "React",
+        "src": "/images/logos/react.svg",
+        "alt": "Currículo",
+        "navigateTo": "",
+        "size": 40,
+        "description": "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components."
+      },
+      {
+        "id": 6,
+        "name": "HTML",
+        "src": "/images/logos/html.svg",
+        "alt": "Currículo",
+        "navigateTo": "#",
+        "size": 40,
+        "description": "HTML is a markup language used for structuring and presenting content on the World Wide Web."
+      },
+      {
+        "id": 8,
+        "name": "Figma",
+        "src": "/images/logos/figma.svg",
+        "alt": "Currículo",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Figma is a free online design and prototyping tool that lets you create and share interactive prototypes for mobile, web, and desktop."
+      },
+      {
+        "id": 7,
+        "name": "Sequelize",
+        "src": "/images/logos/sequelize.svg",
+        "alt": "Currículo",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Sequelize is a promise-based ORM for Node.js and PostgreSQL, written in JavaScript."
+      },
+      {
+        "id": 3,
+        "name": "Next.js",
+        "src": "/images/logos/nextjs.svg",
+        "alt": "Currículo",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Next.js is a React framework that enables features like server-side rendering and generating static sites with ease."
+      }
+    ]
+  }
+]

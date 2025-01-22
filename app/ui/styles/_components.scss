@@ -1,6 +1,9 @@
 $navbar-height: 5rem;
 
-.navbar {
+#banner,
+#projects,
+#playground,
+#about {
   position: relative;
 }
 
@@ -12,10 +15,59 @@ $navbar-height: 5rem;
   background-color: var(--background);
 }
 
+.menu {
+  &-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    width: fit-content;
+    align-self: flex-end;
+
+    &:hover {
+      .menu-tooltip {
+        visibility: visible !important;
+        opacity: 100%;
+      }
+    }
+  }
+
+  &-link {
+    transition: color var(--transition-speed) ease;
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &-tooltip {
+    width: 13rem;
+    position: absolute;
+    left: -14rem;
+    opacity: 0;
+    text-align: left;
+    transition: opacity var(--transition-speed) ease;
+
+    &-container {
+      border: 1px solid var(--primary);
+      width: fit-content;
+      padding: 0.8rem;
+      font-size: 0.85rem;
+      color: var(--primary);
+    }
+  }
+}
+
+.banner-image {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
 .button {
-  border: 1px solid var(--primary);
+  border: 1px solid var(--black);
   padding: 0.5rem 1rem;
-  color: var(--primary);
+  // color: var(--blue-200);
   font-family: inherit;
 
   &.icon-only {
@@ -26,7 +78,7 @@ $navbar-height: 5rem;
   }
 
   svg {
-    color: var(--primary);
+    color: var(--black);
     height: 1.5rem;
     margin: auto;
     display: flex;
@@ -58,4 +110,18 @@ $navbar-height: 5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+}
+
+.tag {
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  color: var(--primary);
+  font-family: inherit;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid black;
+  border-radius: 50%;
 }

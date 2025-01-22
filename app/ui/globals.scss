@@ -25,69 +25,6 @@ button {
   background-color: transparent;
 }
 
-// DISPLAYS
-
-.flex {
-  display: flex;
-
-  &-row {
-    flex-direction: row;
-  }
-
-  &-column {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &-wrap {
-    flex-wrap: wrap;
-  }
-}
-
-.align {
-  &-center {
-    align-items: center;
-  }
-}
-
-.justify {
-  &-between {
-    justify-content: space-between;
-  }
-
-  &-center {
-    justify-content: center;
-  }
-}
-
-// VISIBLITY
-
-.hidden {
-  display: none;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-// SHAPES
-
-.round {
-  border-radius: 1.15rem;
-
-  &-full {
-    border-radius: 50%;
-  }
-
-  &-top {
-    border-radius: 1.15rem 1.15rem 0 0;
-  }
-
-  &-bottom {
-    border-radius: 0 0 1.15rem 1.15rem;
-  }
-}
-
 // DECORATIONS
 
 .decoration {
@@ -95,10 +32,45 @@ button {
     text-decoration: none;
     list-style-type: none;
   }
+
+  &-underline {
+    text-decoration: underline var(--primary);
+  }
+
+  &-wavy {
+    text-decoration: underline wavy var(--primary);
+  }
+
+  &-dotted {
+    text-decoration: underline dotted var(--primary);
+  }
+
+  &-blink {
+    text-decoration: blink var(--primary);
+  }
 }
 
 // EXTRAS
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+// NOVA PÁGINA
+
+.markdown {
+  &\:grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    opacity: 50%;
+
+    .column {
+      height: 100%;
+      background-color: rgb(186, 223, 255);
+    }
+  }
 }

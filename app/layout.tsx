@@ -1,6 +1,5 @@
 import "@/app/ui/globals.scss";
 import { font } from "@/app/ui/fonts";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Portfolio Bruna Boeger",
@@ -15,9 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${font.paragraph} antialiased`}>
+      <body className={`${font.paragraph} antialiased bg-noise`}>
         {children}
-        <SpeedInsights />
       </body>
     </html>
   );

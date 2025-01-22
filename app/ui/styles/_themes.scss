@@ -4,11 +4,19 @@
   --gray-100: #c9c9c9;
   --gray-600: #363a3f;
 
-  --orange: #f15103;
   --blue-100: #f0f8ff;
   --blue-200: hsl(208, 43%, 88%);
+  --blue-400: #117f95;
+  --blue-500: #003148;
 
-  --primary: var(--orange);
+  --orange-100: #f5d89c;
+  --orange-200: #f3942c;
+  --orange-300: #ef7802;
+  --orange-400: #f15103;
+  --orange-500: #ed3300;
+  --orange-600: #4b191a;
+
+  --primary: var(--orange-400);
   --active: var(--primary);
 
   --foreground: var(--black);
@@ -16,5 +24,37 @@
   --border: 1px solid var(--black);
 
   --transition-speed: 0.3s;
+  --padding-container: 1.5rem;
 
+  --border-width: 1px;
+  --border-style: solid;
+
+  --background-gradient-orange: linear-gradient(
+    180deg,
+    var(--orange-100),
+    var(--white)
+  );
+
+  --background-gradient-orange-2: linear-gradient(
+    180deg,
+    var(--orange-200),
+    var(--orange-400)
+  );
+
+  --background-gradient-blue: linear-gradient(
+    180deg,
+    var(--blue-100),
+    var(--white)
+  );
+
+  --background-gradient-gray: linear-gradient(
+    180deg,
+    var(--gray-100),
+    var(--white)
+  );
+
+  .color-primary {
+    color: var(--primary);
+    fill: var(--primary);
+  }
 }

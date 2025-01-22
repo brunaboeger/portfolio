@@ -1,44 +1,59 @@
 [
   {
-    "priority": "principal",
-    "title": "Projeto 1",
-    "text": "Lörem ipsum åsat rede, nens nenas. Pojirat rening. Aheten syhyliga konfili sunade hikikomori. Unar belav prorade. Ress rek nynyrad att nyrågt.",
-    "media": "",
-    "action": "Ver projeto"
+    "work": [
+      {
+        "title": "Allp",
+        "description": "A platform that connects people with the best products and services in the market.",
+        "imageSrc": "/images/projects/screen-allp.png",
+        "imageTexture": "/images/textures/texture-paint.png",
+        "navigateTo": "/allp"
+      },
+      {
+        "title": "Vue Polar Bear Library",
+        "description": "A library of components for Vue 3, used in Simplifica+ project.",
+        "imageSrc": "",
+        "imageTexture": "/images/textures/texture-dots.png",
+        "navigateTo": "/vue-polar-bear"
+      },
+      {
+        "title": "Simplifica+",
+        "description": "A plataform that help clients to find their own financial things.",
+        "imageSrc": "/images/projects/screen-simplificamais.png",
+        "imageTexture": "/images/textures/texture-dots.png",
+        "navigateTo": "/simplificamais"
+      }
+    ]
   },
   {
-    "priority": "secondary",
-    "title": "Projeto 2",
-    "text": "Lörem ipsum åsat rede, nens nenas. Pojirat rening. Aheten syhyliga konfili sunade hikikomori. Unar belav prorade. Ress rek nynyrad att nyrågt.",
-    "media": "",
-    "action": "Ver projeto"
-  },
-  {
-    "priority": "third",
-    "subtitle": "Projeto 3",
-    "text": "",
-    "media": "",
-    "action": ""
-  },
-  {
-    "priority": "third",
-    "subtitle": "Projeto 4",
-    "text": "",
-    "media": "",
-    "action": ""
-  },
-  {
-    "priority": "third",
-    "subtitle": "Projeto 5",
-    "text": "",
-    "media": "",
-    "action": ""
-  },
-  {
-    "priority": "third",
-    "subtitle": "Projeto 6",
-    "text": "",
-    "media": "",
-    "action": ""
+    "playground": [
+      {
+        "title": "Finnap",
+        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
+        "border": "border-gray-600",
+        "imageSrc": "",
+        "imageTexture": ""
+      },
+      {
+        "title": "Dashboard",
+        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
+        "border": "border-gray-600",
+        "imageSrc": "",
+        "imageTexture": ""
+      },
+      {
+        "title": "Sequelize",
+        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
+        "border": "border-gray-600",
+        "imageSrc": "",
+        "imageTexture": ""
+      },
+      {
+        "title": "Text Editor",
+        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
+        "border": "border-gray-600",
+        "imageSrc": "",
+        "imageTexture": ""
+      }
+    ]
   }
 ]

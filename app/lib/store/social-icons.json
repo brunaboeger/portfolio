@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Email",
+    "iconSrc": "/images/icons/email.svg",
+    "iconAlt": "Get in touch through email",
+    "navigateTo": "mailto:bruna.boeger@gmail.com"
+  },
+  {
+    "name": "Github",
+    "iconSrc": "/images/icons/github.svg",
+    "iconAlt": "Check out my GitHub profile",
+    "navigateTo": "https://github.com/brunaboeger"
+  },
+  {
+    "name": "LinkedIn",
+    "iconSrc": "/images/icons/linkedin.svg",
+    "iconAlt": "Check out my LinkedIn profile",
+    "navigateTo": "https://www.linkedin.com/in/brunaboeger/"
+  }
+]

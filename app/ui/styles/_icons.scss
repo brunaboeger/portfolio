@@ -1,0 +1,39 @@
+.size {
+  &-1 {
+    height: 1rem;
+  }
+
+  &-2 {
+    height: 1.5rem;
+  }
+
+  &-3 {
+    height: 2rem;
+  }
+
+  &-4 {
+    height: 2.5rem;
+  }
+
+  &-square {
+    &-1 {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &-2 {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &-3 {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &-4 {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Projects",
+    "icon": "📂",
+    "linkTo": "#projects",
+    "description": "What I've been working on and proud projects"
+  },
+  {
+    "name": "Playground",
+    "icon": "📂",
+    "linkTo": "#playground",
+    "description": "Where I experiment with new technologies"
+  },
+  {
+    "name": "About",
+    "icon": "📂",
+    "linkTo": "#about",
+    "description": "Who I am and a little bit about my background"
+  }
+]

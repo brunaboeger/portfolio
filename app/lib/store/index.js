@@ -1,22 +1,15 @@
-import pages from "./pages.json";
-import tools from "./tools.json";
-import navbar from "./navbar.json";
-
+import menuLinks from "./menu-links.json";
 import projects from "./projects.json";
-import experiences from "./experiences.json";
-import abilities from "./abilities.json";
-import knowledge from "./knowledge.json";
-import contact from "./contact.json";
+import banner from "./banner.json";
+import socialIcons from "./social-icons.json";
+import about from "./about.json";
 
 const store = {
-  pages,
-  tools,
+  menuLinks,
   projects,
-  experiences,
-  abilities,
-  knowledge,
-  contact,
-  navbar,
+  banner,
+  socialIcons,
+  about,
 };
 
 export default store;
