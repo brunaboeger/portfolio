@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import Tooltip from "@/app/ui/components/page/about/tooltip";
-import { useState } from "react";
+// import Tooltip from "@/app/ui/components/page/about/tooltip";
+// import { useState } from "react";
 
 interface Icon {
   id: number;
@@ -10,7 +10,7 @@ interface Icon {
   alt: string;
   size: number;
   navigateTo: string;
-  description: string;
+  // description: string;
   className?: string;
 }
 
@@ -23,11 +23,11 @@ export default function IconList({ iconList }: IconsProps) {
     return null;
   }
 
-  const [tooltip, setTooltip] = useState<boolean>(false);
+  // const [tooltip, setTooltip] = useState<boolean>(false);
 
-  const toggleMenu = (id: number) => {
-    setTooltip(tooltip === false ? true : false);
-  };
+  // const toggleMenu = (id: number) => {
+  //   setTooltip(tooltip === false ? true : false);
+  // };
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function IconList({ iconList }: IconsProps) {
             target="_blank"
             key={icon?.id}
             className="flex mr-2 position-relative"
-            onMouseEnter={() => toggleMenu(icon.id)}
+            // onMouseEnter={() => toggleMenu(icon.id)}
           >
             <Image
               src={icon?.src}
@@ -48,7 +48,7 @@ export default function IconList({ iconList }: IconsProps) {
               height={icon.size ? icon.size : 24}
               className={icon?.className}
             />
-            {tooltip ? <Tooltip icon={icon} /> : null}
+            {/* {tooltip ? <Tooltip icon={icon} /> : null} */}
           </Link>
         ))}
     </>

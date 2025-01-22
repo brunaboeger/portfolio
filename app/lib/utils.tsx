@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const tabletSize = 768;
 const desktopSize = 1280;
 
-export const getScreenWidth = () => {
+export const useWindowWidth = () => {
   const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export const getScreenWidth = () => {
   return width;
 };
 
-export const isMobileSize = (width = getScreenWidth()) => {
+export const isMobileSize = (width = useWindowWidth()) => {
   if (width < tabletSize) {
     return true;
   }
