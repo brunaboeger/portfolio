@@ -15,7 +15,6 @@ interface CardProps {
   text?: string;
   image?: ImageProps;
   className?: string;
-  border?: string;
   imageSrc?: string;
   imageTexture?: string;
   navigateTo?: string;
@@ -25,40 +24,46 @@ export default function Card({
   title,
   text,
   className,
-  border,
   imageSrc,
   imageTexture,
   navigateTo,
 }: CardProps) {
   return (
-    <div className={`card round-3 ${className} ${border}`}>
-      <Link href={navigateTo || "/"}>
+    <div className={`card round-3 ${className} border-gray-100`}>
+      <Link href={navigateTo ? navigateTo : "#"}>
         <div
-          className="overflow-hidden round-half bg-white h-100"
+          className="round-half bg-white h-100"
           style={{
-            backgroundImage: `url(${imageTexture || ""})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            background: "linear-gradient(180deg, #ffffff00, #ffeef84d)",
           }}
         >
-          <div className="flex-column justify-between overflow-hidden h-100">
-            {text || title ? (
-              <>
-                <div className="flex-column w-100 hover-ease p-5">
-                  <h3 className={`${font.heading}`}>{title}</h3>
-                  <p className="paragraph mt-2">{text}</p>
-                </div>
-                {imageSrc ? (
-                  <Image
-                    src={imageSrc || "/images/placeholder.webp"}
-                    alt={imageSrc || ""}
-                    width={300}
-                    height={500}
-                    className="w-100 object-contain"
-                  />
-                ) : null}
-              </>
+          <div className="flex-column justify-end h-100 position-relative">
+            {imageSrc ? (
+              <div className="flex h-100 position-relative round-top-3">
+                <Image
+                  src={imageSrc}
+                  alt={imageSrc}
+                  width={300}
+                  height={540}
+                  className="w-100 object-contain position-absolute bottom-0 z-index-20"
+                />
+                <div
+                  className="position-absolute top-0 w-100 h-100 round-top-3"
+                  style={{
+                    backgroundImage: `url(${imageTexture || ""})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    opacity: 0.5,
+                  }}
+                />
+              </div>
+            ) : null}
+            {title || text ? (
+              <div className="flex-column w-100 hover-ease p-5 round-bottom-3 z-index-20">
+                <h3 className={`${font.heading}`}>{title}</h3>
+                <p className="paragraph mt-2">{text}</p>
+              </div>
             ) : null}
           </div>
         </div>

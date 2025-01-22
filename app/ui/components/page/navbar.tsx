@@ -21,7 +21,11 @@ export default function Navbar() {
 
   return (
     <nav id="navbar" className="position-fixed w-100 z-index-30">
-      <div className={`p-container flex justify-between ${isMobile}`}>
+      <div
+        className={`p-container flex justify-between ${
+          isMobile ? "align-center" : "align-start"
+        }`}
+      >
         {/* Logo */}
         <div className="flex align-center">
           <Link href="/">
@@ -47,8 +51,8 @@ export default function Navbar() {
             </Button>
             {menuDisplay ? (
               <div
-                className="position-absolute"
-                style={{ right: "0", top: "4rem" }}
+                className="position-absolute top-0 p-4 bg-blue-100 shadow-3 round-2 border-gray-100"
+                style={{ right: "0", top: "3rem" }}
               >
                 <div className="flex-column justify-end gap-3 text-right position-relative">
                   {Store.menuLinks.map((link, index) => (

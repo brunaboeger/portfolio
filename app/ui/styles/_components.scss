@@ -65,9 +65,9 @@ $navbar-height: 5rem;
 }
 
 .button {
-  border: 1px solid var(--primary);
+  border: 1px solid var(--black);
   padding: 0.5rem 1rem;
-  color: var(--primary);
+  // color: var(--blue-200);
   font-family: inherit;
 
   &.icon-only {
@@ -78,7 +78,7 @@ $navbar-height: 5rem;
   }
 
   svg {
-    color: var(--primary);
+    color: var(--black);
     height: 1.5rem;
     margin: auto;
     display: flex;

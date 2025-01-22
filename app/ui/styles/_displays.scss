@@ -209,6 +209,10 @@
   }
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .masonry {
   column-count: 2;
   column-gap: $spacing-5;

@@ -1,18 +1,42 @@
 import { font } from "@/app/ui/fonts";
+import { useEffect, useState } from "react";
+import { useWindowWidth } from "@/app/lib/utils";
 import store from "@/app/lib/store";
 import Image from "next/image";
 import IconList from "@/app/ui/components/page/about/icon-list";
 import Timeline from "@/app/ui/components/page/about/timeline";
 
 export default function About() {
+  const [sortedCards, setSortedCards] = useState<typeof store.about>([]);
+
+  const tabletSize = 768;
+  const width = useWindowWidth();
+  const isMobile = width < tabletSize;
+
+  // Altera a ordem dos cards quando a view é Mobile
+  const sortCards = () => {
+    if (isMobile) {
+      setSortedCards([
+        store.about[0], // Card com id 1
+        store.about[1], // Card com id 2
+        store.about[3], // Card com id 4
+        store.about[4], // Card com id 5
+        store.about[2], // Card com id 3
+      ]);
+    } else {
+      setSortedCards(store.about.sort((a, b) => a.id - b.id));
+    }
+  };
+
+  useEffect(() => {
+    sortCards();
+  }, [isMobile]);
+
   return (
-    <section
-      id="about"
-      className="p-container-top-0 flex-column z-index-10 mb-5"
-    >
-      <h2 className={`${font.heading} mb-5`}>About</h2>
+    <section id="about" className="p-container flex-column z-index-10 mb-5">
+      <h2 className={`${font.heading} mb-6`}>About</h2>
       <div className="masonry gap-5">
-        {store.about.map((aboutItem, index) => (
+        {sortedCards.map((aboutItem, index) => (
           <div
             key={index}
             className="masonry-item hover-translateY-2 flex-column border-gray-600 round-3 h-auto"
@@ -24,21 +48,12 @@ export default function About() {
                   {aboutItem.title}
                 </h4>
 
-                {/* Description */}
-                {/* {aboutItem.description ? (
-                  <p className={`${font.paragraph} mt-3`}>
-                    {aboutItem.description}
-                  </p>
-                ) : null} */}
-
                 {/* Icons and Tools */}
                 {aboutItem.icons ? (
                   <div className="flex justify-between mt-5">
-                    {aboutItem.icons ? (
-                      <div className="flex align-center gap-3">
-                        <IconList iconList={aboutItem.icons} />
-                      </div>
-                    ) : null}
+                    <div className="flex wrap align-center gap-2">
+                      <IconList iconList={aboutItem.icons} />
+                    </div>
                   </div>
                 ) : null}
               </div>

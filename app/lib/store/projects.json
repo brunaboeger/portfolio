@@ -4,25 +4,22 @@
       {
         "title": "Allp",
         "description": "A platform that connects people with the best products and services in the market.",
-        "border": "border-orange-200",
         "imageSrc": "/images/projects/screen-allp.png",
-        "imageTexture": "/images/textures/texture-1.png",
+        "imageTexture": "/images/textures/texture-paint.png",
         "navigateTo": "/allp"
       },
       {
         "title": "Vue Polar Bear Library",
         "description": "A library of components for Vue 3, used in Simplifica+ project.",
-        "border": "border-gray-100",
         "imageSrc": "",
-        "imageTexture": "/images/textures/texture-2.png",
+        "imageTexture": "/images/textures/texture-dots.png",
         "navigateTo": "/vue-polar-bear"
       },
       {
         "title": "Simplifica+",
         "description": "A plataform that help clients to find their own financial things.",
-        "border": "border-blue-200",
         "imageSrc": "/images/projects/screen-simplificamais.png",
-        "imageTexture": "/images/textures/texture-4.png",
+        "imageTexture": "/images/textures/texture-dots.png",
         "navigateTo": "/simplificamais"
       }
     ]

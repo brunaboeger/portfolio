@@ -9,7 +9,7 @@
     }
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "Experiences",
     "timeline": [
       {
@@ -39,8 +39,8 @@
     ]
   },
   {
-    "id": 3,
-    "title": "I gratuated in Graphic Design from the university of Univille in 2017, and have been working in this field since then as a UX/UI Designer. Recently, at the beggining of this year (2024), I had the opportunity to play a role as a junior frontend developer and I pretty much loved it.",
+    "id": 2,
+    "title": "I gratuated in Graphic Design from the university of Univille in 2017, and have been working in this field since then as a UX/UI Designer. At the beggining of 2024, I had the opportunity to play a role as a junior frontend developer and I pretty much loved it.",
     "icons": [
       {
         "id": 1,
@@ -77,7 +77,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Education",
     "timeline": [
       {
@@ -101,7 +101,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 3,
     "title": "Tools",
     "icons": [
       {

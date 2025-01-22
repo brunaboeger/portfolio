@@ -12,7 +12,7 @@ export default function Tooltip({ icon }: TooltipProps) {
   return (
     <>
       <div
-        className="position-absolute p-4 right-0 bg-blue-100 round-2 border-gray-100"
+        className="position-absolute top-0 p-4 right-0 bg-blue-100 round-2 border-gray-100"
         style={{ top: "-200px", width: 300 }}
       >
         <Image
