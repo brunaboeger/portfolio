@@ -6,25 +6,22 @@ import Store from "@/app/lib/store";
 import Button from "@/app/ui/components/button";
 import { font } from "@/app/ui/fonts";
 import { Bars2Icon } from "@heroicons/react/24/outline";
-import { MobileSize } from "@/app/lib/utils";
+import { useWindowWidth } from "@/app/lib/utils";
 import { useState } from "react";
 
 export default function Navbar() {
+  const tabletSize = 768;
+  const width = useWindowWidth();
+  const isMobile = width < tabletSize;
   const [menuDisplay, setMenuDisplay] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setMenuDisplay(menuDisplay === false ? true : false);
   };
 
-  const isMobile = MobileSize();
-
   return (
     <nav id="navbar" className="position-fixed w-100 z-index-30">
-      <div
-        className={`p-container flex justify-between ${
-          isMobile ? "align-center" : "align-start"
-        }`}
-      >
+      <div className={`p-container flex justify-between ${isMobile}`}>
         {/* Logo */}
         <div className="flex align-center">
           <Link href="/">
