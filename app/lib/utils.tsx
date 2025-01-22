@@ -23,7 +23,7 @@ export const useWindowWidth = () => {
   return width;
 };
 
-export const isMobileSize = (width = useWindowWidth()) => {
+export const MobileSize = (width = useWindowWidth()) => {
   if (width < tabletSize) {
     return true;
   }

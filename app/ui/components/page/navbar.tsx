@@ -6,7 +6,7 @@ import Store from "@/app/lib/store";
 import Button from "@/app/ui/components/button";
 import { font } from "@/app/ui/fonts";
 import { Bars2Icon } from "@heroicons/react/24/outline";
-import { isMobileSize } from "@/app/lib/utils";
+import { MobileSize } from "@/app/lib/utils";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
     setMenuDisplay(menuDisplay === false ? true : false);
   };
 
-  const isMobile = isMobileSize();
+  const isMobile = MobileSize();
 
   return (
     <nav id="navbar" className="position-fixed w-100 z-index-30">
