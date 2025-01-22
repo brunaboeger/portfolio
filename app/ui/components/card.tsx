@@ -37,17 +37,18 @@ export default function Card({
             background: "linear-gradient(180deg, #ffffff00, #ffeef84d)",
           }}
         >
-          <div className="flex-column justify-end h-100 position-relative">
+          <div className="flex-column justify-end h-100">
             {imageSrc ? (
               <div className="flex h-100 position-relative round-top-3">
                 <Image
                   src={imageSrc}
                   alt={imageSrc}
                   width={300}
-                  height={540}
+                  height={520}
                   className="w-100 object-contain position-absolute bottom-0 z-index-20"
                 />
-                <div
+                {/* <div
+                  id="texture"
                   className="position-absolute top-0 w-100 h-100 round-top-3"
                   style={{
                     backgroundImage: `url(${imageTexture || ""})`,
@@ -56,7 +57,7 @@ export default function Card({
                     backgroundRepeat: "no-repeat",
                     opacity: 0.5,
                   }}
-                />
+                /> */}
               </div>
             ) : null}
             {title || text ? (

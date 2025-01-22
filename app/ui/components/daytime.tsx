@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function UserDayTime() {
-  type TimeOfDay = "morning" | "afternoon" | "evening" | "night";
+  type TimeOfDay = "morning" | "afternoon" | "night";
   const [time, setTime] = useState<TimeOfDay | "">("");
 
   const images = {
@@ -15,32 +15,23 @@ export default function UserDayTime() {
       src: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBiYTQyYTQ3OWY1YTFiMjM4ZTdmMmE3ZWFjM2Q2NmQ4MTM4N2FlNCZlcD12MV91c2VyX2Zhdm9yaXRlcyZjdD1n/d5PPYjcb3caPTHM3hv/giphy.gif",
       alt: "Afternoon sky gif",
       background: "rgb(136 255 177)",
-      opacity: 0.8,
+      opacity: 0.5,
     },
-    evening: {
+    night: {
       src: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBiYTQyYTQ3OWY1YTFiMjM4ZTdmMmE3ZWFjM2Q2NmQ4MTM4N2FlNCZlcD12MV91c2VyX2Zhdm9yaXRlcyZjdD1n/HZwazRfmuiVSSBjoGw/giphy.gif",
       alt: "Evening sky gif",
       background: "rgb(253 216 255)",
-      opacity: 0.8,
-    },
-    night: {
-      src: "https://media.giphy.com/media/Y9yIfTedAdn3oq57xs/giphy.gif?cid=790b7611c0ba42a479f5a1b238e7f2a7eac3d66d81387ae4&ep=v1_user_favorites&rid=giphy.gif&ct=g",
-      alt: "Night sky gif",
-      background: "rgb(5 0 255 / 60%)",
       opacity: 0.8,
     },
   };
 
   useEffect(() => {
     const actualTime = new Date().getHours();
-    // const actualTime = 21;
 
     if (actualTime >= 6 && actualTime < 12) {
       setTime("morning");
-    } else if (actualTime >= 12 && actualTime < 16) {
+    } else if (actualTime >= 12 && actualTime < 18) {
       setTime("afternoon");
-    } else if (actualTime >= 16 && actualTime < 19) {
-      setTime("evening");
     } else {
       setTime("night");
     }
