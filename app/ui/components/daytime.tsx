@@ -17,7 +17,9 @@ export default function UserDayTime() {
   }, []);
 
   return (
-    <div className={`banner-image bg-gradient-${time} grid-column:auto`}>
+    <div
+      className={`banner-image bg-gradient-${time} position-absolute z-index-10`}
+    >
       {/* <div className="bg-banner-texture"></div> */}
     </div>
   );

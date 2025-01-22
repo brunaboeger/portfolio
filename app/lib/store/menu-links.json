@@ -3,18 +3,18 @@
     "name": "Projects",
     "icon": "📂",
     "linkTo": "#projects",
-    "description": "What I've been working on"
+    "description": "What I've been working on and proud projects"
   },
   {
     "name": "Playground",
     "icon": "📂",
     "linkTo": "#playground",
-    "description": "Where I test my skills and creativity"
+    "description": "Where I experiment with new technologies"
   },
   {
-    "name": "About me",
+    "name": "About",
     "icon": "📂",
     "linkTo": "#about",
-    "description": "Who I am and what I do"
+    "description": "Who I am and a little bit about my background"
   }
 ]

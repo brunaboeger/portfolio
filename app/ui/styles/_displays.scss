@@ -30,8 +30,12 @@
     align-items: center;
   }
 
+  &-start {
+    align-items: flex-start;
+  }
+
   &-end {
-    justify-content: flex-end;
+    align-items: flex-end;
   }
 }
 
@@ -202,6 +206,28 @@
 
   &-8 {
     gap: $spacing-8;
+  }
+}
+
+.masonry {
+  column-count: 2;
+  column-gap: $spacing-5;
+
+  &-item {
+    break-inside: avoid;
+    margin-bottom: $spacing-5;
+  }
+
+  @media (min-width: 300px) and (max-width: 668px) {
+    column-count: 1;
+  }
+
+  @media (min-width: 669px) and (max-width: 1024px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 1280px) {
+    column-count: 3;
   }
 }
 

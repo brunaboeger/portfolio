@@ -22,6 +22,7 @@ export const ibmPlexMono = IBM_Plex_Mono({
 export const font = {
   heading: `${ginto.className} heading`,
   paragraph: `${merriweather.className} paragraph`,
+  small: `${merriweather.className} small`,
   copyright: `${ginto.className} text-italic text-light`,
   logo: `${merriweather.className} heading-light text-light`,
 };

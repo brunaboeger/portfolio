@@ -13,9 +13,14 @@
   1201px e acima —  telas muito grandes, TVs
 */
 
+$mobile: "max-width: 767px";
+$tablet: "min-width: 768px";
+$tablet-only: "(min-width: 768px) and (max-width: 1024px)";
+$desktop: "min-width: 1025px";
+
 // Only small devices
 
-@media (max-width: 767px) {
+@media (#{ $mobile }) {
   .sm {
     &\:row {
       display: flex;
@@ -30,16 +35,27 @@
       width: 50%;
     }
   }
+
+  .mobile {
+    &\:flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &\:w-100 {
+      width: 100%;
+    }
+  }
 }
 
 // Medium devices and above
 
-@media (min-width: 768px) {
+@media (#{ $tablet }) {
   .md {
     &\:flex {
       display: flex;
     }
-    
+
     &\:row {
       display: flex;
       flex-direction: row;
@@ -57,7 +73,7 @@
 
 // Large devices and above
 
-@media (min-width: 1024px) {
+@media (#{ $desktop }) {
   .lg {
     &\:row {
       display: flex;

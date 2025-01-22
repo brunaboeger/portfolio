@@ -45,7 +45,7 @@ export default function Card({
           <div className="flex-column justify-between overflow-hidden h-100">
             {text || title ? (
               <>
-                <div className="flex-column align-end w-100 hover-ease p-5">
+                <div className="flex-column w-100 hover-ease p-5">
                   <h3 className={`${font.heading}`}>{title}</h3>
                   <p className="paragraph mt-2">{text}</p>
                 </div>

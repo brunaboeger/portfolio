@@ -188,6 +188,42 @@ $spacing-8: 3rem; // 48px
     }
   }
 
+  // Padding top
+
+  &t {
+    &-1 {
+      padding-top: $spacing-1;
+    }
+
+    &-2 {
+      padding-top: $spacing-2;
+    }
+
+    &-3 {
+      padding-top: $spacing-3;
+    }
+
+    &-4 {
+      padding-top: $spacing-4;
+    }
+
+    &-5 {
+      padding-top: $spacing-5;
+    }
+
+    &-6 {
+      padding-top: $spacing-6;
+    }
+
+    &-7 {
+      padding-top: $spacing-7;
+    }
+
+    &-8 {
+      padding-top: $spacing-8;
+    }
+  }
+
   // Padding bottom
 
   &b {
@@ -495,6 +531,8 @@ $spacing-8: 3rem; // 48px
   }
 }
 
+// Negative margins
+
 .-m {
   &t-1 {
     margin-top: -$spacing-1;
@@ -529,48 +567,6 @@ $spacing-8: 3rem; // 48px
   }
 }
 
-// SIZES
-
-.size {
-  &-1 {
-    height: 1rem;
-  }
-
-  &-2 {
-    height: 1.5rem;
-  }
-
-  &-3 {
-    height: 2rem;
-  }
-
-  &-4 {
-    height: 2.5rem;
-  }
-
-  &-square {
-    &-1 {
-      width: 1rem;
-      height: 1rem;
-    }
-
-    &-2 {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-
-    &-3 {
-      width: 2rem;
-      height: 2rem;
-    }
-
-    &-4 {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-  }
-}
-
 @media (max-width: 767px) {
   .sm {
     &\:mtb-1 {
@@ -591,6 +587,38 @@ $spacing-8: 3rem; // 48px
     &\:mtb-4 {
       margin-top: $spacing-4;
       margin-bottom: $spacing-4;
+    }
+  }
+
+  .p {
+    // Padding container
+
+    &-container {
+      padding-top: $spacing-4;
+      padding-bottom: $spacing-4;
+      padding-left: $spacing-4;
+      padding-right: $spacing-4;
+    }
+
+    &-container-lr {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: $spacing-4;
+      padding-right: $spacing-4;
+    }
+
+    &-container-tb {
+      padding-top: $spacing-4;
+      padding-bottom: $spacing-4;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &-container-top-0 {
+      padding-top: 0;
+      padding-bottom: $spacing-4;
+      padding-left: $spacing-4;
+      padding-right: $spacing-4;
     }
   }
 }
