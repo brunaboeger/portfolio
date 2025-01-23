@@ -33,13 +33,16 @@ export default function About() {
   }, [isMobile]);
 
   return (
-    <section id="about" className="p-container flex-column z-index-10 mb-5">
+    <section
+      id="about"
+      className="container-default p-container flex-column z-index-10 mb-5"
+    >
       <h2 className={`${font.heading} mb-6`}>About</h2>
-      <div className="masonry gap-5">
+      <div className="masonry-column-3 gap-5">
         {sortedCards.map((aboutItem, index) => (
           <div
             key={index}
-            className="masonry-item hover-translateY-2 flex-column border-gray-600 round-3 h-auto"
+            className="masonry-item hover-translateY-2 flex-column border-gray-100 round-3 h-auto"
           >
             {aboutItem.title || aboutItem.icons ? (
               <div className="p-container">

@@ -3,7 +3,10 @@ import Card from "@/app/ui/components/card";
 
 export default function Projects() {
   return (
-    <section id="projects" className="p-container-top-0 z-index-20">
+    <section
+      id="projects"
+      className="container-default p-container-top-0 z-index-20"
+    >
       <>
         {store.projects.map((project, index) =>
           project.work ? (

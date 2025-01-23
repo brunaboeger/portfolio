@@ -5,6 +5,11 @@
   large: 1280px
 */
 
+.container-default {
+  max-width: 100rem;
+  margin: auto;
+}
+
 .container-fluid {
   width: 100%;
 }
