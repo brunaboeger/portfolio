@@ -1,6 +1,6 @@
 import { font } from "@/app/ui/fonts";
 
-export default function Banner() {
+export default function Hero() {
   return (
     <>
       <section

@@ -18,7 +18,6 @@ export default function Projects() {
                   text={workItem.description}
                   className="h-600x shadow-2 tablet:w-33 tablet:hover-width-50 mobile:hover-translateY-2"
                   imageSrc={workItem.imageSrc}
-                  imageTexture={workItem.imageTexture}
                   navigateTo={workItem.navigateTo}
                 />
               ))}

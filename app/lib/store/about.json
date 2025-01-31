@@ -16,25 +16,29 @@
         "id": 1,
         "role": "UI Designer & Developer",
         "company": "Adapcon Software & Inovação",
-        "date": "may 2021 - aug 2024 (3 years)"
+        "date": "may 2021 - aug 2024 (3 years)",
+        "imageSrc": "/images/logos/companies/adapcon.png"
       },
       {
         "id": 2,
         "role": "UX / UI Designer",
         "company": "Sonda I.T. Brasil",
-        "date": "8 months"
+        "date": "8 months",
+        "imageSrc": "/images/logos/companies/sonda.png"
       },
       {
         "id": 3,
         "role": "Graphic Designer",
         "company": "Schulz S.A.",
-        "date": "8 months"
+        "date": "8 months",
+        "imageSrc": "/images/logos/companies/schulz.png"
       },
       {
         "id": 4,
         "role": "Webdesigner",
         "company": "Cubo Afinação de Empresas",
-        "date": "8 months"
+        "date": "8 months",
+        "imageSrc": "/images/logos/companies/cubo.png"
       }
     ]
   },
@@ -84,19 +88,36 @@
         "id": 1,
         "role": "Curso.dev",
         "company": "Filipe Deschamps",
-        "date": "2024 - present"
+        "date": "2024 - present",
+        "imageSrc": "/images/logos/companies/cursodev.png"
       },
       {
         "id": 2,
         "role": "Photography",
         "company": "Univille Universidade",
-        "date": "2019-2021"
+        "date": "2019-2021",
+        "imageSrc": "/images/logos/companies/univille.png"
       },
       {
         "id": 3,
         "role": "Graphic Design",
         "company": "Univille Universidade",
-        "date": "2014 - 2017"
+        "date": "2014 - 2017",
+        "imageSrc": "/images/logos/companies/univille.png"
+      }
+    ],
+    "timelineExtra": [
+      {
+        "id": 1,
+        "name": "EF Set Certificate"
+      },
+      {
+        "id": 2,
+        "name": "Como Desenvolver sua Inteligência Artificial"
+      },
+      {
+        "id": 3,
+        "name": "Lógica de Programação com JavaScript"
       }
     ]
   },

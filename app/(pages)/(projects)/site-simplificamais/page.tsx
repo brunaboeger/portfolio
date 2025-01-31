@@ -1,16 +1,13 @@
-import Navigation from "@/app/ui/components/projects/navigation";
 import Banner from "@/app/ui/components/projects/banner";
-import Overview from "@/app/ui/components/projects/overview";
+import Overview from "@/app/ui/components/projects/content";
 import Screens from "@/app/ui/components/projects/screens";
 
 export default function Page() {
   return (
     <>
-      <Navigation nextLink="/allp" />
-
       <Banner
-        heading="Simplifica+"
-        subheading="Plataforms website"
+        heading="Site S+"
+        subheading="Site comercial para o produto Simplifica+"
         description="Lorem ipsum dolor simet"
         tags={["2024", "Developer", "Adapcon Software & Inovação"]}
         mainImageSrc="/images/projects/allp/allp-screen-1.png"

@@ -298,6 +298,10 @@ $spacing-8: 3rem; // 48px
     margin: $spacing-8;
   }
 
+  &-auto {
+    margin: auto;
+  }
+
   // Margin top and bottom
 
   &tb {

@@ -2,25 +2,34 @@
   {
     "work": [
       {
-        "title": "Allp",
+        "title": "Aplicativo Allp",
         "description": "A platform that connects people with the best products and services in the market.",
-        "imageSrc": "/images/projects/screen-allp.png",
-        "imageTexture": "/images/textures/texture-paint.png",
-        "navigateTo": "/allp"
+        "imageSrc": "/images/projects/allp/allp-3.png",
+        "navigateTo": "/allp",
+        "navigate": {
+          "name": "Allp",
+          "href": "/allp"
+        }
       },
       {
-        "title": "Vue Polar Bear Library",
-        "description": "A library of components for Vue 3, used in Simplifica+ project.",
-        "imageSrc": "",
-        "imageTexture": "/images/textures/texture-dots.png",
-        "navigateTo": "/vue-polar-bear"
+        "title": "Plataforma Simplifica+",
+        "description": "Portal de gerenciamento do cliente que automatiza processos e permite acesso a diversos serviços financeiros.",
+        "imageSrc": "/images/projects/simplifica-site/site-1.png",
+        "navigateTo": "/plataforma-simplificamais",
+        "navigate": {
+          "name": "Plataforma S+",
+          "href": "/plataforma-simplificamais"
+        }
       },
       {
-        "title": "Simplifica+",
+        "title": "Site Simplifica+",
         "description": "A plataform that help clients to find their own financial things.",
-        "imageSrc": "/images/projects/screen-simplificamais.png",
-        "imageTexture": "/images/textures/texture-dots.png",
-        "navigateTo": "/simplificamais"
+        "imageSrc": "/images/projects/simplifica-site/site-1.png",
+        "navigateTo": "/site-simplificamais",
+        "navigate": {
+          "name": "Site S+",
+          "href": "/site-simplificamais"
+        }
       }
     ]
   },

@@ -1,3 +1,5 @@
+@use "./media-queries" as *;
+
 $navbar-height: 5rem;
 
 #banner,
@@ -13,6 +15,12 @@ $navbar-height: 5rem;
   height: calc(100vh - 5.5rem);
   z-index: 10;
   background-color: var(--background);
+}
+
+.section-screens {
+  display: grid;
+  // flex-wrap: wrap;
+  // gap: 1.5rem;
 }
 
 .menu {
@@ -34,8 +42,9 @@ $navbar-height: 5rem;
 
   &-link {
     transition: color var(--transition-speed) ease;
+
     &:hover {
-      color: var(--primary);
+      color: var(--blue-500);
     }
   }
 
@@ -48,11 +57,12 @@ $navbar-height: 5rem;
     transition: opacity var(--transition-speed) ease;
 
     &-container {
-      border: 1px solid var(--primary);
+      background: var(--blue-500);
       width: fit-content;
       padding: 0.8rem;
       font-size: 0.85rem;
-      color: var(--primary);
+      color: var(--white);
+      border-radius: 8px;
     }
   }
 }
@@ -65,7 +75,7 @@ $navbar-height: 5rem;
 }
 
 .button {
-  border: 1px solid var(--black);
+  // border: 1px solid var(--black);
   padding: 0.5rem 1rem;
   // color: var(--blue-200);
   font-family: inherit;
@@ -124,4 +134,46 @@ $navbar-height: 5rem;
   height: 2.5rem;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .section-screens {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-screens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section-screens {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (#{$desktop-sm}) {
+  .section-screens {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (#{$desktop-md}) {
+  .section-screens {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (#{$desktop-lg}) {
+  .section-screens {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (#{$desktop-xlg}) {
+  .section-screens {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }

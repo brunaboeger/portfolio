@@ -22,10 +22,10 @@ export default function Banner({
   const placeholder = "/images/projects/placeholder.png";
 
   return (
-    <>
+    <div className="overflow-hidden">
       <section
-        className="banner flex-column align-center justify-center text-center h-400x container-sm"
-        style={{ marginTop: "-116px" }}
+        className="banner flex-column align-center justify-center text-center container-sm"
+        style={{ height: 450 }}
       >
         <h1 className={font.heading}>{heading}</h1>
         <h3 className={`${font.heading} mtb-4`}>{subheading}</h3>
@@ -42,21 +42,22 @@ export default function Banner({
       {/* Image */}
       <section className="section-image p-container-top-0 h-500x">
         <div
-          className="flex justify-center align-center shadow-1 round-4 overflow-hidden h-100"
+          className="flex w-100 justify-center align-center shadow-1 round-4 h-100 object-cover"
           style={{
             backgroundImage: `url(${backgroundImageSrc || placeholder})`,
             maxWidth: "100%",
+            backgroundPositionX: "center",
           }}
         >
           <Image
             src={mainImageSrc || placeholder}
             alt={mainImageAlt || "Imagem de capa"}
             width={700}
-            height={600}
-            className="object-cover"
+            height={530}
+            className="object-cover w-auto"
           />
         </div>
       </section>
-    </>
+    </div>
   );
 }

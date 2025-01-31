@@ -1,4 +1,17 @@
-export default function Screens({ images }: { images?: string[] }) {
+import Image from "next/image";
+
+interface Screens {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}
+
+interface ScreensProps {
+  screens?: Screens[];
+}
+
+export default function Screens({ screens }: ScreensProps) {
   const placeholderList = [
     "bg-orange-100",
     "bg-orange-200",
@@ -10,13 +23,16 @@ export default function Screens({ images }: { images?: string[] }) {
 
   return (
     <section className="p-container bg-blue-100">
-      <div className="grid-template-columns-3 gap-5 p-container">
-        {images
-          ? images.map((image, index) => (
-              <div
+      <div className="p-container-tb section-screens gap-5">
+        {screens
+          ? screens.map((screen, index) => (
+              <Image
                 key={index}
-                style={{ backgroundImage: `url(${image || ""})` }}
-                className="h-600x round-3 shadow-3 hover-translateY-2"
+                src={screen.src || ""}
+                alt={screen.alt || "Imagem"}
+                width={screen.width || "300"}
+                height={600}
+                className="round-3 shadow-1 hover-translateY-2 m-auto"
               />
             ))
           : placeholderList.map((placeholder, index) => (

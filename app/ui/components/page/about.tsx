@@ -63,8 +63,11 @@ export default function About() {
             ) : null}
 
             {/* Timeline */}
-            {aboutItem.timeline ? (
-              <Timeline timeline={aboutItem.timeline} />
+            {aboutItem.timeline || aboutItem.timelineExtra ? (
+              <Timeline
+                timeline={aboutItem.timeline}
+                timelineExtra={aboutItem.timelineExtra || []}
+              />
             ) : null}
 
             {/* Image */}

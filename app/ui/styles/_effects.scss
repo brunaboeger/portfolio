@@ -1,10 +1,10 @@
 @use "./media-queries" as *;
 
 .hover-bg-1 {
-  transition: background-color var(--transition-speed) ease-in-out;
+  transition: background var(--transition-speed) ease-in-out;
 
   &:hover {
-    background-color: var(--blue-200);
+    background: var(--blue-200);
   }
 }
 
@@ -40,6 +40,30 @@
       transform: translateY(-1rem);
     }
   }
+}
+
+.hover-color {
+  &-blue-500,
+  &-orange-400 {
+    transition: color var(--transition-speed) ease-in-out;
+  }
+
+  &-blue-500 {
+    &:hover {
+      color: var(--blue-500);
+    }
+  }
+
+  &-orange-400 {
+    &:hover {
+      color: var(--orange-400);
+    }
+  }
+}
+
+.active {
+  color: var(--active);
+  fill: var(--active);
 }
 
 @media (#{ $mobile }) {

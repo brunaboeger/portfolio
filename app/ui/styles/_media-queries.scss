@@ -16,7 +16,10 @@
 $mobile: "max-width: 767px";
 $tablet: "min-width: 768px";
 $tablet-only: "(min-width: 768px) and (max-width: 1024px)";
-$desktop: "min-width: 1025px";
+$desktop-sm: "min-width: 1025px";
+$desktop-md: "min-width: 1366px";
+$desktop-lg: "min-width: 1920px";
+$desktop-xlg: "min-width: 2560px";
 
 // Only small devices
 
@@ -69,11 +72,22 @@ $desktop: "min-width: 1025px";
       width: 50%;
     }
   }
+
+  .tablet {
+    &\:flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &\:w-100 {
+      width: 100%;
+    }
+  }
 }
 
 // Large devices and above
 
-@media (#{ $desktop }) {
+@media (#{ $desktop-sm }) {
   .lg {
     &\:row {
       display: flex;
@@ -86,6 +100,17 @@ $desktop: "min-width: 1025px";
 
     &\:w-50 {
       width: 50%;
+    }
+  }
+
+  .desktop {
+    &\:flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &\:w-100 {
+      width: 100%;
     }
   }
 }

@@ -107,6 +107,23 @@
   opacity: 20%;
 }
 
+.bg-glass {
+  &-1,
+  &-2 {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  &-1 {
+    border-radius: 8px;
+  }
+
+  &-2 {
+    border-radius: 8px;
+  }
+}
+
 .border {
   &-gray-100,
   &-gray-600,
@@ -189,4 +206,13 @@
   &-gray-100 {
     border-top: 1px solid var(--gray-100);
   }
+}
+
+.border-gradient-blue {
+  border-image: linear-gradient(
+      to right,
+      var(--blue-100) 0%,
+      var(--blue-200) 100%
+    )
+    1;
 }
