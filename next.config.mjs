@@ -10,6 +10,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "src/assets/scss")],
   },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

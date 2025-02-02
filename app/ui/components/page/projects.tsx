@@ -10,13 +10,13 @@ export default function Projects() {
       <>
         {store.projects.map((project, index) =>
           project.work ? (
-            <div key={index} className="flex gap-5 mobile:flex-column">
+            <div key={index} className="projects-list">
               {project.work?.map((workItem, index) => (
                 <Card
                   key={index}
                   title={workItem.title}
                   text={workItem.description}
-                  className="h-600x shadow-2 tablet:w-33 tablet:hover-width-50 mobile:hover-translateY-2"
+                  className="h-600x shadow-2 hover-translateY-2"
                   imageSrc={workItem.imageSrc}
                   navigateTo={workItem.navigateTo}
                 />

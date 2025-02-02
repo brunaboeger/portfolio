@@ -129,7 +129,7 @@
         "id": 2,
         "name": "Node.js",
         "src": "/images/logos/nodejs.svg",
-        "alt": "Email",
+        "alt": "Ícone do Node.js",
         "navigateTo": "",
         "size": 40,
         "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine."
@@ -138,7 +138,7 @@
         "id": 4,
         "name": "JavaScript",
         "src": "/images/logos/javascript.svg",
-        "alt": "LinkedIn",
+        "alt": "Ícone do JavaScript",
         "navigateTo": "",
         "size": 40,
         "description": "JavaScript is a programming language that conforms to the ECMAScript specification."
@@ -147,7 +147,7 @@
         "id": 5,
         "name": "SASS",
         "src": "/images/logos/sass.svg",
-        "alt": "Github",
+        "alt": "Ícone do SASS",
         "navigateTo": "",
         "size": 40,
         "description": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world."
@@ -156,7 +156,7 @@
         "id": 1,
         "name": "React",
         "src": "/images/logos/react.svg",
-        "alt": "Currículo",
+        "alt": "Ícone do React",
         "navigateTo": "",
         "size": 40,
         "description": "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components."
@@ -165,7 +165,7 @@
         "id": 6,
         "name": "HTML",
         "src": "/images/logos/html.svg",
-        "alt": "Currículo",
+        "alt": "Ícone do HTML",
         "navigateTo": "#",
         "size": 40,
         "description": "HTML is a markup language used for structuring and presenting content on the World Wide Web."
@@ -174,7 +174,7 @@
         "id": 8,
         "name": "Figma",
         "src": "/images/logos/figma.svg",
-        "alt": "Currículo",
+        "alt": "Ícone do Figma",
         "navigateTo": "",
         "size": 40,
         "description": "Figma is a free online design and prototyping tool that lets you create and share interactive prototypes for mobile, web, and desktop."
@@ -183,7 +183,7 @@
         "id": 7,
         "name": "Sequelize",
         "src": "/images/logos/sequelize.svg",
-        "alt": "Currículo",
+        "alt": "Ícone do Sequelize",
         "navigateTo": "",
         "size": 40,
         "description": "Sequelize is a promise-based ORM for Node.js and PostgreSQL, written in JavaScript."
@@ -192,10 +192,46 @@
         "id": 3,
         "name": "Next.js",
         "src": "/images/logos/nextjs.svg",
-        "alt": "Currículo",
+        "alt": "Ícone do Next.js",
         "navigateTo": "",
         "size": 40,
         "description": "Next.js is a React framework that enables features like server-side rendering and generating static sites with ease."
+      },
+      {
+        "id": 9,
+        "name": "Vue.js",
+        "src": "/images/logos/vuejs.svg",
+        "alt": "Ícone do Vue.js",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Vue.js is an open-source JavaScript framework for building user interfaces and single-page applications."
+      },
+      {
+        "id": 10,
+        "name": "Docker",
+        "src": "/images/logos/docker.svg",
+        "alt": "Ícone do Docker",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Docker is a platform for developing and running applications in containers."
+      },
+      {
+        "id": 11,
+        "name": "Webflow",
+        "src": "/images/logos/webflow.svg",
+        "alt": "Ícone do Webflow",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Wenflow is a web design and development platform that allows you to create and manage websites and web apps."
+      },
+      {
+        "id": 12,
+        "name": "Wordpress",
+        "src": "/images/logos/wordpress.svg",
+        "alt": "Ícone do Wordpress",
+        "navigateTo": "",
+        "size": 40,
+        "description": "Wordpress is a free and open-source content management system (CMS) built with PHP and MySQL."
       }
     ]
   }

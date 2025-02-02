@@ -80,17 +80,3 @@ $radius-8: 3.5rem;
     }
   }
 }
-
-.shadow {
-  &-1 {
-    box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
-  }
-
-  &-2 {
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-  }
-
-  &-3 {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  }
-}

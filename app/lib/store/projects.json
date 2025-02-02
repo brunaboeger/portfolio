@@ -4,7 +4,12 @@
       {
         "title": "Aplicativo Allp",
         "description": "A platform that connects people with the best products and services in the market.",
-        "imageSrc": "/images/projects/allp/allp-3.png",
+        "imageSrc": "/images/projects/allp/tela-allp.png",
+        "image": {
+          "src": "/images/projects/allp/tela-allp.png",
+          "alt": "Imagens das telas do aplicativo ALLP",
+          "height": 600
+        },
         "navigateTo": "/allp",
         "navigate": {
           "name": "Allp",

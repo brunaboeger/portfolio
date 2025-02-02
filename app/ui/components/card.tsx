@@ -16,7 +16,6 @@ interface CardProps {
   image?: ImageProps;
   className?: string;
   imageSrc?: string;
-  imageTexture?: string;
   navigateTo?: string;
 }
 
@@ -25,8 +24,8 @@ export default function Card({
   text,
   className,
   imageSrc,
-  imageTexture,
   navigateTo,
+  image,
 }: CardProps) {
   return (
     <div className={`card round-3 ${className} border-gray-100`}>
@@ -41,23 +40,24 @@ export default function Card({
             {imageSrc ? (
               <div className="flex h-100 position-relative round-top-3">
                 <Image
-                  src={imageSrc}
-                  alt={imageSrc}
-                  width={300}
-                  height={520}
+                  src={imageSrc || image?.src || ""}
+                  alt={imageSrc || image?.alt || ""}
+                  width={image?.width || 300}
+                  height={image?.height || 520}
+                  unoptimized
                   className="w-100 object-contain position-absolute bottom-0 z-index-20"
                 />
-                {/* <div
+                <div
                   id="texture"
                   className="position-absolute top-0 w-100 h-100 round-top-3"
                   style={{
-                    backgroundImage: `url(${imageTexture || ""})`,
+                    backgroundImage: "url('/images/noise.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     opacity: 0.5,
                   }}
-                /> */}
+                />
               </div>
             ) : null}
             {title || text ? (
