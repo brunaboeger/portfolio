@@ -51,29 +51,47 @@ export default function Page() {
 
       <section className="mb-6">
         <Content
-          heading="Descrição"
+          heading="Contexto"
           texts={[
-            "O projeto surgiu por meio de solicitações de clientes que tinham locais disponíveis para reservas, e buscavam um maior engajamento de seus funcionários.",
-            "Dessa forma, o aplicativo tem como propósito facilitar a reserva de locais e serviços, bem como promover qualidade de vida - saúde, educação e entretenimento - para os colaboradores e para os demais indivíduos da sociedade.",
+            "Empresas com área recreativa, muitas das vezes, não conseguem preencher seus espaços com horários para os colaboradores, devido a baixa adesão e falta de facilidade para agendamentos.",
+            "Dessa forma, o aplicativo surgiu com o propósito de facilitar a reserva de quadras e campos de esportes para essas empresas.",
           ]}
           buttonText="Site institucional"
           buttonLink="https://allp.digital/"
         />
 
         <Content
-          heading="Discovery"
+          heading="Objetivos"
           texts={[
-            "Com base em pesquisas, entrevistas quantitativas e qualitativas, benchmarking e mapa de jornada do usuário, foram mapeados 2 principais objetivos para o projeto:",
-            "👉 Facilidade de busca e reserva de um local ou serviço (usuários)",
-            "👉 Área do fornecedor-parceiro para administração dos locais (cliente).",
+            "👉 Facilidade de busca e reserva de um local ou serviço",
+            "👉 Ambiente administrativo para os fornecedores-parceiros configurarem os horários, valores e demais informações dos espaços",
+            "👉 Processo de pagamento de forma simplificada",
+            "👉 Opção de escolha das quadras, locais, horários e frequência",
+            "👉 ",
           ]}
         />
 
         <Content
-          heading="Delivery"
+          heading="Desafios"
           texts={[
-            "Em seguida, com base dos resultados de discovery, por meio de wireframes e tests de usabilidade foram definidos fluxos de jornada do usuário, tanto no aplicativo quanto na versão web do fornecedor-parceiro.",
-            "Abaixo estão algumas telas do aplicativo e da versão web.",
+            "Foi criado um MVP para que as empresas-parceiras pudessem incentivar o uso do aplicativo para seus colaboradores.",
+            "Outras empresas demonstraram interesse no aplicativo, permitindo que planejássemos novas perspectivas e recursos para atender outras áreas além do esporte.",
+          ]}
+        />
+
+        <Content
+          heading="Processo"
+          texts={[
+            "Os primeiros rascunhos das interações do aplicativo visavam suprir a necessidade de alocação de quadras e campos de esportes.Assim, o foco foi criar uma experiência simplificada para o usuário bem como para o fornecedor-parceiro em seu ambiente administrativo.",
+            "Como novas demandas surgiram após o lançamento do MVP, adicionamos novos recursos para fornecer aos usuários modalidades diferentes de agendamentos.",
+          ]}
+        />
+
+        <Content
+          heading="Resultados"
+          texts={[
+            "As empresas parceiras do projeto obtiveram bons resultados após o lançamento do aplicativo. Houve bastante interesse na reserva das quadras e campos de esportes por parte dos colaboradores, quanto dos cidadãos.",
+            "Como resultado, o projeto expandiu para agregar outros serviços além da reservas para esportes, atendendo consultórios, farmácias, e outros serviços disponiilizados.",
           ]}
         />
       </section>

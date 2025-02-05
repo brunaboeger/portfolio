@@ -21,7 +21,7 @@ export default function Content({
 
   return (
     <section className="container-sm flex-column p-container gap-4">
-      <h2 className={font.heading}>{heading}</h2>
+      <h2 className={font.headingSm}>{heading}</h2>
 
       <div className="flex-column gap-3">
         {texts?.map((text, index) => (
