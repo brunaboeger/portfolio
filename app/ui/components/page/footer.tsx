@@ -8,7 +8,7 @@ export default function Footer() {
   const icons = store.socialIcons;
 
   return (
-    <footer className="grid-area:footer p-container bg-blue-500">
+    <footer className="p-container bg-blue-500">
       <div className="p-container flex-column justify-center color-white text-center">
         <h3 className={`${font.heading} mt-2`}>Let’s get in touch</h3>
         <p className={`${font.paragraph} text-small mt-2`}>

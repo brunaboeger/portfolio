@@ -1,22 +1,21 @@
 import Tag from "@/app/ui/components/tag";
 import Image from "next/image";
 import { font } from "@/app/ui/fonts";
+import { ImageProps } from "@/app/lib/types";
 
 export default function Banner({
   heading,
   subheading,
   description,
   tags,
-  mainImageSrc,
-  mainImageAlt,
+  image,
   backgroundImageSrc,
 }: {
   heading?: string;
   subheading?: string;
   description?: string;
   tags?: string[];
-  mainImageSrc?: string;
-  mainImageAlt?: string;
+  image?: ImageProps;
   backgroundImageSrc?: string;
 }) {
   const placeholder = "/images/projects/placeholder.png";
@@ -28,8 +27,12 @@ export default function Banner({
         style={{ height: 450 }}
       >
         <h1 className={font.heading}>{heading}</h1>
-        <h3 className={`${font.heading} mtb-4`}>{subheading}</h3>
-        <p className={`${font.paragraph} text-italic`}>{description}</p>
+        {subheading && (
+          <h3 className={`${font.heading} mtb-4`}>{subheading}</h3>
+        )}
+        {description && (
+          <p className={`${font.paragraph} text-italic`}>{description}</p>
+        )}
         <div className="flex gap-2 mt-5">
           {tags?.map((tag, index) => (
             <Tag key={index} className="hover-translateY-1">
@@ -50,11 +53,11 @@ export default function Banner({
           }}
         >
           <Image
-            src={mainImageSrc || placeholder}
-            alt={mainImageAlt || "Imagem de capa"}
+            src={image?.src || placeholder}
+            alt={image?.alt || "Imagem de capa"}
             width={700}
             height={530}
-            className="object-cover w-auto"
+            className={`object-cover w-auto mw-full ${image?.className}`}
           />
         </div>
       </section>

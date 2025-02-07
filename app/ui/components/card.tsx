@@ -1,65 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import { font } from "@/app/ui/fonts";
-
-interface ImageProps {
-  src: string;
-  alt: string;
-  height?: number;
-  width?: number;
-  className?: string;
-}
-
-interface CardProps {
-  title?: string;
-  text?: string;
-  image?: ImageProps;
-  className?: string;
-  imageSrc?: string;
-  navigateTo?: string;
-}
+import { CardProps } from "@/app/lib/types";
 
 export default function Card({
   title,
   text,
   className,
-  imageSrc,
   navigateTo,
   image,
 }: CardProps) {
   return (
-    <div className={`card round-3 ${className} border-gray-100`}>
-      <Link href={navigateTo ? navigateTo : "#"}>
+    <div className={`card round-3 ${className} border-gray-100 z-index-20`}>
+      <Link href={navigateTo?.link || ""}>
         <div
-          className="round-half bg-white h-100"
+          className="round-half bg-white"
           style={{
             background: "linear-gradient(180deg, #ffffff00, #ffeef84d)",
           }}
         >
-          <div className="flex-column justify-end h-100">
-            {imageSrc ? (
-              <div className="flex h-100 position-relative round-top-3">
+          <div className="flex-column position-relative justify-end">
+            {image ? (
+              <div className="flex align-end justify-center position-relative round-top-3">
                 <Image
-                  src={imageSrc || image?.src || ""}
-                  alt={imageSrc || image?.alt || ""}
+                  src={image?.src || ""}
+                  alt={image?.alt || ""}
                   width={image?.width || 300}
                   height={image?.height || 520}
+                  className={`${image?.className} w-auto mw-full object-contain`}
                   unoptimized
-                  className="w-100 object-contain position-absolute bottom-0 z-index-20"
-                />
-                <div
-                  id="texture"
-                  className="position-absolute top-0 w-100 h-100 round-top-3"
-                  style={{
-                    backgroundImage: "url('/images/noise.png')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    opacity: 0.5,
-                  }}
                 />
               </div>
             ) : null}
+
             {title || text ? (
               <div className="flex-column w-100 hover-ease p-5 round-bottom-3 z-index-20">
                 <h3 className={`${font.heading}`}>{title}</h3>

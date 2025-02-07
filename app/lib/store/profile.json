@@ -1,0 +1,210 @@
+[
+  {
+    "photo": {
+      "src": "/images/photo.jpg",
+      "alt": "Bruna Boeger photo",
+      "width": 400,
+      "height": 400
+    }
+  },
+  {
+    "about": {
+      "name": "Bruna Boeger",
+      "role": "UI Designer & Developer",
+      "texts": [
+        "Em 2017, concluí minha graduação em Design Gráfico pela Universidade de Univille e, desde então, tenho atuado como Designer UX/UI, explorando minha paixão por criar experiências digitais significativas. No início de 2024, surgiu uma oportunidade desafiadora e empolgante: desempenhar o papel de desenvolvedora front-end júnior. ",
+        "Foi uma experiência incrível, que me permitiu unir minha base criativa com a lógica da programação, e eu simplesmente adorei! Essa nova jornada tem sido enriquecedora, ampliando meus horizontes e reforçando minha vontade de crescer na interseção entre design e desenvolvimento."
+      ],
+      "socials": [
+        {
+          "label": "Email",
+          "src": "/images/icons/email.svg",
+          "alt": "Entre em contato pelo e-mail",
+          "navigateTo": {
+            "label": "email",
+            "link": "mailto:bruna.boeger@gmail.com",
+            "target": "_blank"
+          }
+        },
+        {
+          "label": "Github",
+          "src": "/images/icons/github.svg",
+          "alt": "Veja meus projetos no Github",
+          "navigateTo": {
+            "label": "github",
+            "link": "",
+            "target": "_blank"
+          }
+        },
+        {
+          "label": "LinkedIn",
+          "src": "/images/icons/linkedin.svg",
+          "alt": "Entre em contato pelo Linkedin",
+          "navigateTo": {
+            "label": "linkedIn",
+            "link": "",
+            "target": "_blank"
+          }
+        },
+        {
+          "label": "Currículo",
+          "src": "/images/icons/curriculo.svg",
+          "alt": "Baixe o documento do currículo",
+          "navigateTo": {
+            "label": "curriculo",
+            "link": "",
+            "target": "_blank"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "experiences": [
+      {
+        "id": 1,
+        "role": "UI Designer & Developer",
+        "company": "Adapcon Software & Inovação",
+        "date": "may 2021 - aug 2024 (3 years)",
+        "image": {
+          "src": "/images/logos/companies/adapcon.png",
+          "alt": "Logo da Adapcon Software & Inovação"
+        }
+      },
+      {
+        "id": 2,
+        "role": "UX / UI Designer",
+        "company": "Sonda I.T. Brasil",
+        "date": "fev de 2019 - dez de 2020 (1 ano 11 meses)",
+        "image": {
+          "src": "/images/logos/companies/sonda.png",
+          "alt": "Logo da Sonda I.T. Brasil"
+        }
+      },
+      {
+        "id": 3,
+        "role": "Designer Gráfico",
+        "company": "Shulz S.A.",
+        "date": "mar de 2017 - dez de 2017 (10 meses)",
+        "image": {
+          "src": "/images/logos/companies/shulz.png",
+          "alt": "Logo da Schulz S.A."
+        }
+      },
+      {
+        "id": 4,
+        "role": "Webdesigner",
+        "company": "Cubo Afinação de Empresas",
+        "date": "fev de 2016 - nov de 2016 (10 meses)",
+        "image": {
+          "src": "/images/logos/companies/cubo.png",
+          "alt": "Logo da Cubo Afinação de Empresas"
+        }
+      }
+    ]
+  },
+  {
+    "education": {
+      "courses": [
+        [
+          {
+            "id": 1,
+            "title": "Bacharel em Design Gráfico",
+            "university": "Universidade de Univille",
+            "date": "2017 - 2021",
+            "image": {
+              "src": "/images/logos/companies/univille.png",
+              "alt": "Logo da Univille Universidade"
+            }
+          },
+          {
+            "id": 2,
+            "title": "Bacharel em Design Gráfico",
+            "university": "Universidade de Univille",
+            "date": "2017 - 2021",
+            "image": {
+              "src": "/images/logos/companies/univille.png",
+              "alt": "Logo da Univille Universidade"
+            }
+          }
+        ]
+      ],
+      "certificates": [
+        {
+          "id": 1,
+          "name": "EF Set Certificate",
+          "university": "Universidade de Univille",
+          "date": "2017",
+          "image": {
+            "src": "/images/logos/companies/univille.png",
+            "alt": "Logo da Univille Universidade"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tools": [
+      {
+        "id": 1,
+        "name": "React",
+        "src": "/images/logos/react.svg",
+        "alt": "Ícone do React Framework"
+      },
+      {
+        "id": 2,
+        "name": "Node.js",
+        "src": "/images/logos/nodejs.svg",
+        "alt": "Ícone do Node.js"
+      },
+      {
+        "id": 3,
+        "name": "Next.js",
+        "src": "/images/logos/nextjs.svg",
+        "alt": "Ícone do Next.js"
+      },
+      {
+        "id": 4,
+        "name": "JavaScript",
+        "src": "/images/logos/javascript.svg",
+        "alt": "Ícone do JavaScript"
+      },
+      {
+        "id": 5,
+        "name": "SASS",
+        "src": "/images/logos/sass.svg",
+        "alt": "Ícone do SASS"
+      },
+      {
+        "id": 6,
+        "name": "HTML5",
+        "src": "/images/logos/html.svg",
+        "alt": "Ícone do HTML5"
+      },
+      {
+        "id": 7,
+        "name": "Docker",
+        "src": "/images/logos/figma.svg",
+        "alt": "Ícone do "
+      },
+      {
+        "id": 8,
+        "name": "Vue.js",
+        "src": "/images/logos/vuejs.svg",
+        "alt": "Ícone do Vue.js"
+      },
+      {
+        "id": 9,
+        "name": "Webflow",
+        "src": "/images/logos/webflow.svg",
+        "alt": "Ícone do Webflow"
+      },
+      {
+        "id": 10,
+        "name": "Figma",
+        "src": "/images/logos/figma.svg",
+        "alt": "Ícone do Figma"
+      }
+    ]
+  }
+]

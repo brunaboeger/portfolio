@@ -7,24 +7,26 @@ import IconList from "@/app/ui/components/page/about/icon-list";
 import Timeline from "@/app/ui/components/page/about/timeline";
 
 export default function About() {
-  const [sortedCards, setSortedCards] = useState<typeof store.about>([]);
-
+  const [sortedCards, setSortedCards] = useState<typeof store.profile>([]);
   const tabletSize = 768;
   const width = useWindowWidth();
   const isMobile = width < tabletSize;
+  const simplificaSiteProject = store.projects[0].work?.[2];
+
+  console.log(simplificaSiteProject);
 
   // Altera a ordem dos cards quando a view é Mobile
   const sortCards = () => {
     if (isMobile) {
       setSortedCards([
-        store.about[0], // Card com id 1
-        store.about[1], // Card com id 2
-        store.about[3], // Card com id 4
-        store.about[4], // Card com id 5
-        store.about[2], // Card com id 3
+        store.profile[0], // Card com id 1
+        store.profile[1], // Card com id 2
+        store.profile[3], // Card com id 4
+        store.profile[4], // Card com id 5
+        store.profile[2], // Card com id 3
       ]);
     } else {
-      setSortedCards(store.about.sort((a, b) => a.id - b.id));
+      setSortedCards(store.profile.sort((a, b) => a.id - b.id));
     }
   };
 

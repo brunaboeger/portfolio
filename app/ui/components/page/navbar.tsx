@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Store from "@/app/lib/store";
 import Button from "@/app/ui/components/button";
+import store from "@/app/lib/store";
 import { font } from "@/app/ui/fonts";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useWindowWidth } from "@/app/lib/utils";
@@ -13,6 +13,7 @@ export default function Navbar() {
   const tabletSize = 768;
   const width = useWindowWidth();
   const isMobile = width < tabletSize;
+  const isDesktop = !isMobile;
   const [menuDisplay, setMenuDisplay] = useState<boolean>(false);
 
   const toggleMenu = () => {
@@ -23,15 +24,8 @@ export default function Navbar() {
     <nav id="navbar" className="p-container position-fixed w-100 z-index-30">
       <div className="flex justify-between align-center">
         {/* Logo */}
-        <div
-          className="flex p-4 align-center bg-glass-1"
-          style={{ height: "54px" }}
-        >
-          <Link
-            href="/"
-            className="hover-translateY-1"
-            style={{ height: 40, transform: "translateX(-10px)" }}
-          >
+        <Link href="/" style={{ height: 54 }}>
+          <div className="flex pt-4 pb-4 pl-2 pr-4 align-center h-100 bg-glass-1 hover-translateY-1">
             <Image
               src="/images/photo.jpg"
               alt="Bruna Boeger"
@@ -39,9 +33,9 @@ export default function Navbar() {
               height={40}
               className="round-full"
             />
-          </Link>
-          <h3 className={`${font.logo} ml-1`}>Bruna Boeger</h3>
-        </div>
+            <h3 className={`${font.logo} ml-3`}>Bruna Boeger</h3>
+          </div>
+        </Link>
 
         {/* Menu Links */}
         {isMobile ? (
@@ -59,9 +53,9 @@ export default function Navbar() {
                 style={{ right: "0", top: "4rem" }}
               >
                 <div className="flex-column justify-end gap-3 text-right position-relative">
-                  {Store.menuLinks.map((link, index) => (
+                  {store.menuLinks.map((link, index) => (
                     <div className="menu-item mb-2" key={index}>
-                      <Link className="menu-link" href={link.linkTo}>
+                      <Link className="menu-link" href={link.navigateTo?.link}>
                         {link.name}
                       </Link>
                       {!isMobile ? (
@@ -80,12 +74,12 @@ export default function Navbar() {
         ) : (
           // Tablet and Desktop Menu
           <div className="flex justify-end gap-4 text-right position-relative bg-glass-2 p-4">
-            {Store.menuLinks.map((link, index) => (
+            {store.menuLinks.map((link, index) => (
               <div className="menu-item" key={index}>
-                <Link className="menu-link" href={link.linkTo}>
+                <Link className="menu-link" href={link.navigateTo.link}>
                   {link.name}
                 </Link>
-                {!isMobile ? (
+                {isDesktop && link.description ? (
                   <div className="menu-tooltip flex justify-end">
                     <div className="menu-tooltip-container">
                       <p>{link.description}</p>

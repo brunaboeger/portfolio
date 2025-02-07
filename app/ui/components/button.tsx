@@ -1,29 +1,45 @@
+import Link from "next/link";
+import { NavigateToProps } from "@/app/lib/types";
+
 export default function Button({
   text,
+  navigateTo,
   onClick,
+  startIcon,
+  endIcon,
   ariaLabel,
   iconOnly = false,
   children,
 }: {
   text?: string;
-  onClick: () => void;
-  icon?: React.ReactNode;
-  ariaLabel?: string;
+  navigateTo?: NavigateToProps;
+  onClick?: () => void;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
+  ariaLabel: string;
   iconOnly?: boolean;
   children?: React.ReactNode;
 }) {
   return (
-    <button
-      onClick={onClick}
-      className={`button flex align-center justify-center ${
-        iconOnly ? "icon-only" : ""
-      }`}
-      aria-label={ariaLabel}
+    <Link
+      href={navigateTo?.link || ""}
+      target={navigateTo?.target}
+      className="w-fit"
     >
-      <p className="text">
-        {text}
-        {children}
-      </p>
-    </button>
+      <button
+        onClick={onClick}
+        aria-label={ariaLabel}
+        className={`button flex align-center justify-center ${
+          iconOnly ? "icon-only" : "border-orange-200 radius-2"
+        }`}
+      >
+        {startIcon ? startIcon : null}
+        <p className="text">
+          {text}
+          {children}
+        </p>
+        {endIcon ? endIcon : null}
+      </button>
+    </Link>
   );
 }

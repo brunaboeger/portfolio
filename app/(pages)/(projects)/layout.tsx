@@ -1,5 +1,5 @@
 import Footer from "@/app/ui/components/page/footer";
-import Navigation from "@/app/ui/components/projects/navigation";
+import Navbar from "@/app/ui/components/page/navbar";
 
 export default function RootLayout({
   children,
@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <div className="container position-relative h-100">
-      <Navigation />
+      <Navbar />
       {children}
       <Footer />
     </div>

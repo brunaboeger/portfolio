@@ -1,20 +1,37 @@
 [
   {
-    "name": "Projects",
-    "icon": "📂",
-    "linkTo": "#projects",
-    "description": "What I've been working on and proud projects"
+    "name": "Início",
+    "navigateTo": {
+      "text": "inicio",
+      "link": "/"
+    },
+    "icon": "📂"
   },
   {
-    "name": "Playground",
-    "icon": "📂",
-    "linkTo": "#playground",
-    "description": "Where I experiment with new technologies"
+    "name": "Projetos",
+    "navigateTo": {
+      "text": "projetos",
+      "link": "/#projetos"
+    },
+    "description": "No que andei trabalhando e projetos em destaque",
+    "icon": "📂"
   },
   {
-    "name": "About",
-    "icon": "📂",
-    "linkTo": "#about",
-    "description": "Who I am and a little bit about my background"
+    "name": "Sobre",
+    "navigateTo": {
+      "text": "sobre",
+      "link": "/#sobre"
+    },
+    "description": "Quem eu sou e um pouco sobre minha história",
+    "icon": "📂"
+  },
+  {
+    "name": "Contato",
+    "navigateTo": {
+      "text": "contato",
+      "link": "/#contato"
+    },
+    "description": "Entre em contato comigo",
+    "icon": "📂"
   }
 ]

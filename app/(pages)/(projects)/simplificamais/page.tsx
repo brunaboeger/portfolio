@@ -4,20 +4,19 @@ import Screens from "@/app/ui/components/projects/screens";
 import store from "@/app/lib/store";
 
 export default function Page() {
-  const allpProject = store.projects[0].work?.[0];
-  const banner = allpProject?.content?.banner;
-  const context = allpProject?.content?.context;
-  const goals = allpProject?.content?.goals;
-  const challenges = allpProject?.content?.challenges;
-  const process = allpProject?.content?.process;
-  const results = allpProject?.content?.results;
+  const simplificaProject = store.projects[0].work?.[1];
+  const banner = simplificaProject?.content?.banner;
+  const context = simplificaProject?.content?.context;
+  const goals = simplificaProject?.content?.goals;
+  // const challenges = simplificaProject?.content?.challenges;
+  const process = simplificaProject?.content?.process;
+  const results = simplificaProject?.content?.results;
 
   return (
     <>
       <Banner
         heading={banner?.title}
         subheading={banner?.subtitle}
-        description={banner?.description}
         tags={banner?.tags}
         image={banner?.image}
       />
@@ -31,14 +30,12 @@ export default function Page() {
 
         <Content heading={goals?.title} lists={goals?.lists} />
 
-        <Content heading={challenges?.title} texts={challenges?.texts} />
-
         <Content heading={process?.title} texts={process?.texts} />
 
         <Content heading={results?.title} texts={results?.texts} />
       </section>
 
-      <Screens screens={allpProject?.screens} />
+      <Screens screens={simplificaProject?.screens} />
     </>
   );
 }

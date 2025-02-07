@@ -8,6 +8,10 @@
     align-items: flex-start;
   }
 
+  &-fit {
+    width: fit-content;
+  }
+
   &-25 {
     width: 25%;
   }
@@ -58,6 +62,14 @@
 
   &-700x {
     width: 700px;
+  }
+}
+
+// MAX WIDTHS
+
+.mw {
+  &-full {
+    max-width: 100%;
   }
 }
 

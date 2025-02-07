@@ -75,10 +75,14 @@ $navbar-height: 5rem;
 }
 
 .button {
-  // border: 1px solid var(--black);
-  padding: 0.5rem 1rem;
-  // color: var(--blue-200);
+  padding: 0.8rem 1rem;
   font-family: inherit;
+  transition: all var(--transition-speed) ease;
+
+  &:hover {
+    background: var(--primary);
+    color: var(--white);
+  }
 
   &.icon-only {
     width: 2.5rem;
@@ -138,23 +142,15 @@ $navbar-height: 5rem;
 
 .projects-list {
   display: grid;
-  flex: none;
-  gap: 32px;
+  grid-gap: 1.5rem;
   grid-auto-rows: minmax(0, 1fr);
-  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  // grid-template-columns: repeat(2, minmax(50px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
-.projects-list .card:first-child {
-  grid-column: auto / span 2;
-}
-
-// .projects-list .card:not(:first-child) {
-//   width: 50%;
-// }
-
 // .projects-list .card:first-child {
-//   width: 100%;
+//   grid-column: auto / span 2;
 // }
 
 @media screen and (max-width: 767px) {

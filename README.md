@@ -20,13 +20,13 @@ Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do 
 - Next.js
 - Vercel
 
-### Wireframing
+### Wireframing (antigo)
 
-![imagem do layout inicial](./public/github-images/capa.png)
-![imagem do layout inicial](./public/github-images/projetos.png)
-![imagem do layout inicial](./public/github-images/experiencias.png)
-![imagem do layout inicial](./public/github-images/habilidades.png)
-![imagem do layout inicial](./public/github-images/aprendizados.png)
-![imagem do layout inicial](./public/github-images/contato.png)
-![imagem do layout inicial](./public/github-images/esconder-grid.png)
-![imagem do layout inicial](./public/github-images/layout.png)
+![imagem do layout inicial](./public/github/capa.png)
+![imagem do layout inicial](./public/github/projetos.png)
+![imagem do layout inicial](./public/github/experiencias.png)
+![imagem do layout inicial](./public/github/habilidades.png)
+![imagem do layout inicial](./public/github/aprendizados.png)
+![imagem do layout inicial](./public/github/contato.png)
+![imagem do layout inicial](./public/github/esconder-grid.png)
+![imagem do layout inicial](./public/github/layout.png)

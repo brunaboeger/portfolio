@@ -3,37 +3,171 @@
     "work": [
       {
         "title": "Aplicativo Allp",
-        "description": "A platform that connects people with the best products and services in the market.",
-        "imageSrc": "/images/projects/allp/tela-allp.png",
+        "description": "Aplicativo que facilita locações, reservas e pagamentos de serviços que promovem a saúde e bem-estar.",
         "image": {
-          "src": "/images/projects/allp/tela-allp.png",
+          "src": "/images/projects/allp/allp-2.webp",
           "alt": "Imagens das telas do aplicativo ALLP",
-          "height": 600
+          "height": 800,
+          "className": "h-auto"
         },
-        "navigateTo": "/allp",
         "navigate": {
           "name": "Allp",
-          "href": "/allp"
-        }
+          "link": "/allp"
+        },
+        "content": {
+          "banner": {
+            "title": "Allp",
+            "subtitle": "Aplicativo de reservas",
+            "description": "Uma plataforma que conecta pessoas, lugares e serviços para a promoção de saúde e bem-estar.",
+            "tags": ["2022", "UI Designer", "Adapcon Software & Inovação"],
+            "image": {
+              "src": "/images/projects/allp/allp-1.png",
+              "alt": "Imagem do aplicativo ALLP"
+            }
+          },
+          "context": {
+            "title": "Contexto",
+            "texts": [
+              "Empresas com áreas recreativas frequentemente enfrentam dificuldades para preencher seus espaços com horários para os colaboradores, devido à baixa adesão e à falta de praticidade nos agendamentos.",
+              "Para solucionar esse problema, o aplicativo foi desenvolvido com o objetivo de simplificar a reserva de quadras e campos esportivos, tornando o processo mais acessível e eficiente para as empresas."
+            ],
+            "actions": [
+              {
+                "text": "Site Institucional",
+                "link": "https://allp.digital/",
+                "target": "_blank"
+              },
+              {
+                "text": "Google Play Store",
+                "link": "https://play.google.com/store/apps/details?id=br.com.allp&hl=pt_BR",
+                "target": "_blank"
+              }
+            ]
+          },
+          "goals": {
+            "title": "Objetivos",
+            "lists": [
+              "Facilidade de busca e reserva de um local ou serviço;",
+              "Ambiente administrativo para os fornecedores-parceiros configurarem os horários, valores e demais informações dos espaços;",
+              "Processo de pagamento de forma simplificada;",
+              "Opção de escolha das quadras, locais, horários e frequência."
+            ]
+          },
+          "challenges": {
+            "title": "Desafios",
+            "texts": [
+              "Um MVP foi desenvolvido para que as empresas parceiras pudessem promover o uso do aplicativo entre seus colaboradores. Além disso, o interesse demonstrado por outras empresas nos permitiu explorar novas perspectivas e recursos, ampliando a atuação do aplicativo para áreas além do esporte."
+            ]
+          },
+          "process": {
+            "title": "Processo",
+            "texts": [
+              "Os primeiros esboços das interações do aplicativo foram projetados para atender à necessidade de reserva de quadras e campos esportivos. Dessa forma, o foco foi criar uma experiência simplificada tanto para o usuário quanto para o fornecedor parceiro em seu ambiente administrativo.",
+              "Com o surgimento de novas demandas após o lançamento do MVP, incorporamos funcionalidades adicionais para oferecer aos usuários diferentes modalidades de agendamento."
+            ],
+            "screens": []
+          },
+          "results": {
+            "title": "Resultados",
+            "texts": [
+              "As empresas parceiras do projeto alcançaram resultados positivos após o lançamento do aplicativo. Houve um grande interesse por parte dos colaboradores e também dos cidadãos na reserva de quadras e campos esportivos.",
+              "Como consequência, o projeto se expandiu para incluir outros serviços além das reservas esportivas, passando a atender consultórios, farmácias e diversos outros serviços disponíveis."
+            ],
+            "screens": []
+          }
+        },
+        "screens": [
+          {
+            "src": "/images/projects/allp/screens/allp-tela-1.png",
+            "alt": "Tela de login do aplicativo Allp"
+          },
+          {
+            "src": "/images/projects/allp/screens/allp-tela-2.png",
+            "alt": "Tela de busca de locais no aplicativo Allp"
+          },
+          {
+            "src": "/images/projects/allp/screens/allp-tela-3.png",
+            "alt": "Tela de detalhes de um local no aplicativo Allp"
+          },
+          {
+            "src": "/images/projects/allp/screens/allp-tela-4.png",
+            "alt": "Tela de login do fornecedor no aplicativo Allp"
+          },
+          {
+            "src": "/images/projects/allp/screens/allp-tela-5.png",
+            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
+          },
+          {
+            "src": "/images/projects/allp/screens/allp-tela-7.png",
+            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
+          },
+          {
+            "src": "/images/projects/allp/screens/allp-tela-9.png",
+            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
+          },
+          {
+            "src": "/images/projects/allp/screens/allp-tela-8.png",
+            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
+          }
+        ]
       },
       {
-        "title": "Plataforma Simplifica+",
-        "description": "Portal de gerenciamento do cliente que automatiza processos e permite acesso a diversos serviços financeiros.",
-        "imageSrc": "/images/projects/simplifica-site/site-1.png",
-        "navigateTo": "/plataforma-simplificamais",
+        "title": "Simplifica+",
+        "description": "Plataforma que automatiza processos e facilita a gestão de empresas e colaboradores.",
+        "image": {
+          "src": "/images/projects/simplifica/simplifica-1.webp",
+          "alt": "Imagens das telas do site Simplifica+",
+          "height": 800,
+          "className": "h-auto"
+        },
         "navigate": {
-          "name": "Plataforma S+",
-          "href": "/plataforma-simplificamais"
-        }
-      },
-      {
-        "title": "Site Simplifica+",
-        "description": "A plataform that help clients to find their own financial things.",
-        "imageSrc": "/images/projects/simplifica-site/site-1.png",
-        "navigateTo": "/site-simplificamais",
-        "navigate": {
-          "name": "Site S+",
-          "href": "/site-simplificamais"
+          "name": "Site Simplifica+",
+          "link": "/simplificamais"
+        },
+        "content": {
+          "banner": {
+            "title": "Simplifica+",
+            "subtitle": "Site do Portal do Cliente Simplifica+",
+            "description": "Lorem ipsum",
+            "tags": ["2024", "Developer", "Adapcon Software & Inovação"],
+            "image": {
+              "src": "/images/projects/simplifica/simplifica-2.webp",
+              "alt": "Imagem da plataforma Simplifica+",
+              "className": "mb-8"
+            }
+          },
+          "context": {
+            "title": "Contexto",
+            "texts": [
+              "A Simplifica+ é uma plataforma desenvolvida para simplificar o acesso a documentos e informações nas relações B2B, além de automatizar processos por meio de autoatendimento.",
+              "Com módulos especializados nas áreas financeira, comercial e logística, a plataforma atende mais de 500 mil usuários, conectando-se a 120 instituições financeiras e integrando-se a mais de 60 ERPs (Sistemas de Gestão)."
+            ],
+            "actions": [
+              {
+                "text": "Site Institucional",
+                "link": "https://www.simplificamais.com.br/",
+                "target": "_blank"
+              }
+            ]
+          },
+          "goals": {
+            "title": "Objetivos",
+            "lists": [
+              "Criar o site conforme as prototipações da equipe de marketing."
+            ]
+          },
+          "process": {
+            "title": "Processo",
+            "texts": [
+              "Para facilitar a edição de conteúdo pela equipe de Marketing, foi utilizada a plataforma Webflow. Foi necessário aprender a ferramenta e adaptar o site conforme as prototipações da equipe de marketing."
+            ],
+            "screens": []
+          },
+          "results": {
+            "title": "Resultados",
+            "texts": ["Texto"],
+            "screens": []
+          }
         }
       }
     ]
@@ -42,27 +176,6 @@
     "playground": [
       {
         "title": "Finnap",
-        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
-        "border": "border-gray-600",
-        "imageSrc": "",
-        "imageTexture": ""
-      },
-      {
-        "title": "Dashboard",
-        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
-        "border": "border-gray-600",
-        "imageSrc": "",
-        "imageTexture": ""
-      },
-      {
-        "title": "Sequelize",
-        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
-        "border": "border-gray-600",
-        "imageSrc": "",
-        "imageTexture": ""
-      },
-      {
-        "title": "Text Editor",
         "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
         "border": "border-gray-600",
         "imageSrc": "",
