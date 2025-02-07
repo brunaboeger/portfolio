@@ -21,7 +21,7 @@ export default function Navigation() {
     return project?.map((workItem) =>
       list.push({
         name: workItem.navigate?.name,
-        link: workItem.navigate?.href,
+        link: workItem.navigate?.link,
       })
     );
   });
