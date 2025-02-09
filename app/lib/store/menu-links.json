@@ -24,14 +24,5 @@
     },
     "description": "Quem eu sou e um pouco sobre minha história",
     "icon": "📂"
-  },
-  {
-    "name": "Contato",
-    "navigateTo": {
-      "text": "contato",
-      "link": "/#contato"
-    },
-    "description": "Entre em contato comigo",
-    "icon": "📂"
   }
 ]

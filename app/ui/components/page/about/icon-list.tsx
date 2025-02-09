@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-// import Tooltip from "@/app/ui/components/page/about/tooltip";
-// import { useState } from "react";
 
 interface Icon {
   id: number;
@@ -10,7 +8,6 @@ interface Icon {
   alt: string;
   size: number;
   navigateTo: string;
-  // description: string;
   className?: string;
 }
 

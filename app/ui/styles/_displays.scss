@@ -176,6 +176,10 @@
 }
 
 .gap {
+  &-default {
+    gap: $spacing-default;
+  }
+
   &-1 {
     gap: $spacing-1;
   }

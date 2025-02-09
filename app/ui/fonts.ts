@@ -23,7 +23,7 @@ export const font = {
   heading: `${ginto.className} heading`,
   headingSm: `${ginto.className} heading-sm`,
   paragraph: `${merriweather.className} paragraph`,
-  small: `${merriweather.className} small`,
+  small: `${ginto.className} small`,
   copyright: `${ginto.className} text-italic text-light`,
   logo: `${merriweather.className} heading-light text-light`,
 };

@@ -7,13 +7,12 @@ import IconList from "@/app/ui/components/page/about/icon-list";
 import Timeline from "@/app/ui/components/page/about/timeline";
 
 export default function About() {
+  const menuLink = store.menuLinks[2].navigateTo.text;
+
   const [sortedCards, setSortedCards] = useState<typeof store.about>([]);
   const tabletSize = 768;
   const width = useWindowWidth();
   const isMobile = width < tabletSize;
-  const simplificaSiteProject = store.projects[0].work?.[2];
-
-  console.log(simplificaSiteProject);
 
   // Altera a ordem dos cards quando a view é Mobile
   const sortCards = () => {
@@ -36,7 +35,7 @@ export default function About() {
 
   return (
     <section
-      id="about"
+      id={menuLink}
       className="container-default p-container flex-column z-index-10 mb-5"
     >
       <h2 className={`${font.heading} mb-6`}>About</h2>

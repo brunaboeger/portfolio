@@ -21,3 +21,17 @@ export interface CardProps {
   className?: string;
   navigateTo?: NavigateToProps;
 }
+
+export interface SocialIconsProps {
+  label?: string;
+  image?: ImageProps;
+  navigateTo?: NavigateToProps;
+}
+
+export interface TimelineProps {
+  id?: number;
+  title?: string;
+  subtitle?: string;
+  date?: string;
+  image?: ImageProps;
+}
