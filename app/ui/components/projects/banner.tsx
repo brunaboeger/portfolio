@@ -23,7 +23,7 @@ export default function Banner({
   return (
     <div className="overflow-hidden">
       <section
-        className="banner flex-column align-center justify-center text-center container-sm"
+        className="banner flex-column p-container align-center justify-center text-center container-sm"
         style={{ height: 450 }}
       >
         <h1 className={font.heading}>{heading}</h1>

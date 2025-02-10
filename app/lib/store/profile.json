@@ -62,7 +62,7 @@
           },
           "navigateTo": {
             "label": "curriculo",
-            "link": "",
+            "link": "/docs/curriculo.pdf",
             "target": "_blank"
           }
         }
