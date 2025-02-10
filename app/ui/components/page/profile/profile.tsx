@@ -8,7 +8,10 @@ import { ImageProps } from "@/app/lib/types";
 import { font } from "@/app/ui/fonts";
 
 export default function About() {
-  const menuLink = store.menuLinks[2].navigateTo.text;
+  const sectionTitle = store.home.navbar.links[2].name;
+  const navbarLinkLabel = store.home.navbar.links.find(
+    (item) => item.name === sectionTitle
+  );
 
   const profile = {
     photo: store.profile[0].photo,
@@ -28,10 +31,10 @@ export default function About() {
 
   return (
     <section
-      id={menuLink}
+      id={navbarLinkLabel?.navigateTo.label}
       className="container-default p-container flex-column z-index-10 mb-5"
     >
-      <h2 className={`${font.heading} mb-6`}>Sobre</h2>
+      <h2 className={`${font.heading} mb-6`}>{sectionTitle}</h2>
       <div className="masonry-column-3 gap-5">
         <ProfileImage photo={profile.photo || defaultPhoto} />
         <ProfileAbout item={profile.about ?? {}} />

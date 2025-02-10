@@ -17,10 +17,15 @@ $navbar-height: 5rem;
   background-color: var(--background);
 }
 
-.section-screens {
+.screens-mobile {
   display: grid;
-  // flex-wrap: wrap;
-  // gap: 1.5rem;
+}
+
+.screens-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu {
@@ -78,11 +83,6 @@ $navbar-height: 5rem;
   padding: 0.8rem 1rem;
   font-family: inherit;
   transition: all var(--transition-speed) ease;
-
-  &:hover {
-    background: var(--primary);
-    color: var(--white);
-  }
 
   &.icon-only {
     width: 2.5rem;
@@ -144,53 +144,65 @@ $navbar-height: 5rem;
   display: grid;
   grid-gap: 1.5rem;
   grid-auto-rows: minmax(0, 1fr);
-  // grid-template-columns: repeat(2, minmax(50px, 1fr));
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
-// .projects-list .card:first-child {
-//   grid-column: auto / span 2;
-// }
-
 @media screen and (max-width: 767px) {
-  .section-screens {
+  .screens-mobile {
     grid-template-columns: 1fr;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .section-screens {
+  .screens-mobile {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .screens-desktop {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (min-width: 1024px) {
-  .section-screens {
+  .screens-mobile {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (#{$desktop-sm}) {
-  .section-screens {
+  .screens-mobile {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .button {
+    &:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
   }
 }
 
 @media screen and (#{$desktop-md}) {
-  .section-screens {
+  .screens-mobile {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (#{$desktop-lg}) {
-  .section-screens {
+  .screens-mobile {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media screen and (#{$desktop-xlg}) {
-  .section-screens {
+  .screens-mobile {
     grid-template-columns: repeat(6, 1fr);
   }
 }

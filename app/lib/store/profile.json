@@ -1,10 +1,11 @@
 [
   {
     "photo": {
+      "label": "Bruna Boeger",
       "src": "/images/photo.jpg",
       "alt": "Foto de Bruna Boeger",
       "width": 400,
-      "height": 200,
+      "height": 186,
       "className": "w-full"
     }
   },
@@ -37,7 +38,7 @@
           },
           "navigateTo": {
             "label": "github",
-            "link": "",
+            "link": "https://github.com/brunaboeger",
             "target": "_blank"
           }
         },
@@ -49,7 +50,7 @@
           },
           "navigateTo": {
             "label": "linkedIn",
-            "link": "",
+            "link": "https://www.linkedin.com/in/brunaboeger",
             "target": "_blank"
           }
         },
@@ -93,7 +94,7 @@
       {
         "id": 3,
         "title": "Designer Gráfico",
-        "subtitle": "Shulz S.A.",
+        "subtitle": "Schulz S.A.",
         "date": "mar/2017 - dez/2017 (10 meses)",
         "image": {
           "src": "/images/logos/schulz.png",
@@ -129,7 +130,7 @@
         "id": 2,
         "type": "course",
         "title": "Fotografia",
-        "subtitle": "Universidade de Univille",
+        "subtitle": "Univille Universidade",
         "date": "2017 - 2021",
         "image": {
           "src": "/images/logos/univille.png",
@@ -140,7 +141,7 @@
         "id": 3,
         "type": "course",
         "title": "Design Gráfico",
-        "subtitle": "Universidade de Univille",
+        "subtitle": "Univille Universidade",
         "date": "2014 - 2017",
         "image": {
           "src": "/images/logos/univille.png",
@@ -150,12 +151,34 @@
       {
         "id": 4,
         "type": "certificate",
-        "name": "EF Set Certificate",
-        "subtitle": "Universidade de Univille",
-        "date": "2017",
-        "image": {
-          "src": "/images/logos/univille.png",
-          "alt": "Logo da Univille Universidade"
+        "title": "EF Set English Certificate",
+        "date": "EF Education First | julho/2023",
+        "navigateTo": {
+          "label": "univille",
+          "link": "https://cert.efset.org/qFZVFc",
+          "target": "_blank"
+        }
+      },
+      {
+        "id": 5,
+        "type": "certificate",
+        "title": "Lógica de Programação com Javascript",
+        "date": "Caelum | março/2022",
+        "navigateTo": {
+          "label": "univille",
+          "link": "https://cert.efset.org/qFZVFc",
+          "target": "_blank"
+        }
+      },
+      {
+        "id": 6,
+        "type": "certificate",
+        "title": "HTML e CSS",
+        "date": "Alura | junho/2022",
+        "navigateTo": {
+          "label": "univille",
+          "link": "https://cert.efset.org/qFZVFc",
+          "target": "_blank"
         }
       }
     ]

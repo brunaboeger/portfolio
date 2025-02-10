@@ -8,15 +8,16 @@ export default function Page() {
   const banner = simplificaProject?.content?.banner;
   const context = simplificaProject?.content?.context;
   const goals = simplificaProject?.content?.goals;
-  // const challenges = simplificaProject?.content?.challenges;
   const process = simplificaProject?.content?.process;
-  const results = simplificaProject?.content?.results;
+  // const results = simplificaProject?.content?.results;
+  const screens = simplificaProject?.screens;
 
   return (
     <>
       <Banner
         heading={banner?.title}
         subheading={banner?.subtitle}
+        description={banner?.description}
         tags={banner?.tags}
         image={banner?.image}
       />
@@ -32,10 +33,10 @@ export default function Page() {
 
         <Content heading={process?.title} texts={process?.texts} />
 
-        <Content heading={results?.title} texts={results?.texts} />
+        {/* <Content heading={results?.title} texts={results?.texts} /> */}
       </section>
 
-      <Screens screens={simplificaProject?.screens} />
+      <Screens {...screens} />
     </>
   );
 }

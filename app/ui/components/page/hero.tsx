@@ -1,28 +1,18 @@
 import { font } from "@/app/ui/fonts";
+import store from "@/app/lib/store";
 
 export default function Hero() {
+  const heroTexts = store.home.hero;
+
   return (
     <>
       <section
         id="banner"
-        className="p-container-lr container-sm flex-column justify-center text-center h-100vh z-index-20"
+        className="p-container-lr container-sm flex-column justify-center align-center text-center h-100vh z-index-20"
       >
-        <p className="paragraph">Hello, there! I'm Bruna.</p>
-        <h1 className={`${font.heading} mtb-5`}>
-          A dedicated UI designer and front-end developer.
-        </h1>
-        <p className="paragraph">
-          I design and code beautiful things, and I love what I do. <br /> My
-          inspiration comes from the desire to turn{" "}
-          <span className="highlight">
-            <strong>ideas</strong>
-          </span>{" "}
-          into{" "}
-          <span className="highlight">
-            <strong>reality</strong>
-          </span>
-          .
-        </p>
+        <p className="paragraph">{heroTexts.pretitle}</p>
+        <h1 className={`${font.heading} mtb-5`}>{heroTexts.title}</h1>
+        <p className="paragraph mw-600x">{heroTexts.description}</p>
       </section>
     </>
   );

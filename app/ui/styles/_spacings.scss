@@ -108,26 +108,51 @@ $spacing-default: $spacing-5;
     &-1 {
       padding-top: $spacing-1;
       padding-bottom: $spacing-1;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-1;
+        padding-bottom: $spacing-1;
+      }
     }
 
     &-2 {
       padding-top: $spacing-2;
       padding-bottom: $spacing-2;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-2;
+        padding-bottom: $spacing-2;
+      }
     }
 
     &-3 {
       padding-top: $spacing-3;
       padding-bottom: $spacing-3;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-3;
+        padding-bottom: $spacing-3;
+      }
     }
 
     &-4 {
       padding-top: $spacing-4;
       padding-bottom: $spacing-4;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-4;
+        padding-bottom: $spacing-4;
+      }
     }
 
     &-5 {
       padding-top: $spacing-5;
       padding-bottom: $spacing-5;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-5;
+        padding-bottom: $spacing-5;
+      }
     }
 
     &-6 {
@@ -195,34 +220,106 @@ $spacing-default: $spacing-5;
   &t {
     &-1 {
       padding-top: $spacing-1;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-1;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-1;
+      }
     }
 
     &-2 {
       padding-top: $spacing-2;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-2;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-2;
+      }
     }
 
     &-3 {
       padding-top: $spacing-3;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-3;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-3;
+      }
     }
 
     &-4 {
       padding-top: $spacing-4;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-4;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-4;
+      }
+
+      &\:lc:last-child {
+        padding-top: $spacing-4;
+      }
+
+      &\:lc:first-child {
+        padding-top: $spacing-4;
+      }
     }
 
     &-5 {
       padding-top: $spacing-5;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-5;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-5;
+      }
     }
 
     &-6 {
       padding-top: $spacing-6;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-6;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-6;
+      }
     }
 
     &-7 {
       padding-top: $spacing-7;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-7;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-7;
+      }
     }
 
     &-8 {
       padding-top: $spacing-8;
+
+      &\:not-lc:not(:last-child) {
+        padding-top: $spacing-8;
+      }
+
+      &\:not-fc:not(:first-child) {
+        padding-top: $spacing-8;
+      }
     }
   }
 

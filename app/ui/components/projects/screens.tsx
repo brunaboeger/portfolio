@@ -1,17 +1,19 @@
 import Image from "next/image";
 
-interface Screens {
+interface ImagesProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
+  className?: string;
 }
 
 interface ScreensProps {
-  screens?: Screens[];
+  type?: string;
+  images?: ImagesProps[];
 }
 
-export default function Screens({ screens }: ScreensProps) {
+export default function Screens({ images, type }: ScreensProps) {
   const placeholderList = [
     "bg-orange-100",
     "bg-orange-200",
@@ -23,22 +25,22 @@ export default function Screens({ screens }: ScreensProps) {
 
   return (
     <section className="p-container bg-blue-100">
-      <div className="p-container-tb section-screens gap-5">
-        {screens
-          ? screens.map((screen, index) => (
+      <div className={`screens-${type} p-container-tb gap-5`}>
+        {images
+          ? images?.map((image, index) => (
               <Image
                 key={index}
-                src={screen.src || ""}
-                alt={screen.alt || "Imagem"}
-                width={screen.width || "300"}
-                height={600}
-                className="round-3 shadow-1 hover-translateY-2 m-auto"
+                src={image.src || ""}
+                alt={image.alt || "Imagem"}
+                width={image.width || 300}
+                height={image.height || 600}
+                className={`hover-translateY-2 ${image.className}`}
               />
             ))
           : placeholderList.map((placeholder, index) => (
               <div
                 key={index}
-                className={`h-600x ${placeholder} round-3 shadow-3 hover-translateY-2`}
+                className={`${placeholder} hover-translateY-2`}
               />
             ))}
       </div>

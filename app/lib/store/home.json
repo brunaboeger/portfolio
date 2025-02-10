@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "title": "Portfolio Bruna Boeger",
+    "description": "Bruna Boeger - UX/UI Developer Portfolio",
+    "authors": [{ "name": "Bruna Boeger" }]
+  },
+  "hero": {
+    "pretitle": "Olá! Chamo-me Bruna.",
+    "title": "UI designer & desenvolvedora dedicada",
+    "description": "Apaixonada por criar novas experiências, minha inspiração e motivação vem do desejo de transformar uma simples ideia em realidade.",
+    "alternate-description": "Sou uma UI designer dedicada e desenvolvedor front-end com paixão por criar novas experiências e dar vida a ideias. Tenho uma sólida formação em design gráfico e recentemente fiz a transição para desenvolvimento web, na qual adquiri conhecimentos valiosos que posso aplicar a qualquer projeto. Tenho orgulho de dizer que posso transformar ideias em vida."
+  },
+  "navbar": {
+    "links": [
+      {
+        "name": "Início",
+        "navigateTo": {
+          "label": "inicio",
+          "link": "/"
+        },
+        "icon": "📂"
+      },
+      {
+        "name": "Projetos",
+        "navigateTo": {
+          "label": "projetos",
+          "link": "/#projetos"
+        },
+        "description": "No que andei trabalhando e projetos em destaque",
+        "icon": "📂"
+      },
+      {
+        "name": "Sobre",
+        "navigateTo": {
+          "label": "sobre",
+          "link": "/#sobre"
+        },
+        "description": "Quem eu sou e um pouco sobre minha história",
+        "icon": "📂"
+      }
+    ],
+    "photo": {
+      "title": "Bruna Boeger",
+      "image": {
+        "src": "/images/photo.jpg",
+        "alt": "Foto de Bruna Boeger",
+        "width": 40,
+        "height": 40
+      },
+      "navigateTo": {
+        "title": "",
+        "link": "/"
+      }
+    }
+  },
+  "footer": {
+    "title": "Vamos entrar em contato?",
+    "texts": [
+      "Estou aberta a novas oportunidades e colaborações. Sinta-se a vontade para entrar em contato por meio das redes sociais abaixo.",
+      "Ficarei feliz em te responder."
+    ],
+    "copyright": {
+      "title": "Copyright ©",
+      "description": "Feito com amor e dedicação."
+    }
+  }
+}

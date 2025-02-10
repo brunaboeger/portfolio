@@ -57,7 +57,7 @@ export default function Banner({
             alt={image?.alt || "Imagem de capa"}
             width={700}
             height={530}
-            className={`object-cover w-auto mw-full ${image?.className}`}
+            className={`object-cover w-auto mw-full hover-translateY-3 ${image?.className}`}
           />
         </div>
       </section>

@@ -11,6 +11,7 @@ export default function Page() {
   const challenges = allpProject?.content?.challenges;
   const process = allpProject?.content?.process;
   const results = allpProject?.content?.results;
+  const screens = allpProject?.screens;
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function Page() {
         <Content heading={results?.title} texts={results?.texts} />
       </section>
 
-      <Screens screens={allpProject?.screens} />
+      <Screens {...screens} />
     </>
   );
 }

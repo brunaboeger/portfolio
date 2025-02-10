@@ -15,7 +15,8 @@
     "bcrypt": "^5.1.1",
     "next": "^15.1.1-canary.18",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "simple-scss-library": "^1.2.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

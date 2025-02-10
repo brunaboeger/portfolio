@@ -10,6 +10,7 @@ export default function Button({
   ariaLabel,
   iconOnly = false,
   children,
+  ref,
 }: {
   text?: string;
   navigateTo?: NavigateToProps;
@@ -19,6 +20,7 @@ export default function Button({
   ariaLabel: string;
   iconOnly?: boolean;
   children?: React.ReactNode;
+  ref?: React.RefObject<HTMLButtonElement>;
 }) {
   return (
     <Link
@@ -27,6 +29,7 @@ export default function Button({
       className="w-fit"
     >
       <button
+        ref={ref}
         onClick={onClick}
         aria-label={ariaLabel}
         className={`button flex align-center justify-center ${

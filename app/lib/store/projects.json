@@ -76,40 +76,59 @@
             "screens": []
           }
         },
-        "screens": [
-          {
-            "src": "/images/projects/allp/screens/allp-tela-1.png",
-            "alt": "Tela de login do aplicativo Allp"
-          },
-          {
-            "src": "/images/projects/allp/screens/allp-tela-2.png",
-            "alt": "Tela de busca de locais no aplicativo Allp"
-          },
-          {
-            "src": "/images/projects/allp/screens/allp-tela-3.png",
-            "alt": "Tela de detalhes de um local no aplicativo Allp"
-          },
-          {
-            "src": "/images/projects/allp/screens/allp-tela-4.png",
-            "alt": "Tela de login do fornecedor no aplicativo Allp"
-          },
-          {
-            "src": "/images/projects/allp/screens/allp-tela-5.png",
-            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
-          },
-          {
-            "src": "/images/projects/allp/screens/allp-tela-7.png",
-            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
-          },
-          {
-            "src": "/images/projects/allp/screens/allp-tela-9.png",
-            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
-          },
-          {
-            "src": "/images/projects/allp/screens/allp-tela-8.png",
-            "alt": "Tela de dashboard do fornecedor no aplicativo Allp"
-          }
-        ]
+        "screens": {
+          "type": "mobile",
+          "images": [
+            {
+              "src": "/images/projects/allp/screens/allp-tela-1.png",
+              "alt": "Tela de login do aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            },
+            {
+              "src": "/images/projects/allp/screens/allp-tela-2.png",
+              "alt": "Tela de busca de locais no aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            },
+            {
+              "src": "/images/projects/allp/screens/allp-tela-3.png",
+              "alt": "Tela de detalhes de um local no aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            },
+            {
+              "src": "/images/projects/allp/screens/allp-tela-4.png",
+              "alt": "Tela de login do fornecedor no aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            },
+            {
+              "src": "/images/projects/allp/screens/allp-tela-5.png",
+              "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            },
+            {
+              "src": "/images/projects/allp/screens/allp-tela-7.png",
+              "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            },
+            {
+              "src": "/images/projects/allp/screens/allp-tela-9.png",
+              "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            },
+            {
+              "src": "/images/projects/allp/screens/allp-tela-8.png",
+              "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
+              "height": 600,
+              "className": "object-cover w-auto round-3 shadow-3"
+            }
+          ]
+        }
       },
       {
         "title": "Simplifica+",
@@ -127,11 +146,11 @@
         "content": {
           "banner": {
             "title": "Simplifica+",
-            "subtitle": "Site do Portal do Cliente Simplifica+",
-            "description": "Lorem ipsum",
-            "tags": ["2024", "Developer", "Adapcon Software & Inovação"],
+            "subtitle": "Site da plataforma",
+            "description": "Automatiza os processos das empresas e fornece autonomia para os clientes.",
+            "tags": ["2024", "Desenvolvedora", "Adapcon Software & Inovação"],
             "image": {
-              "src": "/images/projects/simplifica/simplifica-2.webp",
+              "src": "/images/projects/simplifica/simplifica-cover.webp",
               "alt": "Imagem da plataforma Simplifica+",
               "className": "mb-8"
             }
@@ -153,33 +172,51 @@
           "goals": {
             "title": "Objetivos",
             "lists": [
-              "Criar o site conforme as prototipações da equipe de marketing."
+              "Criar o site conforme as prototipações da equipe de marketing;",
+              "Facilitar a manutenção e edição do conteúdo pela equipe de marketing;",
+              "Implementar o Microsoft Clarity para monitorar o comportamento dos usuários."
             ]
           },
           "process": {
             "title": "Processo",
             "texts": [
               "Para facilitar a edição de conteúdo pela equipe de Marketing, foi utilizada a plataforma Webflow. Foi necessário aprender a ferramenta e adaptar o site conforme as prototipações da equipe de marketing."
-            ],
-            "screens": []
+            ]
           },
           "results": {
             "title": "Resultados",
-            "texts": ["Texto"],
-            "screens": []
+            "texts": ["Texto"]
           }
+        },
+        "screens": {
+          "type": "desktop",
+          "images": [
+            {
+              "src": "/images/projects/simplifica/simplifica-1.webp",
+              "alt": "Imagem da tela inicial do site",
+              "width": 1024,
+              "className": "h-auto object-cover"
+            },
+            {
+              "src": "/images/projects/simplifica/simplifica-2.webp",
+              "alt": "Imagem da tela inicial do site",
+              "width": 1024,
+              "className": "h-auto object-cover"
+            },
+            {
+              "src": "/images/projects/simplifica/simplifica-3.webp",
+              "alt": "Imagem da tela inicial do site",
+              "width": 1024,
+              "className": "h-auto object-cover"
+            },
+            {
+              "src": "/images/projects/simplifica/simplifica-4.webp",
+              "alt": "Imagem da tela inicial do site",
+              "width": 1024,
+              "className": "h-auto object-cover"
+            }
+          ]
         }
-      }
-    ]
-  },
-  {
-    "playground": [
-      {
-        "title": "Finnap",
-        "description": "Lorem ipsum dolor simet adipisicing elit. Quisquam officiis quidem, repellat, quia.",
-        "border": "border-gray-600",
-        "imageSrc": "",
-        "imageTexture": ""
       }
     ]
   }

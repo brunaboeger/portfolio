@@ -7,33 +7,61 @@ import store from "@/app/lib/store";
 import { font } from "@/app/ui/fonts";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useWindowWidth } from "@/app/lib/utils";
-import { useState } from "react";
+import { useState, useEffect, useRef, use } from "react";
 
 export default function Navbar() {
   const tabletSize = 768;
   const width = useWindowWidth();
   const isMobile = width < tabletSize;
   const isDesktop = !isMobile;
+
+  const navbarTexts = store.home.navbar;
+  const navbarLogo = navbarTexts.photo;
+
   const [menuDisplay, setMenuDisplay] = useState<boolean>(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMenu = () => {
-    setMenuDisplay(menuDisplay === false ? true : false);
+    setMenuDisplay(!menuDisplay);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target as Node) &&
+      buttonRef.current &&
+      !buttonRef.current.contains(event.target as Node)
+    ) {
+      setMenuDisplay(false);
+    }
+  };
+
+  const handleMenuItemClick = () => {
+    setMenuDisplay(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav id="navbar" className="p-container position-fixed w-100 z-index-30">
       <div className="flex justify-between align-center">
         {/* Logo */}
-        <Link href="/" style={{ height: 54 }}>
+        <Link href={navbarLogo.navigateTo?.link || "/"} style={{ height: 54 }}>
           <div className="flex pt-4 pb-4 pl-2 pr-4 align-center h-100 bg-glass-1 hover-translateY-1">
             <Image
-              src="/images/photo.jpg"
-              alt="Bruna Boeger"
-              width={40}
-              height={40}
+              src={navbarLogo.image?.src}
+              alt={navbarLogo.image?.alt}
+              width={navbarLogo.image?.width || 40}
+              height={navbarLogo.image?.height || 40}
               className="round-full"
             />
-            <h3 className={`${font.logo} ml-3`}>Bruna Boeger</h3>
+            <h3 className={`${font.logo} ml-3`}>{navbarLogo.title}</h3>
           </div>
         </Link>
 
@@ -44,32 +72,42 @@ export default function Navbar() {
             className="position-relative p-container bg-glass-1 flex align-center justify-center"
             style={{ height: 54, width: 54 }}
           >
-            <Button onClick={toggleMenu} ariaLabel="Toggle Menu" iconOnly>
+            <Button
+              ref={buttonRef}
+              onClick={toggleMenu}
+              ariaLabel="Toggle Menu"
+              iconOnly
+            >
               <Bars3Icon />
             </Button>
-            {menuDisplay ? (
+            {menuDisplay && (
               <div
+                ref={menuRef}
                 className="position-absolute top-0 p-4 bg-blue-100 shadow-3 round-top-2-right-0 border-gray-100"
                 style={{ right: "0", top: "4rem" }}
               >
                 <div className="flex-column justify-end gap-3 text-right position-relative">
                   {store.menuLinks.map((link, index) => (
                     <div className="menu-item mb-2" key={index}>
-                      <Link className="menu-link" href={link.navigateTo?.link}>
+                      <Link
+                        className="menu-link"
+                        href={link.navigateTo?.link}
+                        onClick={handleMenuItemClick}
+                      >
                         {link.name}
                       </Link>
-                      {!isMobile ? (
+                      {!isMobile && (
                         <div className="menu-tooltip flex justify-end">
                           <div className="menu-tooltip-container">
                             <p>{link.description}</p>
                           </div>
                         </div>
-                      ) : null}
+                      )}
                     </div>
                   ))}
                 </div>
               </div>
-            ) : null}
+            )}
           </div>
         ) : (
           // Tablet and Desktop Menu

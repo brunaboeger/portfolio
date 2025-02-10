@@ -1,17 +1,16 @@
-import menuLinks from "./menu-links.json";
+import home from "./home.json";
 import projects from "./projects.json";
-import hero from "./hero.json";
-import socialIcons from "./social-icons.json";
-import about from "./about.json";
 import profile from "./profile.json";
 
+import menuLinks from "./menu-links.json";
+import hero from "./hero.json";
+
 const store = {
-  hero,
+  home,
   projects,
-  about,
-  menuLinks,
-  socialIcons,
   profile,
+  hero,
+  menuLinks,
 };
 
 export default store;

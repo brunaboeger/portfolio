@@ -30,6 +30,7 @@ export interface SocialIconsProps {
 
 export interface TimelineProps {
   id?: number;
+  type?: string;
   title?: string;
   subtitle?: string;
   date?: string;

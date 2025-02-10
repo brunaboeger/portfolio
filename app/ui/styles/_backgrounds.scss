@@ -132,7 +132,7 @@
   &-top {
     border-top: var(--border);
 
-    &\:nf:not(:first-child) {
+    &\:not-fc:not(:first-child) {
       border-top: var(--border);
     }
   }
