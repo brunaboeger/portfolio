@@ -11,7 +11,7 @@ export default function Hero() {
         className="p-container-lr container-sm flex-column justify-center align-center text-center h-100vh z-index-20"
       >
         <p className="paragraph">{heroTexts.pretitle}</p>
-        <h1 className={`${font.heading} mtb-5`}>{heroTexts.title}</h1>
+        <h1 className={`${font.heading} mtb-5 w-100`}>{heroTexts.title}</h1>
         <p className="paragraph mw-600x">{heroTexts.description}</p>
       </section>
     </>
