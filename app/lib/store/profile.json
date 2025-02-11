@@ -219,6 +219,14 @@
       },
       {
         "id": 5,
+        "name": "Git",
+        "image": {
+          "src": "/tools/git.svg",
+          "alt": "Ícone do Git"
+        }
+      },
+      {
+        "id": 6,
         "name": "SASS",
         "image": {
           "src": "/tools/sass.svg",
@@ -226,7 +234,7 @@
         }
       },
       {
-        "id": 6,
+        "id": 7,
         "name": "HTML5",
         "image": {
           "src": "/tools/html.svg",
@@ -234,7 +242,7 @@
         }
       },
       {
-        "id": 7,
+        "id": 8,
         "name": "Docker",
         "image": {
           "src": "/tools/docker.svg",
@@ -242,7 +250,7 @@
         }
       },
       {
-        "id": 8,
+        "id": 9,
         "name": "Vue.js",
         "image": {
           "src": "/tools/vuejs.svg",
@@ -250,7 +258,7 @@
         }
       },
       {
-        "id": 9,
+        "id": 10,
         "name": "Webflow",
         "image": {
           "src": "/tools/webflow.svg",
@@ -258,7 +266,7 @@
         }
       },
       {
-        "id": 10,
+        "id": 11,
         "name": "Figma",
         "image": {
           "src": "/tools/figma.svg",
