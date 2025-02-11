@@ -83,49 +83,49 @@
               "src": "/images/projects/allp/screens/allp-tela-1.png",
               "alt": "Tela de login do aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             },
             {
               "src": "/images/projects/allp/screens/allp-tela-2.png",
               "alt": "Tela de busca de locais no aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             },
             {
               "src": "/images/projects/allp/screens/allp-tela-3.png",
               "alt": "Tela de detalhes de um local no aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             },
             {
               "src": "/images/projects/allp/screens/allp-tela-4.png",
               "alt": "Tela de login do fornecedor no aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             },
             {
               "src": "/images/projects/allp/screens/allp-tela-5.png",
               "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             },
             {
               "src": "/images/projects/allp/screens/allp-tela-7.png",
               "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             },
             {
               "src": "/images/projects/allp/screens/allp-tela-9.png",
               "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             },
             {
               "src": "/images/projects/allp/screens/allp-tela-8.png",
               "alt": "Tela de dashboard do fornecedor no aplicativo Allp",
               "height": 600,
-              "className": "object-cover w-auto round-3 shadow-3"
+              "className": "object-cover w-auto m-auto round-3 shadow-3"
             }
           ]
         }

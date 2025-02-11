@@ -33,7 +33,7 @@ export default function Banner({
         {description && (
           <p className={`${font.paragraph} text-italic`}>{description}</p>
         )}
-        <div className="flex gap-2 mt-5">
+        <div className="flex gap-2 mt-5 mobile:flex-wrap justify-center">
           {tags?.map((tag, index) => (
             <Tag key={index} className="hover-translateY-1">
               {tag}

@@ -265,6 +265,12 @@
       "footer footer footer footer";
     grid-template-columns: repeat(4, minmax(100px, 1fr));
   }
+
+  .mobile {
+    &\:flex-wrap {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1399px) {
