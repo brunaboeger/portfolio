@@ -9,7 +9,7 @@ export default function Footer() {
   const footerTexts = store.home.footer;
 
   return (
-    <footer className="p-container bg-blue-500">
+    <footer className="p-container bg-blue-500 bg-texture-1">
       <div className="p-container flex-column justify-center align-center color-white text-center">
         <h3 className={`${font.heading} mt-2 mb-3`}>{footerTexts.title}</h3>
         {footerTexts.texts.map((text, index) => (
