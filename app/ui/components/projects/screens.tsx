@@ -25,7 +25,7 @@ export default function Screens({ images, type }: ScreensProps) {
 
   return (
     <section className="p-container bg-blue-100">
-      <div className={`screens-${type} p-container-tb gap-5`}>
+      <div className={`screens-${type} gap-5`}>
         {images
           ? images?.map((image, index) => (
               <Image
