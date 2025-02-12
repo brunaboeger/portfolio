@@ -197,12 +197,6 @@ $navbar-height: 5rem;
 
 @media screen and (#{$desktop-lg}) {
   .screens-mobile {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media screen and (#{$desktop-xlg}) {
-  .screens-mobile {
     grid-template-columns: repeat(6, 1fr);
   }
 }
