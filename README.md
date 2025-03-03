@@ -20,8 +20,8 @@ Como primeiro passo para começar o projeto, foquei em criar o _wireframing_ do 
 - Next.js
 - Vercel
 
-### Wireframing (antigo)
+### Wireframing (versões)
 
-![imagem do layout inicial](./public/github/capa-1.png)
-![imagem do layout secundário](./public/github/capa-2.png)
 ![imagem do layout final](./public/github/capa-3.png)
+![imagem do layout secundário](./public/github/capa-2.png)
+![imagem do layout inicial](./public/github/capa-1.png)
