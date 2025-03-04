@@ -1,0 +1,119 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id           String        @id @default(uuid())
+  name         String
+  role         String
+  imageUrl     String
+  description  String
+  socials      Social[]
+  skills       Skill[]
+  projects     Project[]
+  studies      Study[]
+  experiences  Experience[]
+  certificates Certificate[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model Social {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  link        String?
+  imageUrl    String
+  profile     Profile  @relation(fields: [profileId], references: [id])
+  profileId   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Skill {
+  id          String         @id @default(uuid())
+  name        String
+  description String?
+  imageSrc    String
+  profile     Profile        @relation(fields: [profileId], references: [id])
+  profileId   String
+  projects    ProjectSkill[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model Project {
+  id            String         @id @default(uuid())
+  name          String
+  slug          String
+  description   String
+  coverImageSrc String
+  thumbImageSrc String
+  screens       String[]
+  skills        ProjectSkill[]
+  profile       Profile        @relation(fields: [profileId], references: [id])
+  profileId     String
+  experience    Experience     @relation(fields: [experienceId], references: [id])
+  experienceId  String
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model ProjectSkill {
+  skill     Skill   @relation(fields: [skillId], references: [id])
+  skillId   String
+  project   Project @relation(fields: [projectId], references: [id])
+  projectId String
+
+  @@id([skillId, projectId])
+}
+
+model Study {
+  id          String    @id @default(uuid())
+  name        String
+  description String
+  startDate   DateTime
+  endDate     DateTime?
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  profileId   String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Experience {
+  id          String    @id @default(uuid())
+  name        String
+  description String
+  startDate   DateTime
+  endDate     DateTime?
+  link        String?
+  projects    Project[]
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  profileId   String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Certificate {
+  id             String    @id @default(uuid())
+  name           String
+  description    String
+  link           String?
+  issueDate      DateTime
+  expirationDate DateTime?
+  profile        Profile   @relation(fields: [profileId], references: [id])
+  profileId      String
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
