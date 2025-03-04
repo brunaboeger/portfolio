@@ -56,7 +56,7 @@ model Skill {
 model Project {
   id            String         @id @default(uuid())
   name          String
-  slug          String
+  slug          String         @unique
   description   String
   coverImageSrc String
   thumbImageSrc String
