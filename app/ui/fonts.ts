@@ -1,29 +1,28 @@
-import { Merriweather, Poppins, IBM_Plex_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Cabin, Crimson_Pro, Agbalumo } from "next/font/google";
 
-export const ginto = localFont({ src: "/fonts/Ginto-Regular.otf" });
-
-export const merriweather = Merriweather({
+export const cabin = Cabin({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
-export const poppins = Poppins({
+export const crimsom = Crimson_Pro({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-export const ibmPlexMono = IBM_Plex_Mono({
+export const agbalumo = Agbalumo({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
+  style: ["normal"],
 });
 
 export const font = {
-  heading: `${ginto.className} heading`,
-  headingSm: `${ginto.className} heading-sm`,
-  paragraph: `${merriweather.className} paragraph`,
-  small: `${ginto.className} small`,
-  copyright: `${ginto.className} text-italic text-light`,
-  logo: `${merriweather.className} heading-light text-light`,
+  heading: `${agbalumo.className} heading`,
+  title: `${crimsom.className} title`,
+  paragraph: `${cabin.className} paragraph`,
+  small: `${cabin.className} small`,
+  copyright: `${crimsom.className} text-italic text-light`,
+  logo: `${crimsom.className} heading-light text-light`,
 };
