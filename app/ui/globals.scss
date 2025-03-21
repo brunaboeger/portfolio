@@ -1,6 +1,28 @@
 @import "styles";
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --primary: 42 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 198 33% 94%;
+    --input: 198 33% 94%;
+    --radius: 0.5rem;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,67 +33,4 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
-}
-
-// RESET
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
-// DECORATIONS
-
-.decoration {
-  &-none {
-    text-decoration: none;
-    list-style-type: none;
-  }
-
-  &-underline {
-    text-decoration: underline var(--primary);
-  }
-
-  &-wavy {
-    text-decoration: underline wavy var(--primary);
-  }
-
-  &-dotted {
-    text-decoration: underline dotted var(--primary);
-  }
-
-  &-blink {
-    text-decoration: blink var(--primary);
-  }
-}
-
-// EXTRAS
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-// NOVA PÁGINA
-
-.markdown {
-  &\:grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
-    height: 100%;
-    width: 100vw;
-    position: absolute;
-    opacity: 50%;
-
-    .column {
-      height: 100%;
-      background-color: rgb(186, 223, 255);
-    }
-  }
 }
