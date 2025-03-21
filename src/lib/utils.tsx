@@ -1,24 +1,6 @@
-import { useState, useEffect } from "react";
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
 
-const tabletSize = 768;
-const desktopSize = 1280;
-
-export const useWindowWidth = () => {
-  const [width, setWidth] = useState<number>(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return width;
-};
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
