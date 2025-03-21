@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { ScrollArea } from "@/src/components/ui/scroll-area"
 import { getAllProjects } from "@/src/data/get-all-projects";
+import { Button } from "../components/ui/button";
 
 const HomePage = async () => {
   const projects = await getAllProjects();
@@ -7,16 +9,19 @@ const HomePage = async () => {
   if (!projects) return null;
 
   return (
-    <main className="p-[36px] h-screen z-10 relative">
-      <div className="bg-gray-100 p-4 h-full">
+    <>
+      <ScrollArea className="h-full w-full">
         {/* Temporário */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 mb-5">
           {projects.map((project) => (
-            <Link key={project.id} href={project.slug}>{project.name}</Link>
+            <Button key={project.id} asChild>
+              <Link href={project.slug}>{project.name}</Link>
+            </Button>
+
           ))}
         </div>
-      </div>
-    </main>
+      </ScrollArea>
+    </>
   );
 }
 

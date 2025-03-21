@@ -21,7 +21,7 @@ export const agbalumo = Agbalumo({
 export const font = {
   heading: `${agbalumo.className} heading`,
   title: `${crimsom.className} title`,
-  paragraph: `${cabin.className} paragraph`,
+  paragraph: `${crimsom.className} font-sans`,
   small: `${cabin.className} small`,
   copyright: `${crimsom.className} text-italic text-light`,
   logo: `${crimsom.className} heading-light text-light`,

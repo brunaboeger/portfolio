@@ -15,9 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${font.paragraph} antialiased relative`}>
+      <body className={`${font.paragraph} text-slate-50 antialiased relative bg-gradient`}>
         <Navigation />
-        {children}
+        <main className="p-[36px] h-screen z-10 relative">
+          <div className="p-4 h-full">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );
