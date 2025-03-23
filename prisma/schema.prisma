@@ -58,8 +58,8 @@ model Project {
   name          String
   slug          String         @unique
   description   String
-  coverImageSrc String
-  thumbImageSrc String
+  coverImageSrc String[]
+  thumbImageSrc String[]
   screens       String[]
   skills        ProjectSkill[]
   profile       Profile        @relation(fields: [profileId], references: [id])
