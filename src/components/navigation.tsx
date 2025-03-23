@@ -3,10 +3,10 @@ import { Separator } from "@/src/components/ui/separator"
 
 const Navigation = () => {
   return (
-    <div className="absolute w-screen h-screen">
-      <div className="p-1 h-full w-full flex flex-col">
+    <div className="fixed w-screen h-screen">
+      <div className="p-1 h-full w-full flex flex-col z-10">
         {/* Top */}
-        <div className="h-[32px] flex">
+        <div className="h-[32px] flex z-20">
           <div className="w-[32px] h-[32px] border">A</div>
           <div className="flex-grow border-y text-center flex justify-center gap-3 items-center p-1">
             <p className="text-slate-400">bruna boeger</p>
@@ -17,7 +17,7 @@ const Navigation = () => {
         </div>
 
         {/* Middle */}
-        <div className="w-full flex flex-grow">
+        <div className="w-full flex flex-grow z-20">
           <div className="top-8 w-[32px] border-x">D</div>
           <div className="flex flex-col flex-grow justify-between">
             <div className="flex justify-end">
@@ -29,7 +29,7 @@ const Navigation = () => {
         </div>
 
         {/* Bottom */}
-        <div className="h-[32px] flex">
+        <div className="h-[32px] flex z-20">
           <div className="w-[32px] border" />
           <div className="flex-grow border-y text-center flex justify-center gap-3 items-center p-1">
             <p className="text-slate-400">Based in Brazil</p>
