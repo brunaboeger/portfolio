@@ -1,4 +1,4 @@
-import { getProjectById } from "@/src/data/projects/get-project-by-id";
+import { getExperienceById } from "@/src/data/experiences/get-experience-by-id";
 import { notFound } from "next/navigation";
 
 interface EditProjectProps {
@@ -7,14 +7,14 @@ interface EditProjectProps {
 
 const EditProject = async ({ params }: EditProjectProps) => {
   const { id } = await params;
-  const project = await getProjectById(id);
+  const experience = await getExperienceById(id);
 
-  if (!project) return notFound();
+  if (!experience) return notFound();
 
   return (
     <div className="h-full flex flex-col gap-5 justify-center items-center">
-      <h1>Edit project</h1>
-      <p>{project.name}</p>
+      <h1 className="font-sans text-5xl font-semibold">Edit Experience</h1>
+      <p className="font-sans">{experience?.name}</p>
     </div>
   );
 }

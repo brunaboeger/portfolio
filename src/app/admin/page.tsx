@@ -41,7 +41,7 @@ const Admin = async () => {
               <div key={project.id} className="flex justify-between items-center gap-4">
                 <p className="font-sans">{project.name}</p>
                 <Button variant="outline" size="icon">
-                  <Link href={`/admin/${project.id}/edit`}>
+                  <Link href={`/admin/edit/project/${project.id}`}>
                     <Pencil />
                   </Link>
                 </Button>
@@ -69,7 +69,7 @@ const Admin = async () => {
               <div key={experience.id} className="flex justify-between items-center gap-4">
                 <p className="font-sans">{experience.name}</p>
                 <Button variant="outline" size="icon">
-                  <Link href={`/admin/${experience.id}/edit`}>
+                  <Link href={`/admin/edit/experience/${experience.id}`}>
                     <Pencil />
                   </Link>
                 </Button>
@@ -97,7 +97,7 @@ const Admin = async () => {
               <div key={study.id} className="flex justify-between items-center gap-4">
                 <p className="font-sans">{study.name}</p>
                 <Button variant="outline" size="icon">
-                  <Link href={`/admin/${study.id}/edit`}>
+                  <Link href={`/admin/edit/study/${study.id}`}>
                     <Pencil />
                   </Link>
                 </Button>
