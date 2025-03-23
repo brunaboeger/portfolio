@@ -7,7 +7,7 @@
     --background: 222 46% 7%;
     --foreground: 0 0% 100%;
     --primary: 81 96% 55%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 215 25% 27%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 20%;
     --muted: 0 0% 96.1%;
@@ -18,6 +18,10 @@
     --destructive-foreground: 0 0% 98%;
     --border: 215 25% 27%;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .bg-gradient {
@@ -32,5 +36,5 @@
   background-image: url("/images/textures/paint.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 15%;
+  opacity: 80%;
 }
