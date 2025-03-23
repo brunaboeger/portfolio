@@ -30,7 +30,7 @@ const Admin = async () => {
                 <CardDescription className="font-sans text-slate-500">Lista com todos os projetos.</CardDescription>
               </div>
               <Button size="icon">
-                <Link href="/admin/add">
+                <Link href="/admin/add/project">
                   <Plus />
                 </Link>
               </Button>
@@ -58,7 +58,7 @@ const Admin = async () => {
                 <CardDescription className="font-sans text-slate-500">Lista com todos as experiências.</CardDescription>
               </div>
               <Button size="icon">
-                <Link href="/admin/add">
+                <Link href="/admin/add/experience">
                   <Plus />
                 </Link>
               </Button>
@@ -86,7 +86,7 @@ const Admin = async () => {
                 <CardDescription className="font-sans text-slate-500">Lista com todos os estudos.</CardDescription>
               </div>
               <Button size="icon">
-                <Link href="/admin/add">
+                <Link href="/admin/add/study">
                   <Plus />
                 </Link>
               </Button>
