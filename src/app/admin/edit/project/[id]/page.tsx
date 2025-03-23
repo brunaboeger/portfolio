@@ -1,6 +1,6 @@
 import { getProjectById } from "@/src/data/projects/get-project-by-id";
 import { notFound } from "next/navigation";
-import ProjectCards from "@/src/app/admin/edit/project/[id]/components/project-cards";
+import ProjectEditCards from "@/src/components/admin/project/edit/project-edit-cards";
 
 interface EditProjectProps {
   params: { id: string };
@@ -13,7 +13,7 @@ const EditProject = async ({ params }: EditProjectProps) => {
   if (!project) return notFound();
 
   return (
-    <ProjectCards project={project} />
+    <ProjectEditCards project={project} />
   );
 }
 

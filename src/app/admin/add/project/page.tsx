@@ -1,8 +1,8 @@
-const AddProject = () => {
+import ProjectAddCards from "@/src/components/admin/project/add/project-add-cards";
+
+const AddProject = async () => {
   return (
-    <>
-      <h1>Adicionar projeto</h1>
-    </>
+    <ProjectAddCards />
   );
 }
 

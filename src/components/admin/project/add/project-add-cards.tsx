@@ -1,28 +1,14 @@
 "use client";
 
-import ProjectEditForm from "@/src/app/admin/edit/project/[id]/components/project-edit-form";
+import ProjectAddForm from "@/src/components/admin/project/add/project-add-form";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { Button } from "@/src/components/ui/button";
-import { AlignLeft, Trash2 } from "lucide-react";
+import { AlignLeft } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-interface ProjectProps {
-  id: string;
-  name: string;
-  slug: string;
-  description: string;
-  coverImageSrc: string[];
-  thumbImageSrc: string[];
-  screens: string[];
-}
-
-interface ProjectCardsProps {
-  project: ProjectProps;
-}
-
-const ProjectCards = ({ project }: ProjectCardsProps) => {
+const ProjectAddCards = () => {
   const [propertyName, setPropertyName] = useState<string>("Propriedade");
   const [togglePropertyMenu, setTogglePropertyMenu] = useState<boolean>(false);
 
@@ -43,11 +29,11 @@ const ProjectCards = ({ project }: ProjectCardsProps) => {
         <Card className="w-1/2">
           <CardHeader>
             <CardTitle>
-              Editar {project.name}
+              Novo projeto
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ProjectEditForm project={project} onPropertyMenuChange={handlePropertyMenu} />
+            <ProjectAddForm onPropertyMenuChange={handlePropertyMenu} />
           </CardContent>
         </Card>
 
@@ -76,14 +62,7 @@ const ProjectCards = ({ project }: ProjectCardsProps) => {
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-2 flex-grow">
-              {project.coverImageSrc.map((imageSrc) => (
-                <div key={imageSrc} className="flex items-center justify-between">
-                  <p>{imageSrc}</p>
-                  <Button size="icon" variant="outline">
-                    <Trash2 />
-                  </Button>
-                </div>
-              ))}
+              Lista
             </CardContent>
           </Card>
         )}
@@ -96,14 +75,7 @@ const ProjectCards = ({ project }: ProjectCardsProps) => {
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-2 flex-grow">
-              {project.thumbImageSrc.map((imageSrc) => (
-                <div key={imageSrc} className="flex items-center justify-between">
-                  <p>{imageSrc}</p>
-                  <Button size="icon" variant="outline">
-                    <Trash2 />
-                  </Button>
-                </div>
-              ))}
+              Lista
             </CardContent>
           </Card>
         )}
@@ -116,14 +88,7 @@ const ProjectCards = ({ project }: ProjectCardsProps) => {
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-2 flex-grow">
-              {project.screens.map((imageSrc) => (
-                <div key={imageSrc} className="flex items-center justify-between">
-                  <p>{imageSrc}</p>
-                  <Button size="icon" variant="outline">
-                    <Trash2 />
-                  </Button>
-                </div>
-              ))}
+              Lista
             </CardContent>
           </Card>
         )}
@@ -137,4 +102,4 @@ const ProjectCards = ({ project }: ProjectCardsProps) => {
   );
 }
 
-export default ProjectCards;
+export default ProjectAddCards;
