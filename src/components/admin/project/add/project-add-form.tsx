@@ -19,7 +19,7 @@ import { createProject } from "@/src/data/projects/create-project";
 
 import { redirect, useRouter } from "next/navigation";
 
-interface ProjectEditFormProps {
+interface ProjectAddFormProps {
   handleProjectImages: (action: string, type: string, newImage: string) => void;
   projectImages: ProjectImagesProps;
 }
@@ -54,10 +54,10 @@ const formSchema = z.object({
   screens: z.any(),
 })
 
-const ProjectEditForm = ({
+const ProjectAddForm = ({
   projectImages,
   handleProjectImages
-}: ProjectEditFormProps) => {
+}: ProjectAddFormProps) => {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -210,4 +210,4 @@ const ProjectEditForm = ({
   );
 }
 
-export default ProjectEditForm;
+export default ProjectAddForm;

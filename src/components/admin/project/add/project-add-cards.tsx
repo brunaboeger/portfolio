@@ -85,60 +85,76 @@ const ProjectAddCards = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col gap-6">
-        <Card className="w-full">
-          <CardHeader>
-            <CardTitle>
-              Novo projeto
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ProjectAddForm
-              projectImages={projectImages}
-              handleProjectImages={handleProjectImages}
-            />
-          </CardContent>
-        </Card>
-      </div>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>
+            Novo projeto
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ProjectAddForm
+            projectImages={projectImages}
+            handleProjectImages={handleProjectImages}
+          />
+        </CardContent>
+      </Card>
 
       <Card className="w-full">
         <CardContent className="flex pt-6 gap-6">
-          <div className="w-1/3">
+          <div className="w-1/3 flex flex-col gap-2">
             <p className="font-sans text-slate-400">coverImageSrc</p>
             {projectImages.coverImageSrc.map((coverImage) => (
-              <div key={coverImage} className="flex justify-between items-center">
+              <div key={coverImage} className="flex gap-2 justify-between items-center">
                 <p>{coverImage}</p>
-                <Button size="icon" variant="outline" onClick={() => handleProjectImages("remove", "cover", coverImage)}>
-                  <Trash2 />
-                </Button>
+                <div>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    onClick={() => handleProjectImages("remove", "cover", coverImage)}
+                  >
+                    <Trash2 />
+                  </Button>
+                </div>
               </div>
             ))}
           </div>
           <div>
             <Separator orientation="vertical" />
           </div>
-          <div className="w-1/3">
+          <div className="w-1/3 flex flex-col gap-2">
             <p className="font-sans text-slate-400">thumbImageSrc</p>
             {projectImages.thumbImageSrc.map((thumbImage) => (
-              <div key={thumbImage} className="flex justify-between items-center">
+              <div key={thumbImage} className="flex gap-2 justify-between items-center">
                 <p>{thumbImage}</p>
-                <Button size="icon" variant="outline" onClick={() => handleProjectImages("remove", "thumb", thumbImage)}>
-                  <Trash2 />
-                </Button>
+                <div>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    onClick={() => handleProjectImages("remove", "thumb", thumbImage)}
+                  >
+                    <Trash2 />
+                  </Button>
+                </div>
               </div>
             ))}
           </div>
           <div>
             <Separator orientation="vertical" />
           </div>
-          <div className="w-1/3">
+          <div className="w-1/3 flex flex-col gap-2">
             <p className="font-sans text-slate-400">screens</p>
             {projectImages.screens.map((screenImage) => (
-              <div key={screenImage} className="flex justify-between items-center">
+              <div key={screenImage} className="flex gap-2 justify-between items-center">
                 <p>{screenImage}</p>
-                <Button size="icon" variant="outline" onClick={() => handleProjectImages("remove", "thumb", screenImage)}>
-                  <Trash2 />
-                </Button>
+                <div>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    onClick={() => handleProjectImages("remove", "thumb", screenImage)}
+                  >
+                    <Trash2 />
+                  </Button>
+                </div>
               </div>
             ))}
           </div>

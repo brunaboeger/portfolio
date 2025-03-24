@@ -21,7 +21,6 @@ const Admin = async () => {
   return (
     <div className="h-full flex justify-center items-center">
       <div className="w-full grid grid-cols-3 gap-6">
-
         <Card className="w-full">
           <CardHeader>
             <div className="flex gap-3 justify-between items-end">
