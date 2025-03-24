@@ -64,8 +64,8 @@ model Project {
   skills        ProjectSkill[]
   profile       Profile        @relation(fields: [profileId], references: [id])
   profileId     String
-  experience    Experience     @relation(fields: [experienceId], references: [id])
-  experienceId  String
+  experience    Experience?     @relation(fields: [experienceId], references: [id])
+  experienceId  String?
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
 }
