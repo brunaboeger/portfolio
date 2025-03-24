@@ -1,6 +1,6 @@
 import ProjectAddCards from "@/src/components/admin/project/add/project-add-cards";
 
-const AddProject = async () => {
+const AddProject = () => {
   return (
     <ProjectAddCards />
   );

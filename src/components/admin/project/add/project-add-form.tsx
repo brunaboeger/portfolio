@@ -6,7 +6,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage
 } from "@/src/components/ui/form";
 
 import { z } from "zod";
@@ -16,8 +15,29 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/src/components/ui/button";
 import { AlignLeft, Plus } from "lucide-react";
 
+import { createProject } from "@/src/data/projects/create-project";
+
 interface ProjectEditFormProps {
   onPropertyMenuChange: (propertyName: string) => void;
+  addCoverImage: (coverImage: string) => void;
+  addThumbImage: (thumbImage: string) => void;
+  addScreenImage: (screenImage: string) => void;
+  projectImages: ProjectImagesProps;
+}
+
+interface ProjectImagesProps {
+  coverImageSrc: string[];
+  thumbImageSrc: string[];
+  screens: string[];
+}
+
+interface ProjectDataProps {
+  name: string;
+  slug: string;
+  description: string;
+  coverImageSrc: string[];
+  thumbImageSrc: string[];
+  screens: string[];
 }
 
 const formSchema = z.object({
@@ -35,7 +55,13 @@ const formSchema = z.object({
   screens: z.any(),
 })
 
-const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
+const ProjectEditForm = ({
+  onPropertyMenuChange,
+  addCoverImage,
+  addThumbImage,
+  addScreenImage,
+  projectImages
+}: ProjectEditFormProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -49,8 +75,27 @@ const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const { name, slug, description } = values;
+
+    const projectData = {
+      name,
+      slug,
+      description,
+      coverImageSrc: projectImages.coverImageSrc,
+      thumbImageSrc: projectImages.thumbImageSrc,
+      screens: projectImages.screens
+    }
+
+    handleSave(projectData);
   }
+
+  const handleSave = async (projectData: ProjectDataProps) => {
+    await createProject(projectData);
+  }
+
+  const coverImage = form.watch("coverImageSrc");
+  const thumbImage = form.watch("thumbImageSrc");
+  const screenImage = form.watch("screens");
 
   return (
     <div>
@@ -65,7 +110,6 @@ const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
                 <FormControl className="col-span-3">
                   <Input placeholder="Informe um nome..." {...field} />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -79,7 +123,6 @@ const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
                 <FormControl className="col-span-3">
                   <Input placeholder="Informe um slug..." {...field} />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -93,7 +136,6 @@ const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
                 <FormControl className="col-span-3">
                   <Input placeholder="Informe uma descrição..." {...field} />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -109,15 +151,19 @@ const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
                   <div className="flex gap-2">
-                    <Button size="icon">
+                    <Button type="button" size="icon" onClick={() => addCoverImage(coverImage)}>
                       <Plus />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => onPropertyMenuChange("coverImageSrc")}>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="icon"
+                      onClick={() => onPropertyMenuChange("coverImageSrc")}
+                    >
                       <AlignLeft />
                     </Button>
                   </div>
                 </div>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -127,21 +173,20 @@ const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
             name="thumbImageSrc"
             render={({ field }) => (
               <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">coverImageSrc</FormLabel>
+                <FormLabel className="text-right">thumbImageSrc</FormLabel>
                 <div className="col-span-3 flex gap-2">
                   <FormControl>
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
                   <div className="flex gap-2">
-                    <Button size="icon">
+                    <Button type="button" size="icon" onClick={() => addThumbImage(thumbImage)}>
                       <Plus />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => onPropertyMenuChange("thumbImageSrc")}>
+                    <Button type="button" variant="outline" size="icon" onClick={() => onPropertyMenuChange("thumbImageSrc")}>
                       <AlignLeft />
                     </Button>
                   </div>
                 </div>
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -157,18 +202,19 @@ const ProjectEditForm = ({ onPropertyMenuChange }: ProjectEditFormProps) => {
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
                   <div className="flex gap-2">
-                    <Button size="icon">
+                    <Button type="button" size="icon" onClick={() => addScreenImage(screenImage)}>
                       <Plus />
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => onPropertyMenuChange("screens")}>
+                    <Button type="button" variant="outline" size="icon" onClick={() => onPropertyMenuChange("screens")}>
                       <AlignLeft />
                     </Button>
                   </div>
                 </div>
-                <FormMessage />
               </FormItem>
             )}
           />
+
+          <Button>Enviar</Button>
         </form>
       </Form>
     </div>
