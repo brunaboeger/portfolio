@@ -14,7 +14,15 @@ import { Input } from "@/src/components/ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/src/components/ui/button";
-import { AlignLeft, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
+import { redirect, useRouter } from "next/navigation";
+import { updateProject } from "@/src/data/projects/update-project";
+
+interface ProjectEditFormProps {
+  project: ProjectProps;
+  projectImages: ProjectImagesProps;
+  handleProjectImages: (action: string, type: string, image: string) => void;
+}
 
 interface ProjectProps {
   id: string;
@@ -26,9 +34,10 @@ interface ProjectProps {
   screens: string[];
 }
 
-interface ProjectEditFormProps {
-  project: ProjectProps;
-  onPropertyMenuChange: (propertyName: string) => void;
+interface ProjectImagesProps {
+  coverImageSrc: string[];
+  thumbImageSrc: string[];
+  screens: string[];
 }
 
 const formSchema = z.object({
@@ -46,22 +55,45 @@ const formSchema = z.object({
   screens: z.any(),
 })
 
-const ProjectEditForm = ({ project, onPropertyMenuChange }: ProjectEditFormProps) => {
+const ProjectEditForm = ({ project, projectImages, handleProjectImages }: ProjectEditFormProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: project.name,
       slug: project.slug,
       description: project.description,
-      coverImageSrc: "",
-      thumbImageSrc: "",
-      screens: "",
+      coverImageSrc: `/images/projects${project.slug}/cover.webp`,
+      thumbImageSrc: `/images/projects${project.slug}/thumb.webp`,
+      screens: `/images/projects${project.slug}/screens/screen.webp`,
     }
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const { name, slug, description } = values;
+
+    const projectData = {
+      id: project.id,
+      name,
+      slug,
+      description,
+      coverImageSrc: projectImages.coverImageSrc,
+      thumbImageSrc: projectImages.thumbImageSrc,
+      screens: projectImages.screens,
+    }
+
+    handleSave(projectData);
   }
+
+  const handleSave = async (projectData: ProjectProps) => {
+    await updateProject(projectData);
+    redirect("/admin");
+  }
+
+  const router = useRouter();
+
+  const coverImage = form.watch("coverImageSrc");
+  const thumbImage = form.watch("thumbImageSrc");
+  const screenImage = form.watch("screens");
 
   return (
     <div>
@@ -120,11 +152,8 @@ const ProjectEditForm = ({ project, onPropertyMenuChange }: ProjectEditFormProps
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
                   <div className="flex gap-2">
-                    <Button size="icon">
+                    <Button type="button" size="icon" onClick={() => handleProjectImages("add", "cover", coverImage)}>
                       <Plus />
-                    </Button>
-                    <Button variant="outline" size="icon" onClick={() => onPropertyMenuChange("coverImageSrc")}>
-                      <AlignLeft />
                     </Button>
                   </div>
                 </div>
@@ -144,11 +173,8 @@ const ProjectEditForm = ({ project, onPropertyMenuChange }: ProjectEditFormProps
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
                   <div className="flex gap-2">
-                    <Button size="icon">
+                    <Button type="button" size="icon" onClick={() => handleProjectImages("add", "thumb", thumbImage)}>
                       <Plus />
-                    </Button>
-                    <Button variant="outline" size="icon" onClick={() => onPropertyMenuChange("thumbImageSrc")}>
-                      <AlignLeft />
                     </Button>
                   </div>
                 </div>
@@ -168,11 +194,8 @@ const ProjectEditForm = ({ project, onPropertyMenuChange }: ProjectEditFormProps
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
                   <div className="flex gap-2">
-                    <Button size="icon">
+                    <Button type="button" size="icon" onClick={() => handleProjectImages("add", "screen", screenImage)}>
                       <Plus />
-                    </Button>
-                    <Button variant="outline" size="icon" onClick={() => onPropertyMenuChange("screens")}>
-                      <AlignLeft />
                     </Button>
                   </div>
                 </div>
@@ -180,6 +203,11 @@ const ProjectEditForm = ({ project, onPropertyMenuChange }: ProjectEditFormProps
               </FormItem>
             )}
           />
+
+          <div className="flex justify-center gap-3 pt-6">
+            <Button type="button" variant="outline" onClick={() => router.back()}>Cancelar</Button>
+            <Button type="submit">Salvar projeto</Button>
+          </div>
         </form>
       </Form>
     </div>

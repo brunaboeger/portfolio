@@ -4,9 +4,10 @@ import ProjectEditForm from "@/src/components/admin/project/edit/project-edit-fo
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { Button } from "@/src/components/ui/button";
-import { AlignLeft, Trash2 } from "lucide-react";
+import { Trash2 } from "lucide-react";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { Separator } from "@/src/components/ui/separator";
+import Image from "next/image";
 
 interface ProjectProps {
   id: string;
@@ -18,120 +19,167 @@ interface ProjectProps {
   screens: string[];
 }
 
+interface ProjectDataProps {
+  coverImageSrc: string[];
+  thumbImageSrc: string[];
+  screens: string[];
+}
+
 interface ProjectEditCardsProps {
   project: ProjectProps;
 }
 
 const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
-  const [propertyName, setPropertyName] = useState<string>("Propriedade");
-  const [togglePropertyMenu, setTogglePropertyMenu] = useState<boolean>(false);
+  const [projectImages, setProjectImages] = useState<ProjectDataProps>({
+    coverImageSrc: project.coverImageSrc,
+    thumbImageSrc: project.thumbImageSrc,
+    screens: project.screens,
+  });
 
-  const handlePropertyMenu = (newPropertyName: string) => {
-    setPropertyName(newPropertyName);
-    setTogglePropertyMenu(true);
+  const handleProjectImages = (action: string, type: string, newImage: string) => {
+    if (!newImage) return;
 
-    if (newPropertyName === propertyName) {
-      setTogglePropertyMenu(!togglePropertyMenu);
+    if (action === "add") {
+      if (type === "cover") {
+        setProjectImages((prevList) => {
+          if (!prevList.coverImageSrc.includes(newImage)) {
+            return { ...projectImages, coverImageSrc: [...prevList.coverImageSrc, newImage] }
+          }
+          return prevList;
+        });
+      }
+
+      if (type === "thumb") {
+        setProjectImages((prevList) => {
+          if (!prevList.thumbImageSrc.includes(newImage)) {
+            return { ...projectImages, thumbImageSrc: [...prevList.thumbImageSrc, newImage] }
+          }
+          return prevList;
+        })
+      }
+
+      if (type === "screen") {
+        setProjectImages((prevList) => {
+          if (!prevList.screens.includes(newImage)) {
+            return { ...projectImages, screens: [...prevList.screens, newImage] }
+          }
+          return prevList;
+        })
+      }
+    }
+
+    if (action === "remove") {
+      if (type === "cover") {
+        setProjectImages((prevProject) => (
+          {
+            ...prevProject,
+            coverImageSrc: prevProject.coverImageSrc.filter((coverImage) => coverImage !== newImage)
+          }
+        ));
+      }
+
+      if (type === "thumb") {
+        setProjectImages((prevProject) => (
+          {
+            ...prevProject,
+            thumbImageSrc: prevProject.thumbImageSrc.filter((thumbImage) => thumbImage !== newImage)
+          }
+        ));
+      }
+
+      if (type === "screen") {
+        setProjectImages((prevProject) => (
+          {
+            ...prevProject,
+            screens: prevProject.screens.filter((screenImage) => screenImage !== newImage)
+          }
+        ));
+      }
     }
   }
 
-  const route = useRouter();
-
   return (
     <>
-      <div className="w-full flex gap-6">
-        <Card className="w-1/2">
-          <CardHeader>
-            <CardTitle>
-              Editar {project.name}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ProjectEditForm project={project} onPropertyMenuChange={handlePropertyMenu} />
-          </CardContent>
-        </Card>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>
+            Editar {project.name}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ProjectEditForm project={project} handleProjectImages={handleProjectImages} projectImages={projectImages} />
+        </CardContent>
+      </Card>
 
-        {togglePropertyMenu === false && (
-          <Card className="w-1/2 flex flex-col">
-            <CardHeader>
-              <CardTitle>
-                Propriedade
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-2 flex-grow items-center justify-center text-slate-500">
-              <AlignLeft size={40} />
-              <p className="text-center font-sans">
-                Selecione uma das propriedades ao lado <br />
-                para mostrar sua lista de conteúdos
-              </p>
-            </CardContent>
-          </Card>
-        )}
-
-        {propertyName === "coverImageSrc" && togglePropertyMenu === true && (
-          <Card className="w-1/2 flex flex-col">
-            <CardHeader>
-              <CardTitle>
-                {propertyName}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-2 flex-grow">
-              {project.coverImageSrc.map((imageSrc) => (
-                <div key={imageSrc} className="flex items-center justify-between">
-                  <p>{imageSrc}</p>
-                  <Button size="icon" variant="outline">
+      <Card className="w-full">
+        <CardContent className="flex flex-col pt-6 gap-6">
+          <div className="flex flex-col gap-2">
+            <p className="font-sans text-slate-400">coverImageSrc</p>
+            {projectImages.coverImageSrc.map((coverImage) => (
+              <div key={coverImage} className="flex gap-2 justify-between items-center">
+                <div className="flex gap-4 items-center">
+                  <Image src={coverImage} alt="Image" width={120} height={120} className="object-cover" />
+                  <p>{coverImage}</p>
+                </div>
+                <div>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    onClick={() => handleProjectImages("remove", "cover", coverImage)}
+                  >
                     <Trash2 />
                   </Button>
                 </div>
-              ))}
-            </CardContent>
-          </Card>
-        )}
-
-        {propertyName === "thumbImageSrc" && togglePropertyMenu === true && (
-          <Card className="w-1/2 flex flex-col">
-            <CardHeader>
-              <CardTitle>
-                {propertyName}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-2 flex-grow">
-              {project.thumbImageSrc.map((imageSrc) => (
-                <div key={imageSrc} className="flex items-center justify-between">
-                  <p>{imageSrc}</p>
-                  <Button size="icon" variant="outline">
+              </div>
+            ))}
+          </div>
+          <div>
+            <Separator />
+          </div>
+          <div className="flex flex-col gap-2">
+            <p className="font-sans text-slate-400">thumbImageSrc</p>
+            {projectImages.thumbImageSrc.map((thumbImage) => (
+              <div key={thumbImage} className="flex gap-2 justify-between items-center">
+                <div className="flex gap-4 items-center">
+                  <Image src={thumbImage} alt="Image" width={120} height={120} className="object-cover" />
+                  <p>{thumbImage}</p>
+                </div>
+                <div>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    onClick={() => handleProjectImages("remove", "thumb", thumbImage)}
+                  >
                     <Trash2 />
                   </Button>
                 </div>
-              ))}
-            </CardContent>
-          </Card>
-        )}
-
-        {propertyName === "screens" && togglePropertyMenu === true && (
-          <Card className="w-1/2 flex flex-col">
-            <CardHeader>
-              <CardTitle>
-                {propertyName}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-2 flex-grow">
-              {project.screens.map((imageSrc) => (
-                <div key={imageSrc} className="flex items-center justify-between">
-                  <p>{imageSrc}</p>
-                  <Button size="icon" variant="outline">
+              </div>
+            ))}
+          </div>
+          <div>
+            <Separator />
+          </div>
+          <div className="flex flex-col gap-2">
+            <p className="font-sans text-slate-400">screens</p>
+            {projectImages.screens.map((screenImage) => (
+              <div key={screenImage} className="flex gap-2 justify-between items-center">
+                <div className="flex gap-4 items-center">
+                  <Image src={screenImage} alt="Image" width={120} height={120} className="object-cover" />
+                  <p>{screenImage}</p>
+                </div>
+                <div>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    onClick={() => handleProjectImages("remove", "screen", screenImage)}
+                  >
                     <Trash2 />
                   </Button>
                 </div>
-              ))}
-            </CardContent>
-          </Card>
-        )}
-      </div>
-
-      <Card className="w-full flex p-6 gap-4 justify-center">
-        <Button variant="outline" onClick={() => route.back()}>Cancelar</Button>
-        <Button>Salvar</Button>
+              </div>
+            ))}
+          </div>
+        </CardContent>
       </Card>
     </>
   );
