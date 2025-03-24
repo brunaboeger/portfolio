@@ -13,15 +13,14 @@ import { Input } from "@/src/components/ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/src/components/ui/button";
-import { AlignLeft, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 import { createProject } from "@/src/data/projects/create-project";
 
+import { redirect, useRouter } from "next/navigation";
+
 interface ProjectEditFormProps {
-  onPropertyMenuChange: (propertyName: string) => void;
-  addCoverImage: (coverImage: string) => void;
-  addThumbImage: (thumbImage: string) => void;
-  addScreenImage: (screenImage: string) => void;
+  handleProjectImages: (action: string, type: string, newImage: string) => void;
   projectImages: ProjectImagesProps;
 }
 
@@ -56,21 +55,19 @@ const formSchema = z.object({
 })
 
 const ProjectEditForm = ({
-  onPropertyMenuChange,
-  addCoverImage,
-  addThumbImage,
-  addScreenImage,
-  projectImages
+  projectImages,
+  handleProjectImages
 }: ProjectEditFormProps) => {
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       slug: "",
       description: "",
-      coverImageSrc: "",
-      thumbImageSrc: "",
-      screens: "",
+      coverImageSrc: "/images/projects/",
+      thumbImageSrc: "/images/projects/",
+      screens: "/images/projects/",
     }
   });
 
@@ -91,7 +88,10 @@ const ProjectEditForm = ({
 
   const handleSave = async (projectData: ProjectDataProps) => {
     await createProject(projectData);
+    redirect("/admin");
   }
+
+  const router = useRouter();
 
   const coverImage = form.watch("coverImageSrc");
   const thumbImage = form.watch("thumbImageSrc");
@@ -105,9 +105,9 @@ const ProjectEditForm = ({
             control={form.control}
             name="name"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">Name</FormLabel>
-                <FormControl className="col-span-3">
+              <FormItem className="grid grid-cols-8 items-center gap-3">
+                <FormLabel className="text-right">name</FormLabel>
+                <FormControl className="col-span-7">
                   <Input placeholder="Informe um nome..." {...field} />
                 </FormControl>
               </FormItem>
@@ -118,9 +118,9 @@ const ProjectEditForm = ({
             control={form.control}
             name="slug"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">Slug</FormLabel>
-                <FormControl className="col-span-3">
+              <FormItem className="grid grid-cols-8 items-center gap-3">
+                <FormLabel className="text-right">slug</FormLabel>
+                <FormControl className="col-span-7">
                   <Input placeholder="Informe um slug..." {...field} />
                 </FormControl>
               </FormItem>
@@ -131,9 +131,9 @@ const ProjectEditForm = ({
             control={form.control}
             name="description"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">Description</FormLabel>
-                <FormControl className="col-span-3">
+              <FormItem className="grid grid-cols-8 items-center gap-3">
+                <FormLabel className="text-right">description</FormLabel>
+                <FormControl className="col-span-7">
                   <Input placeholder="Informe uma descrição..." {...field} />
                 </FormControl>
               </FormItem>
@@ -144,23 +144,15 @@ const ProjectEditForm = ({
             control={form.control}
             name="coverImageSrc"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
+              <FormItem className="grid grid-cols-8 items-center gap-3">
                 <FormLabel className="text-right">coverImageSrc</FormLabel>
-                <div className="col-span-3 flex gap-2">
+                <div className="col-span-7 flex gap-2">
                   <FormControl>
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
-                  <div className="flex gap-2">
-                    <Button type="button" size="icon" onClick={() => addCoverImage(coverImage)}>
+                  <div>
+                    <Button type="button" size="icon" onClick={() => handleProjectImages("add", "cover", coverImage)}>
                       <Plus />
-                    </Button>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="icon"
-                      onClick={() => onPropertyMenuChange("coverImageSrc")}
-                    >
-                      <AlignLeft />
                     </Button>
                   </div>
                 </div>
@@ -172,18 +164,15 @@ const ProjectEditForm = ({
             control={form.control}
             name="thumbImageSrc"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
+              <FormItem className="grid grid-cols-8 items-center gap-3">
                 <FormLabel className="text-right">thumbImageSrc</FormLabel>
-                <div className="col-span-3 flex gap-2">
+                <div className="col-span-7 flex gap-2">
                   <FormControl>
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
-                  <div className="flex gap-2">
-                    <Button type="button" size="icon" onClick={() => addThumbImage(thumbImage)}>
+                  <div>
+                    <Button type="button" size="icon" onClick={() => handleProjectImages("add", "thumb", thumbImage)}>
                       <Plus />
-                    </Button>
-                    <Button type="button" variant="outline" size="icon" onClick={() => onPropertyMenuChange("thumbImageSrc")}>
-                      <AlignLeft />
                     </Button>
                   </div>
                 </div>
@@ -195,18 +184,15 @@ const ProjectEditForm = ({
             control={form.control}
             name="screens"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
+              <FormItem className="grid grid-cols-8 items-center gap-3">
                 <FormLabel className="text-right">screens</FormLabel>
-                <div className="col-span-3 flex gap-2">
+                <div className="col-span-7 flex gap-2">
                   <FormControl>
                     <Input placeholder="Insira uma nova imagem" {...field} />
                   </FormControl>
-                  <div className="flex gap-2">
-                    <Button type="button" size="icon" onClick={() => addScreenImage(screenImage)}>
+                  <div>
+                    <Button type="button" size="icon" onClick={() => handleProjectImages("add", "screen", screenImage)}>
                       <Plus />
-                    </Button>
-                    <Button type="button" variant="outline" size="icon" onClick={() => onPropertyMenuChange("screens")}>
-                      <AlignLeft />
                     </Button>
                   </div>
                 </div>
@@ -214,7 +200,10 @@ const ProjectEditForm = ({
             )}
           />
 
-          <Button>Enviar</Button>
+          <div className="flex justify-center gap-3 pt-6">
+            <Button type="button" variant="outline" onClick={() => router.back()}>Cancelar</Button>
+            <Button type="submit">Salvar projeto</Button>
+          </div>
         </form>
       </Form>
     </div>
