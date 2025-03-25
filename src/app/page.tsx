@@ -3,6 +3,8 @@ import Image from "next/image";
 import { getProjects } from "@/src/data/projects/get-projects";
 // import { Button } from "@/src/components/ui/button";
 import { font } from "@/src/app/fonts";
+import { Card } from "@/src/components/ui/card";
+import Link from "next/link";
 
 
 const HomePage = async () => {
@@ -13,7 +15,7 @@ const HomePage = async () => {
   return (
     <>
       {/* Hero */}
-      <section data-scroll-section className="h-full mb-6 flex flex-col justify-center items-center gap-4 text-center">
+      <section className="h-full mb-6 flex flex-col justify-center items-center gap-4 text-center">
         <p data-scroll className={`${font.heading} text-primary`}>
           Hello there! I’m Bruna
         </p>
@@ -24,26 +26,26 @@ const HomePage = async () => {
       </section>
 
       {/* Projects */}
-      <section data-scroll-section className="h-full grid grid-cols-2 gap-4">
-        {projects.map((project) => (
-          // Card
-          <div key={project.id} className="flex flex-col">
-            <div>
-              <div className="h-11">
-                {project.coverImageSrc.map((image) => (
+      <section className="h-full">
+        <div className="h-full grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-4">
+          {projects.map((project) => (
+            <Link key={project.id} href={project.slug} className="flex flex-col h-full justify-start overflow-hidden">
+              <Card className="flex flex-col h-full justify-start overflow-hidden">
+                {project.thumbImageSrc.map((image) => (
                   <Image
                     key={image}
                     src={image}
                     alt={project.name}
-                    width={233}
-                    height={500}
-                    className="w-full object-contain"
+                    width={600}
+                    height={600}
+                    unoptimized
+                    className="w-full h-full object-cover"
                   />
                 ))}
-              </div>
-            </div>
-          </div>
-        ))}
+              </Card>
+            </Link>
+          ))}
+        </div>
       </section>
     </>
   );

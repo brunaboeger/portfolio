@@ -19,7 +19,7 @@ const Admin = async () => {
   const studies = await getStudies();
 
   return (
-    <div className="h-full flex justify-center items-center">
+    <div className="h-full flex flex-col gap-6 justify-center items-center">
       <div className="w-full grid grid-cols-3 gap-6">
         <Card className="w-full">
           <CardHeader>
@@ -48,7 +48,6 @@ const Admin = async () => {
             ))}
           </CardContent>
         </Card>
-
         <Card className="w-full">
           <CardHeader>
             <div className="flex gap-3 justify-between items-end">
@@ -76,7 +75,6 @@ const Admin = async () => {
             ))}
           </CardContent>
         </Card>
-
         <Card className="w-full">
           <CardHeader>
             <div className="flex gap-3 justify-between items-end">
@@ -105,6 +103,13 @@ const Admin = async () => {
           </CardContent>
         </Card>
       </div>
+      <Card className="w-full">
+        <CardContent className="pt-6 flex justify-center">
+          <Button variant="outline" asChild>
+            <Link href="/">Voltar</Link>
+          </Button>
+        </CardContent>
+      </Card>
     </div>
   );
 }
