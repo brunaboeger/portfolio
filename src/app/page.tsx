@@ -15,7 +15,7 @@ const HomePage = async () => {
   return (
     <>
       {/* Hero */}
-      <section className="h-full mb-6 flex flex-col justify-center items-center gap-4 text-center">
+      <section id="home" className="h-full mb-6 flex flex-col justify-center items-center gap-4 text-center">
         <p data-scroll className={`${font.heading} text-primary`}>
           Hello there! I’m Bruna
         </p>
@@ -26,7 +26,7 @@ const HomePage = async () => {
       </section>
 
       {/* Projects */}
-      <section className="h-full">
+      <section id="projects" className="h-full">
         <div className="h-full grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-4">
           {projects.map((project) => (
             <Link key={project.id} href={project.slug} className="flex flex-col h-full justify-start overflow-hidden">
