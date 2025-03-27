@@ -38,3 +38,16 @@
   background-size: cover;
   opacity: 80%;
 }
+
+.border-b-gradient {
+  border-image: linear-gradient(
+    90deg,
+    rgba(173, 250, 29, 0) 0%,
+    rgba(173, 250, 29, 1) 50%,
+    rgba(173, 250, 29, 0) 100%
+  );
+}
+
+.bg-gradient-shadow {
+  box-shadow: 0 0 20px rgba(2, 15, 22, 20%);
+}

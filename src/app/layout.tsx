@@ -71,7 +71,7 @@ export default async function RootLayout({
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="#home"
+                      href="/#home"
                       className="hover:text-primary transition-colors duration-500"
                     >
                       <House size={16} />
@@ -87,7 +87,7 @@ export default async function RootLayout({
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="#projects"
+                      href="/#projects"
                       className="hover:text-primary transition-colors duration-500"
                     >
                       <FolderOpen size={16} />
@@ -103,7 +103,7 @@ export default async function RootLayout({
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="#about"
+                      href="/#about"
                       className="hover:text-primary transition-colors duration-500"
                     >
                       <UserRound size={16} />
