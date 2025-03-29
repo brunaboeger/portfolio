@@ -1,22 +1,24 @@
 "use client";
 
 import ProjectEditForm from "@/src/components/admin/project/edit/project-edit-form";
+import ProjectContent from "@/src/components/admin/project/edit/project-content";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { Button } from "@/src/components/ui/button";
 import { Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Separator } from "@/src/components/ui/separator";
+
+import { Prisma } from "@prisma/client";
+
 import Image from "next/image";
 
-interface ProjectProps {
-  id: string;
-  name: string;
-  slug: string;
-  description: string;
-  coverImageSrc: string[];
-  thumbImageSrc: string[];
-  screens: string[];
+interface ProjectEditCardsProps {
+  project: Prisma.ProjectGetPayload<{
+    include: {
+      content: true
+    }
+  }>;
 }
 
 interface ProjectDataProps {
@@ -25,9 +27,20 @@ interface ProjectDataProps {
   screens: string[];
 }
 
-interface ProjectEditCardsProps {
-  project: ProjectProps;
-}
+// interface ProjectProps {
+//   id: string;
+//   name: string;
+//   slug: string;
+//   description: string;
+//   coverImageSrc: string[];
+//   thumbImageSrc: string[];
+//   screens: string[];
+//   content?: Prisma.ProjectGetPayload<{
+//     include: {
+//       content: true
+//     }
+//   }>
+// }
 
 const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
   const [projectImages, setProjectImages] = useState<ProjectDataProps>({
@@ -112,13 +125,24 @@ const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
       </Card>
 
       <Card className="w-full">
-        <CardContent className="flex flex-col pt-6 gap-6">
+        <CardHeader>
+          <CardTitle>
+            Imagens
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <p className="font-sans text-slate-400">coverImageSrc</p>
             {projectImages.coverImageSrc.map((coverImage) => (
               <div key={coverImage} className="flex gap-2 justify-between items-center">
                 <div className="flex gap-4 items-center">
-                  <Image src={coverImage} alt="Image" width={120} height={120} className="object-cover" />
+                  <Image
+                    src={coverImage}
+                    alt="Image"
+                    width={120}
+                    height={120}
+                    className="object-cover max-h-[60px] rounded"
+                  />
                   <p>{coverImage}</p>
                 </div>
                 <div>
@@ -141,7 +165,13 @@ const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
             {projectImages.thumbImageSrc.map((thumbImage) => (
               <div key={thumbImage} className="flex gap-2 justify-between items-center">
                 <div className="flex gap-4 items-center">
-                  <Image src={thumbImage} alt="Image" width={120} height={120} className="object-cover" />
+                  <Image
+                    src={thumbImage}
+                    alt="Image"
+                    width={120}
+                    height={120}
+                    className="object-cover max-h-[60px] rounded"
+                  />
                   <p>{thumbImage}</p>
                 </div>
                 <div>
@@ -164,7 +194,13 @@ const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
             {projectImages.screens.map((screenImage) => (
               <div key={screenImage} className="flex gap-2 justify-between items-center">
                 <div className="flex gap-4 items-center">
-                  <Image src={screenImage} alt="Image" width={120} height={120} className="object-cover" />
+                  <Image
+                    src={screenImage}
+                    alt="Image"
+                    width={120}
+                    height={120}
+                    className="object-cover max-h-[60px] rounded"
+                  />
                   <p>{screenImage}</p>
                 </div>
                 <div>
@@ -179,6 +215,17 @@ const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
               </div>
             ))}
           </div>
+        </CardContent>
+      </Card>
+
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>
+            Conteúdo
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-6">
+          <ProjectContent project={project} />
         </CardContent>
       </Card>
     </>

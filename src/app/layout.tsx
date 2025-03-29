@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { Separator } from "@/src/components/ui/separator";
 import { getSocials } from "@/src/data/socials/get-socials";
 import { notFound } from "next/navigation";
-import { AtSign, FolderOpen, Github, House, Linkedin, ScrollText, UserRound } from "lucide-react";
+import { AtSign, Cog, FolderOpen, Github, House, Linkedin, ScrollText, UserRound } from "lucide-react";
 
 import {
   Tooltip,
@@ -111,6 +111,22 @@ export default async function RootLayout({
                   </TooltipTrigger>
                   <TooltipContent className="bg-primary text-slate-800 ml-2">
                     <p>About</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="/admin"
+                      className="hover:text-primary transition-colors duration-500"
+                    >
+                      <Cog size={16} />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent className="bg-primary text-slate-800 ml-2">
+                    <p>Admin</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>

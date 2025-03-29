@@ -11,9 +11,9 @@ import {
 
 import { z } from "zod";
 import { Input } from "@/src/components/ui/input";
+import { Button } from "@/src/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/src/components/ui/button";
 import { Plus } from "lucide-react";
 import { redirect, useRouter } from "next/navigation";
 import { updateProject } from "@/src/data/projects/update-project";
@@ -62,9 +62,9 @@ const ProjectEditForm = ({ project, projectImages, handleProjectImages }: Projec
       name: project.name,
       slug: project.slug,
       description: project.description,
-      coverImageSrc: `/images/projects${project.slug}/cover.webp`,
-      thumbImageSrc: `/images/projects${project.slug}/thumb.webp`,
-      screens: `/images/projects${project.slug}/screens/screen.webp`,
+      coverImageSrc: `/images/projects/${project.slug}/cover.webp`,
+      thumbImageSrc: `/images/projects/${project.slug}/thumb.webp`,
+      screens: `/images/projects/${project.slug}/screens/screen.webp`,
     }
   });
 
@@ -205,7 +205,13 @@ const ProjectEditForm = ({ project, projectImages, handleProjectImages }: Projec
           />
 
           <div className="flex justify-center gap-3 pt-6">
-            <Button type="button" variant="outline" onClick={() => router.back()}>Cancelar</Button>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => router.back()}
+            >
+              Cancelar
+            </Button>
             <Button type="submit">Salvar projeto</Button>
           </div>
         </form>
