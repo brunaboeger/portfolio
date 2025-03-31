@@ -6,6 +6,8 @@ import { getSocials } from "@/src/data/socials/get-socials";
 import { notFound } from "next/navigation";
 import { AtSign, Cog, FolderOpen, Github, House, Linkedin, ScrollText, UserRound } from "lucide-react";
 
+import { Toaster } from "@/src/components/ui/sonner";
+
 import {
   Tooltip,
   TooltipContent,
@@ -37,6 +39,7 @@ export default async function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${font.paragraph} text-slate-50 scroll-smooth antialiased relative bg-slate-950 bg-gradient overflow-hidden`}>
+        <Toaster richColors position="top-center" />
         <Suspense fallback={<Loading />}>
           {/* Top */}
           <div className="fixed w-full p-1 z-30">
