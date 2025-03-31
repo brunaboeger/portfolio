@@ -86,6 +86,8 @@ model ProjectContent {
   id               Int            @id @default(autoincrement())
   project          Project        @relation(fields: [projectId], references: [id])
   projectId        String         @unique
+  experience       Experience     @relation(fields: [experienceId], references: [id])
+  experienceId     String         @default("")
   client           String
   duration         String
   role             String
@@ -115,17 +117,18 @@ model Study {
 }
 
 model Experience {
-  id          String    @id @default(uuid())
-  name        String
-  description String
-  startDate   DateTime
-  endDate     DateTime?
-  link        String?
-  projects    Project[]
-  profile     Profile   @relation(fields: [profileId], references: [id])
-  profileId   String
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  id             String           @id @default(uuid())
+  name           String
+  description    String
+  startDate      DateTime
+  endDate        DateTime?
+  link           String?
+  projects       Project[]
+  profile        Profile          @relation(fields: [profileId], references: [id])
+  projectContent ProjectContent[]
+  profileId      String
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
 }
 
 model Certificate {
