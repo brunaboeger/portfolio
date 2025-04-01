@@ -3,15 +3,16 @@
 import ProjectEditForm from "@/src/components/admin/project/edit/project-edit-form";
 import ProjectContent from "@/src/components/admin/project/edit/project-content";
 
+import Image from "next/image";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { Button } from "@/src/components/ui/button";
 import { Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Separator } from "@/src/components/ui/separator";
 
-import { Prisma } from "@prisma/client";
+import { Prisma, Experience } from "@prisma/client";
 
-import Image from "next/image";
 
 interface ProjectEditCardsProps {
   project: Prisma.ProjectGetPayload<{
@@ -19,6 +20,7 @@ interface ProjectEditCardsProps {
       content: true
     }
   }>;
+  experiences: Pick<Experience, "id" | "name">[];
 }
 
 interface ProjectDataProps {
@@ -27,22 +29,7 @@ interface ProjectDataProps {
   screens: string[];
 }
 
-// interface ProjectProps {
-//   id: string;
-//   name: string;
-//   slug: string;
-//   description: string;
-//   coverImageSrc: string[];
-//   thumbImageSrc: string[];
-//   screens: string[];
-//   content?: Prisma.ProjectGetPayload<{
-//     include: {
-//       content: true
-//     }
-//   }>
-// }
-
-const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
+const ProjectEditCards = ({ project, experiences }: ProjectEditCardsProps) => {
   const [projectImages, setProjectImages] = useState<ProjectDataProps>({
     coverImageSrc: project.coverImageSrc,
     thumbImageSrc: project.thumbImageSrc,
@@ -124,6 +111,7 @@ const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
         </CardContent>
       </Card>
 
+      {/* Imagens */}
       <Card className="w-full">
         <CardHeader>
           <CardTitle>
@@ -218,6 +206,7 @@ const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
         </CardContent>
       </Card>
 
+      {/* Conteúdo */}
       <Card className="w-full">
         <CardHeader>
           <CardTitle>
@@ -225,7 +214,7 @@ const ProjectEditCards = ({ project }: ProjectEditCardsProps) => {
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-6">
-          <ProjectContent project={project} />
+          <ProjectContent project={project} experiences={experiences} />
         </CardContent>
       </Card>
     </>
