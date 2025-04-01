@@ -1,16 +1,15 @@
-// import Link from "next/link";
 import Image from "next/image";
-import { getProjects } from "@/src/data/projects/get-projects";
-// import { Button } from "@/src/components/ui/button";
-import { font } from "@/src/app/fonts";
-import { Card } from "@/src/components/ui/card";
 import Link from "next/link";
 
+import { notFound } from "next/navigation";
+import { font } from "@/src/app/fonts";
+import { Card } from "@/src/components/ui/card";
+import { getProjects } from "@/src/data/projects/get-projects";
 
 const HomePage = async () => {
   const projects = await getProjects();
 
-  if (!projects) return null;
+  if (!projects) return notFound();
 
   return (
     <>
