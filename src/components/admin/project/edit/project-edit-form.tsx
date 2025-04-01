@@ -9,13 +9,19 @@ import {
   FormMessage
 } from "@/src/components/ui/form";
 
-import { z } from "zod";
 import { Input } from "@/src/components/ui/input";
 import { Button } from "@/src/components/ui/button";
+import { toast } from "sonner"
+
+import { Plus, Loader2 } from "lucide-react";
+
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Plus } from "lucide-react";
-import { redirect, useRouter } from "next/navigation";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 import { updateProject } from "@/src/data/projects/update-project";
 
 interface ProjectEditFormProps {
@@ -56,6 +62,8 @@ const formSchema = z.object({
 })
 
 const ProjectEditForm = ({ project, projectImages, handleProjectImages }: ProjectEditFormProps) => {
+  const [loading, setLoading] = useState<boolean>(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -81,12 +89,14 @@ const ProjectEditForm = ({ project, projectImages, handleProjectImages }: Projec
       screens: projectImages.screens,
     }
 
+    setLoading(true);
     handleSave(projectData);
   }
 
   const handleSave = async (projectData: ProjectProps) => {
     await updateProject(projectData);
-    redirect("/admin");
+    toast.success("Projeto salvo");
+    setLoading(false);
   }
 
   const router = useRouter();
@@ -212,7 +222,12 @@ const ProjectEditForm = ({ project, projectImages, handleProjectImages }: Projec
             >
               Cancelar
             </Button>
-            <Button type="submit">Salvar projeto</Button>
+            <Button type="submit">
+              {loading && (
+                <Loader2 className="animate-spin" />
+              )}
+              Salvar projeto
+            </Button>
           </div>
         </form>
       </Form>
