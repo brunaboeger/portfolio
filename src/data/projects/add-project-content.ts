@@ -9,6 +9,7 @@ export async function addProjectContent(data: {
   duration: string;
   role: string;
   about: string;
+  experienceId: string;
   aboutLinks: string[];
   insights: string;
   insightsImages: string[];

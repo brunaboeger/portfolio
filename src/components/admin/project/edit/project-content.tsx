@@ -1,7 +1,7 @@
 "use client";
 
 import type { ProjectContent } from "@prisma/client";
-import { Prisma } from "@prisma/client";
+import { Prisma, Experience } from "@prisma/client";
 import { updateProjectContent } from "@/src/data/projects/update-project-content"
 
 import {
@@ -13,17 +13,29 @@ import {
   FormMessage
 } from "@/src/components/ui/form";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/src/components/ui/select"
+
+
 import { Input } from "@/src/components/ui/input";
 import { Textarea } from "@/src/components/ui/textarea";
 import { Button } from "@/src/components/ui/button";
+import { toast } from "sonner"
 
 import { Loader2 } from "lucide-react";
 
 import { z } from "zod";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { addProjectContent } from "@/src/data/projects/add-project-content";
+
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface ProjectContentProps {
@@ -32,6 +44,7 @@ interface ProjectContentProps {
       content: true
     }
   }>;
+  experiences: Pick<Experience, "id" | "name">[];
 }
 
 interface ProjectDataProps {
@@ -48,6 +61,7 @@ interface ProjectDataProps {
   challengesImages: string[];
   results: string;
   resultsImages: string[];
+  experienceId: string;
 }
 
 const formSchema = z.object({
@@ -64,7 +78,7 @@ const formSchema = z.object({
   resultsImages: z.string().array(),
 });
 
-const ProjectContent = ({ project }: ProjectContentProps) => {
+const ProjectContent = ({ project, experiences }: ProjectContentProps) => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -99,9 +113,13 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
       resultsImages,
     } = values;
 
+    const selectedExperience = experiences.find((experience) => experience.id === client);
+    const clientName = selectedExperience ? selectedExperience.name : "";
+
     const projectData = {
       projectId: project.id,
-      client,
+      experienceId: client,
+      client: clientName,
       duration,
       role,
       about,
@@ -130,6 +148,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
       await updateProjectContent(projectDataWithId);
     }
 
+    toast.success("Conteúdo salvo");
     setLoading(false);
   };
 
@@ -138,28 +157,39 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
   return (
     <div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          {/* Client */}
           <FormField
             control={form.control}
             name="client"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">client</FormLabel>
-                <FormControl className="col-span-3">
-                  <Input placeholder="Cliente..." {...field} />
-                </FormControl>
+              <FormItem className="flex flex-col">
+                <FormLabel>client</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl className="col-span-2">
+                    <SelectTrigger>
+                      <SelectValue placeholder="Cliente..." />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="bg-slate-900">
+                    {experiences.map((experience) => (
+                      <SelectItem key={experience.id} value={experience.id}>{experience.name}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
 
+          {/* Duration */}
           <FormField
             control={form.control}
             name="duration"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">duration</FormLabel>
-                <FormControl className="col-span-3">
+              <FormItem className="flex flex-col">
+                <FormLabel>duration</FormLabel>
+                <FormControl>
                   <Input placeholder="Duração..." {...field} />
                 </FormControl>
                 <FormMessage />
@@ -167,13 +197,14 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             )}
           />
 
+          {/* Role */}
           <FormField
             control={form.control}
             name="role"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">role</FormLabel>
-                <FormControl className="col-span-3">
+              <FormItem className="flex flex-col">
+                <FormLabel>role</FormLabel>
+                <FormControl>
                   <Input placeholder="Cargo..." {...field} />
                 </FormControl>
                 <FormMessage />
@@ -181,15 +212,16 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             )}
           />
 
+          {/* About */}
           <FormField
             control={form.control}
             name="about"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">about</FormLabel>
+              <FormItem className="flex flex-col">
+                <FormLabel>about</FormLabel>
                 <div className="col-span-3 flex gap-2">
                   <FormControl>
-                    <Textarea placeholder="Sobre..." {...field} />
+                    <Textarea placeholder="Sobre..." className="h-56" {...field} />
                   </FormControl>
                 </div>
                 <FormMessage />
@@ -197,36 +229,16 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             )}
           />
 
-          {/* <FormField
-            control={form.control}
-            name="aboutLinks"
-            render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">aboutLinks</FormLabel>
-                <div className="col-span-3 flex gap-2">
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                  <div className="flex gap-2">
-                    <Button type="button" size="icon">
-                      <Plus />
-                    </Button>
-                  </div>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          /> */}
-
+          {/* Insights */}
           <FormField
             control={form.control}
             name="insights"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">insights</FormLabel>
+              <FormItem className="flex flex-col">
+                <FormLabel>insights</FormLabel>
                 <div className="col-span-3 flex gap-2">
                   <FormControl>
-                    <Textarea placeholder="Insights..." {...field} />
+                    <Textarea placeholder="Insights..." className="h-56" {...field} />
                   </FormControl>
                   <div className="flex gap-2">
 
@@ -237,15 +249,16 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             )}
           />
 
+          {/* Challenges */}
           <FormField
             control={form.control}
             name="challenges"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">challenges</FormLabel>
+              <FormItem className="flex flex-col">
+                <FormLabel>challenges</FormLabel>
                 <div className="col-span-3 flex gap-2">
                   <FormControl>
-                    <Textarea placeholder="Desafios..." {...field} />
+                    <Textarea placeholder="Desafios..." className="h-56" {...field} />
                   </FormControl>
                 </div>
                 <FormMessage />
@@ -253,15 +266,16 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             )}
           />
 
+          {/* Results */}
           <FormField
             control={form.control}
             name="results"
             render={({ field }) => (
-              <FormItem className="grid grid-cols-4 items-center gap-3">
-                <FormLabel className="text-right">results</FormLabel>
+              <FormItem className="flex flex-col">
+                <FormLabel>results</FormLabel>
                 <div className="col-span-3 flex gap-2">
                   <FormControl>
-                    <Textarea placeholder="Resultados..." {...field} />
+                    <Textarea placeholder="Resultados..." className="h-56" {...field} />
                   </FormControl>
                 </div>
                 <FormMessage />
@@ -269,6 +283,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             )}
           />
 
+          {/* Actions */}
           <div className="flex justify-center gap-3 pt-6">
             <Button
               type="button"
@@ -281,7 +296,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
               {loading && (
                 <Loader2 className="animate-spin" />
               )}
-              Salvar projeto
+              Salvar conteúdo
             </Button>
           </div>
         </form>
